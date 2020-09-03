@@ -1,0 +1,73 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{tpl}
+\dbegin[25 февраля 2020 г.]{Комбинаторика и алгоритмы, зима 2020}{Числа Бернулли}{Смирнов Евгений Юрьевич}
+
+Обозначим $S_k(n)=1^k+2^k+\ldots +n^k$. Заметим, что это многочлен вида $\frac{n^{k+1}}{k+1}+\frac{n^k}{2}+\ldots $.
+
+Обозначим также за $\Sigma$ оператор на многочленах, переводящий $P$ в $\sum_{i=1}^n P(i)$, а за $\Delta$ --- оператор, переводящий $P$ в $P(x)-P(x-1)$ (<<суммирование>> и <<разделённая разность>>).
+
+\lemma $\Sigma(P)$ --- многочлен степени $\deg P+1$.
+
+\proof $\Sigma(x^k)=S_k(x)$ по определению. Так как оператор линейный, то $\Sigma(P)=$ какой-то сумме  $a_kS_k(x)$. Это многочлен искомой степени.\QEDA\\
+
+\lemma $\Delta\Sigma P=P$ и $\Sigma\Delta P=P+C$.
+
+\proof Очевидно.\QEDA\\
+
+\lemma $\frac{d}{dx}$ и $\Delta$ коммутируют.
+
+\proof \[
+	\frac{d}{dx}\Delta f=\frac{d}{dx}(f(x)-f(x-1))=f'(x)-f'(x-1)=\Delta(f'(x))=\Delta \frac{d}{dx}f.\QEDA
+\]
+
+\theorem $S_k(n)'=kS_{k-1}(n)+C$.
+
+\proof Это эквивалентно тому, что \[
+	\frac{d}{dx}\Sigma x^k=k\Sigma(x^{k-1})+C=\Sigma(kx^{k-1})+C=\Sigma \frac{d}{dx} x^k+C\impliedby \frac{d}{dx}\Sigma(P)=\Sigma \frac{d}{dx}(P)+C_1
+.\]
+
+Применим к левой части разделённую разность. Получим \[
+	\Delta \frac{d}{dx}\Sigma(P)=\frac{d}{dx}\Delta\Sigma(P)=\frac{d}{dx} P=\Delta\Sigma \frac{d}{dx}P
+.\]
+
+Теперь применим к обоим частям равенства суммирование. Получим искомое равенство.\QEDA\\
+
+Обозначим $B_k^*=S_k(n)'-kS_{k-1}(n)$.
+
+\textbf{Алгоритм вычисления $S_k$}. Берём $Cn+k\int S_{k-1}$, причём $C$ такое, что $S_k(1)=1$.\\
+
+\theorem Коэффициент при $n^{k+1-i}$ в $S_k(n)$ равен $B_i^*\cdot \binom k i \cdot  \frac{1}{k+1-i}$.
+
+\proof Индукция по $k$. База $k=i$ верна по определению $B_i^*$. Нужно доказать: \[
+	\frac{d}{dx}\left[B_i^* \frac{k(k-1)\ldots (k+2-i)}{i!} n^{k+1-i}\right] \cdot \frac{1}{k}=B_i^* \frac{(k-1)(k-2)\ldots (k+1-i)}{i!}n^{k-i}
+,\] что верно.\QEDA\\
+
+\definition{Числа Бернулли $B_k$} числа, равные $B_k^*$ во всех случаях, кроме $k=1$. $B_1=-\frac{1}{2}$. Иногда они определяются как $\frac{B_i^*}{i!}$, тогда это коэффициенты разложения $\frac{x}{e^x-1}$ в ряд. В этом же случае это коэффициенты при подсчёте $S_k(n-1)$.
+
+Заметим, что \[
+	S_k(n-1)=\frac{1}{k+1}\left(n^{k+1}+(k+1)B_1n^k+\binom{k+1}2 B_2n^{k-1}+\ldots +(k+1)B_kn\right)
+.\]
+
+Перейдём в теневое исчисление (Umbral Calculus) и будем писать индексы при $B$ сверху, сложим сумму в бином Ньютона, а затем подставим $n=1$. Получим $0=(B+1)^{k+1}-B^{k+1}$. На самом деле, это рекуррентное соотношение на $B_k$: {\large $B_k=-\sum\binom{k+1}i \frac{B_i}{k+1}$ }.
+
+\newpage
+\hdr{Теневое исчисление}
+
+
+\theoremn{Формула Эйлера-Наклонена} Пусть $F'(x)=f(x)$. Тогда \[
+	f(0)+\ldots +f(n-1)=F(B+n)-F(B)=\int f(x+B)dx
+.\]\label{umbral}
+
+Пусть $f(n)=q^n$. Тогда $F(n)=\frac{q^n}{\ln q}$. Применим \ref{umbral}: \[
+	\frac{q^n-1}{q-1}=1+q+\ldots +q^{n-1}=\frac{q^{B+n}-q^B}{\ln q}=(q^n-1)\frac{q^B}{\ln q}
+.\]
+
+Сделаем замену  $q=e^x$. Получим $EP(B)=e^{Bx}=\frac{x}{e^x-1}$.
+
+\theorem $\left(\sum \frac{x^i}{(i+1)!}\right)\left(\sum \frac{B_ix^i}{i!}\right)=x$.
+
+\proof Коэффициент при $x^k$ в произведении равен \[
+	\sum\limits_{i=0}^{k+1} \frac{B_i}{i!}\frac{1}{(k-i)!}
+.\] При $k>1$ это равно 0 по формуле $B_k$.\QEDA\\
+
+\end{document}

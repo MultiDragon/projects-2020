@@ -1,0 +1,202 @@
+
+\documentclass[a4paper,12pt]{article}
+\usepackage[russian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=2.5truecm, top=1.8truecm, bottom=1.3truecm]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,amssymb}
+
+
+\relpenalty=10000 \binoppenalty=10000
+\newcounter{theorems}
+\newcommand*{\lemma}{\refstepcounter{theorems}{\bf Лемма \arabic{theorems}. }}
+\newcommand*{\theorem}{\refstepcounter{theorems}{\bf Теорема \arabic{theorems}. }}
+\newcommand*{\lemman}[1]{\refstepcounter{theorems}{\bf Лемма \arabic{theorems} (#1). }}
+\newcommand*{\theoremn}[1]{\refstepcounter{theorems}{\bf Теорема \arabic{theorems} (#1). }}
+
+\newcounter{defs}
+\newcommand*{\definition}{\refstepcounter{defs}{\bf Определение \arabic{defs}. }}
+
+\newcommand*{\QEDA}{\hfill\ensuremath{\blacksquare}}
+
+\newcommand{\proof}{{\bf Доказательство. }}
+\newcommand{\prooft}[1]{{\bf Доказательство теоремы~\ref{#1}. }}
+\newcommand{\prooftms}[1]{\newcounter{tproof#1}}
+\newcommand{\prooftm}[1]{\refstepcounter{tproof#1}{\bf Доказательство теоремы~\ref{#1}~\#\arabic{tproof#1}. }}
+\newcommand{\proofl}[1]{{\bf Доказательство леммы~\ref{#1}. }}
+\newcommand{\prooflms}[1]{\newcounter{lproof#1}}
+\newcommand{\prooflm}[1]{\refstepcounter{lproof#1}{\bf Доказательство леммы~\ref{#1}~\#\arabic{lproof#1}. }}
+
+\newcounter{problems}
+\newcommand{\zs}[1]{\refstepcounter{problems}{\bf Упражнение \arabic{problems} (#1 б.).}}
+\begin{document}
+
+\begin{center}
+{\it Комбинаторика и алгоритмы}
+\vskip9pt\hrule\vskip14pt
+\vfill
+{\Large\bf Проблема изоморфизма графов}
+\vskip20pt
+{\large\bf Райгородский Андрей Михайлович}
+
+\vfill
+Берендеевы поляны, 20--25 августа 2019 г.
+\end{center}
+
+\newpage
+
+\definition Графы $G=(V_1,E_1)$ и $H=(V_2,E_2)$ изоморфны, если \[
+	\exists\varphi:V_1\to V_2:\ \exists\varphi^{-1}, \forall v_1,v_2\in V_1\ (v_1,v_2)\in E_1 \iff (\varphi(v_1),\varphi(v_2))\in E_2
+.\]
+
+Пусть $n$ --- число вершин графов $G$ и $H$. Мы хотим проверить за полиномиальное время от $n$ изоморфность графов, решить <<проблему изоморфизма>>.
+
+Классы графов, для которых проблема изоморфизма решена:
+\begin{itemize}
+	\item Деревья.
+	\item Если максимальная степень $k$, то существует алгоритм, работающий за $O(n^k)$.
+	\item Планарные графы.
+	\item Интервальные графы (можно сопоставить каждой вершине отрезок на прямой, что отрезки имеют общую точку тогда и только тогда, когда соответственные вершины смежные).
+\end{itemize}
+
+\zs1 Придумайте пример неинтервального графа.
+
+Пусть степени вершин $G$ --- $g_1\geq g_2\geq\ldots g_n$, а степени $H$ --- $h_1\geq h_2\geq\ldots h_n$. Если последовательности различны, то графы неизоморфны, но обратное неверно (например, два треугольника неизоморфны шестиугольнику).
+
+\definition Каноническая нумерация --- такая нумерация, что графы изоморфны тогда и только тогда, когда они совпадают в канонической нумерации. Например, если в графе все степени различны, то каноническая нумерация может сопоставлять каждой вершине его степень (но таких графов 2 --- из 0 и 1 вершин).
+
+Неизвестно, эквивалентна ли задача о канонической нумерации проблеме изоморфизма графов.
+
+\vskip10pt\hrule\vskip10pt\centerline{\scshape Тривиальный алгоритм}
+
+Проверяем все перестановки. Алгоритм работает за $n!$.
+
+\theorem $n!\geq\left(\frac ne\right)^n$.
+
+\proof Доказываем по индукции. База верна.
+
+{\bf Шаг индукции.} \[
+	(n+1)!=n!(n+1)\geq\left(\frac ne\right)^n(n+1)\geq^?\left(\frac{n+1}e\right)^{n+1}
+.\] Утверждение с вопросом вытекает из определения числа $e$.\QEDA\\
+
+\hrule\vskip10pt
+\theorem Существует (явно указанный) алгоритм, работающий за $e^{c\sqrt{n\ln n}}$.
+
+\theoremn{Бабаи, 2015, статья не проверена до конца} Существует алгоритм, работающий за $e^{\ln^cn}$.
+
+\theoremn{Бабаи, Эрдёш, Селков, 1974} Для каждого $n$ существует множество графов на $n$ вершинах $\mathfrak K_n\subset\Omega_n$ такое, что:
+\begin{itemize}
+	\item Проверка того, что $G\in\mathfrak K_n$, квадратична от $n$.
+	\item На $\mathfrak K_n$ существует (тривиальная) каноническая нумерация.
+	\item $\lim_{n\to\infty}\dfrac{|\mathfrak K_n|}{|\Omega_n|}=1$. (изначально сходилось с полиномиальной скоростью --- $1-n^{-c}$, сейчас известен алгоритм с экспоненциальной скоростью сходимости --- $1-e^{-nc}$ для какой-то константы $c$)
+\end{itemize}
+
+\newpage
+
+\definition Математическое ожидание $\mathbb EX$ случайной величины $X$ --- сумма $X(G)P(G)$. В частности, если все события равновероятны, $\mathbb EX=\frac{\sum X(G)}{|\Omega|}$.
+
+{\bf Утверждение.} $\mathbb E[c_1X_1+c_2X_2]=c_1\mathbb EX_1+c_2\mathbb EX_2$.
+
+{\bf Пример.} Пусть $X$ --- количество треугольников в графе. Тогда считать $\mathbb EX$ по определению очень сложно (получается $\sum\limits_i iP(X=i)$ и неочевидно, например, как считать графы без треугольников). Рассмотрим такие $\binom n3$ случайных величин: \begin{equation}
+	Y_{ijk}(V,E)=\begin{cases}
+		1,(i,j)\in E,(j,k)\in E,(k,i)\in E\\
+		0, \text{ иначе}
+	\end{cases}
+\end{equation}
+
+Тогда, с одной стороны, $\mathbb EY_{ijk}=\frac18$, с другой стороны, $\mathbb EX=\mathbb E[\sum\limits_{i,j,k}Y_{ijk}]=\sum\limits_{i,j,k}\mathbb EY_{ijk}=\binom n3\cdot\frac 18$.\\
+
+\definition Дисперсия случайной величины --- $\mathbb DX=\mathbb E[(X-\mathbb EX)^2]$.
+
+\lemma $\mathbb DX=\mathbb E[X^2]-\mathbb E^2X$.
+
+\proof Раскроем скобки и получим нужное равенство.\QEDA\\
+
+\theoremn{Марков} Пусть $X\geq0$ и $a>0$. Тогда $P(x>a)\leq\frac{\mathbb EX}a$.\label{markov}
+
+\proof \[
+	\mathbb EX=\sum\limits_i y_iP(X=y_i)=\sum\limits_{y_i>a}y_iP(X=y_i)+\sum\limits_{y_j\leq a}y_jP(X=y_j)\geq\sum\limits_{y_i>a}y_iP(X=y_i)>aP(x>a)
+.\QEDA\]
+
+\theoremn{Чебышёв} Пусть $a>0$. Тогда $P(|X-\mathbb EX|>a)\leq\frac{\mathbb DX}{a^2}$.\label{cheb} 
+
+\proof Пусть $Y=(X-\mathbb EX)^2$. Применим \ref{markov} для $Y$ и $a^2$. Получим $P((X-\mathbb EX)^2>a^2)\leq\frac{\mathbb DX}{a^2}$, откуда следует утверждение задачи.\QEDA\\
+
+\theorem Случайный граф на $n$ вершинах не является планарным с вероятностью, стремящейся к 1.
+
+\proof Пусть $X(G)$ --- количество $K_5$ в графе. Хотим доказать: $P(X\geq1)\to^?1$. \[
+	P(X\geq 1)=1-P(X\leq 0=1-P(-X\geq 0)=1-P(\mathbb EX-X\geq\mathbb EX)\geq 1-P(|\mathbb EX-X|\geq\mathbb EX)
+.\] Применим~\ref{cheb}. Получим $P(X\geq 1)\geq 1-\frac{\mathbb DX}{\mathbb E^2X}$. Пусть ребро возникает с вероятностью $p$. Тогда $\mathbb EX=\binom n5\cdot p^{10}$. Посчитаем $\mathbb E[X^2]$: \[
+\mathbb EX^2=\mathbb E[(\sum Y_j)^2]=\mathbb E[Y_1^2+\ldots+Y_{\binom n5}^2]+\sum\limits_{i\neq j}\mathbb E[Y_iY_j]=\sum\limits_{i\neq j}\mathbb E[Y_iY_j]+\mathbb EX
+.\] Пятёрки $i$ и $j$ могут пересекаться либо по 0 вершинам, либо по 1, либо по 2, либо по 3, либо по 4, и в этих случаях коэффициенты у матожидания будут соответственно $p^{20},p^{20},p^{19},p^{17},p^{14}$ и все слагаемые, кроме $p^{20}$, будут стремиться к нулю при $p^2n>1$: \[
+	\mathbb E[X^2]\sim\mathbb EX+\binom n5p^{20}\left(\binom{n-5}5+5\binom{n-5}4\right)%+p^{19}\binom 52\binom{n-5}3+p^{17}\binom 53\binom{n-5}2+p^{14}\binom 54\binom{n-5}1\right)
+.\] Осталось посчитать $\frac{\mathbb DX}{\mathbb E^2X}$: \[
+	\dfrac{\mathbb DX}{\mathbb E^2X}=s-1+\dfrac{*}{\mathbb E^2X}\sim\dfrac{n^5p^{10}}{120}-1+\dfrac{*}{\mathbb E^2X}\sim\dfrac{n^5p^{10}}{120}
+.\] Получается, что при $p>\frac c{\sqrt n}$ вероятность отсутствия $K_5$ стремится к нулю.\QEDA\\
+
+\newpage
+\centerline{\scshape Случайные блуждания на прямой}
+Пусть есть случайные величины $X_1,X_2,\ldots$, равные $1$ и $-1$ с вероятностью $0.5$ (например, в точке 0 стоит пьяница и на каждом шаге идёт на 1 в какую-то сторону), и мы считаем $p=P(X_1+\ldots+X_n>a)$. Заметим, что $\mathbb E[X_1+\ldots+X_n]=0$ по линейности. Применим~\ref{cheb}: \[
+	p\leq\frac{\mathbb D[X_1+\ldots+X_n]}{a^2}=\frac{\mathbb E[(X_1+\ldots+X_n)^2]-\mathbb E^2[X_1+\ldots+X_n]}{a^2}=\frac n{a^2}
+.\]
+
+\theorem $p\leq e^{-\frac{a^2}{2n}}$, причём это неравенство неулучшаемо.\label{shift}
+
+\proof Пусть $\lambda>0$. Тогда \[
+	P(X_1+\ldots+X_n\geq a)=P(\lambda(X_1+\ldots+X_n)\geq\lambda a)=P(e^{\lambda(X_1+\ldots+X_n)}\geq e^{\lambda a})
+.\] Применим \ref{markov}. Получим \[
+p\leq\frac{\mathbb E[e^{\lambda(X_1+\ldots+X_n)}]}{e^{\lambda a}}= \mathbb E[e^{\lambda X_1}\cdot\ldots\cdot e^{\lambda X_n}]\cdot e^{-\lambda a}=\mathbb E[e^{\lambda X_1}]\mathbb E[e^{\lambda X_2}]\ldots\mathbb E[e^{\lambda X_n}]\cdot e^{-\lambda a}=\left(\frac{e^\lambda+e^{-\lambda}}2\right)^ne^{-\lambda a}
+.\] Заметим, что $\ch\lambda:=\frac{e^\lambda+e^{-\lambda}}2=\sum\limits_{k=0}^\infty\frac{\lambda^{2k}}{(2k)!}$ и $(2k)!\geq k!2^k$. Тогда: \[
+	p\leq\left(\sum\limits_{k=0}^\infty\frac{\lambda^{2k}}{k!2^k}\right)^n\cdot e^{-\lambda a}=e^{\frac{\lambda^2n}2-\lambda a}
+.\] Подставим $\lambda=\frac an$. Получим искомую оценку --- $p\leq e^{-\frac{a^2}{2n}}$.\QEDA\\
+
+\newpage
+\centerline{\scshape Алгоритм Бабаи-Эрдёша-Селкова}
+\begin{enumerate}
+	\item Находим первые $r=[3\log_2n]$ членов последовательности $g_i$. Назовём соответствующие вершины {\it большими}, остальные {\it маленькими}.
+	\item Если среди степеней больших вершин есть две одинаковых, то $G\not\in\mathfrak K_n$.
+	\item Для всех маленьких вершин запишем $f(x_i)=\sum\limits_{j=1}^r 2^j\cdot ((i,j)\in E\ ?1:0)$.
+	\item Если среди $f(x_i)$ два одинаковых числа, то $G\not\in\mathfrak K_n$, иначе мы задали каноническую нумерацию (можно приписать к малым вершинам 1 в начале двоичного кода, чтобы они не пересекались с большими).
+\end{enumerate}
+
+\theorem Для этого алгоритма вероятность ошибки стремится к 0.
+
+\proof Докажем, что $P(\overline{\mathfrak K_n})\to0$. Пусть $\mathcal C$ --- такое событие: для $i\in\{1,2,\ldots,r+1\}$ выполняется $d_i-d_{i+1}>2$ (для сравнения, в первой проверке мы проверяем, что для $i\in\{1,2,\ldots,r-1\}$ выполняется $d_i-d_{i+1}>0$). Пусть $\mathcal D(i,j)$ --- такое событие: $G/v_i/v_j$ прошёл 1-ю проверку для того же $r$. Пусть $\mathcal A(i,j)$ --- такое событие: $\overline{\mathcal D(i,j)}\cup G/v_i/v_j$ не прошёл 2-ю проверку. Заметим, что:
+\begin{itemize}
+	\item $\overline{\mathfrak K_n}\implies (\overline{\mathcal C}\cup G$ не прошёл 2-ю проверку$)\implies \overline{\mathcal C}\cup(\mathcal C\cap\bigcup\limits_{i,j}\mathcal A(i,j))$.
+	\item $\forall i,j:\ \mathcal C\implies\mathcal D(i,j)$.
+\end{itemize}
+
+Тогда \[
+	P(\overline{\mathfrak K_n})\leq P(\overline{\mathcal C}) + \sum\limits_{i,j}P(\mathcal A(i,j)\cap\mathcal C)\leq P(\overline{\mathcal C}) + \sum\limits_{i,j}P(\mathcal A(i,j)\cap\mathcal D(i,j))\leq P(\overline{\mathcal C}) + \sum\limits_{i,j}P(\mathcal A(i,j)|\mathcal D(i,j))
+.\] Заметим, что каждое слагаемое вида $P(\mathcal A(i,j)|\mathcal D(i,j))$ означает <<две последовательности из $r$ нулей и единиц совпадают>>, т.е. у этого вероятность $\frac1{2^r}$. Таких слагаемых не более, чем $n^2$, значит: \[
+	P(\overline{\mathfrak K_n})\leq P(\overline{\mathcal C})+n^22^{-3\log_2n}=P(\overline{\mathcal C})+\frac1n\to\lim_{n\to\infty}P(\overline{\mathcal C})
+.\]
+
+Обозначим $k=\frac{n-1}2+x\sqrt{(n-1)\ln n}$ для некоторой константы $x$. Пусть $Y(G)$ --- число вершин $G$, имеющих степени $k$ и больше, $Z_j$ --- число вершин, имеющих степень ровно $j$. Заметим, что
+\begin{align*}
+	\overline{\mathcal C}\implies (Y<r)\cup (Y\geq r\cap \exists i\in\mathbb N_0,u,v\in V:k+i\leq \deg u\leq \deg v\leq k+i+2)\\
+	P(\overline{\mathcal C})\leq P(Y<r)+P((Y\geq r)\cap \exists i,u,v:k+i\leq\deg u\leq\deg v\leq k+i+2)\\
+	P(Y<r)=P(-Y>-r)=P(\mathbb EY-Y>\mathbb EY-r)
+\end{align*}
+Оценим $\mathbb EY$: \[
+	\mathbb EY=\mathbb E[Z_k+\ldots+Z_{n-1}]=n\cdot\sum\limits_{j=k}^{n-1}\left(\frac12\right)^{n-1}\cdot\binom{n-1}j
+	.\] Введём $\alpha_1,\ldots,\alpha_{n-1}$, случайные величины, равные 0 или 1 с вероятностью $\frac12$, тогда $\mathbb EY=nP(\alpha_1+\ldots+\alpha_{n-1}\geq k)=nP((2\alpha_1-1)+\ldots+(2\alpha_{n-1}-1)\geq 2k-(n-1))\leq ne^{-2x\ln n}$, где последнее неравенство возникает из-за \ref{shift}, и при $x<\frac{\sqrt2}{2}$ это стремится к $\infty$. Применим \ref{cheb}: \[
+	P(Y<r)\leq\frac{\mathbb DY}{(\mathbb EY_k-r)^2}\sim \frac{\mathbb DY}n\sim \frac{\mathbb EY}n\to 0
+.\] Осталось оценить вторую часть неравенства:
+\[
+	P((Y\geq r)\cap \exists i,u,v:k+i\leq\deg u\leq\deg v\leq k+i+2)\leq P(\exists i,u,v:k+i\leq\deg u\leq\deg v\leq k+i+2)
+.\] Заметим, что это не больше, чем сумма по всем $i$ каких-то вероятностей. Оценим одно из слагаемых так: \[
+P(\exists u,v:k\leq\deg u\leq\deg v\leq k+2)\leq n(n-1)P(k\leq\deg u\leq\deg v\leq k+2)=
+\]\[
+	=\frac{n(n-1)}2\sum\limits_{i,j}\left(\binom{n-2}{i-1}\left(\frac12\right)^{n-2}\binom{n-2}{j-1}\left(\frac12\right)^{n-2}+\binom{n-2}i\left(\frac12\right)^{n-2}\binom{n-2}j\left(\frac12\right)^{n-2}\right)\leq
+\]\[
+=n(n-1)\binom{n-1}k^2\cdot\left(\frac12\right)^{2n-3}\cdot10\leq80n^2\left(\frac{1}{2}\right)^{2n} \binom{n-1}{\frac{n-1}{2}}^2 e^{-\frac{4x^2(n-1)\ln n}{n-1}}
+.\]
+
+{\bf Утверждение.} $\binom{n}{\frac{n}{2}}\sim \frac{2^n}{\sqrt{\pi n}}$.
+
+После применения утверждения получится, что при $x>\frac{1}{2}$ эта вероятность стремится к нулю, т.е. после подстановки $x$ из интервала $(\frac12,\sqrt{\frac12})$ вся вероятность $\overline{\mathfrak K_n}$ стремится к нулю.\QEDA 
+
+\end{document}

@@ -1,0 +1,34 @@
+<div class="container">
+	<h2>Сервер конспектов</h2>
+	<div id="tree"></div>
+</div>
+<script>
+	function expand(e, d) {
+		$("#tree").treeview("expandNode", [ d.nodeId ])
+	}
+	function collapse(e, d) {
+		$("#tree").treeview("collapseNode", [ d.nodeId ])
+	}
+
+	function expandOrCollapse(e, d) {
+		if (!d.state.expanded) expand(e, d)
+		else collapse(e, d)
+	}
+
+	$(() => {
+		const expansion = {}
+		const tree = JSON.parse("<%- JSON.stringify(tree).replace(/"/g, '\\"') %>")
+		$("#tree").treeview({ data: tree, levels: 1, enableLinks: true, highlightSelected: false })
+		$("#tree").on("click", ".node-tree", function() {
+			const id = parseInt($(this).attr("data-nodeid"))
+			if (!expansion[id]) {
+				$("#tree").treeview("expandNode", [ id, { silent: true } ])
+				expansion[id] = true
+			} else {
+				$("#tree").treeview("collapseNode", [ id, { silent: true } ])
+				expansion[id] = false
+			}
+			return true
+		})
+	})
+</script>

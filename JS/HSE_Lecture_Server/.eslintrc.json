@@ -1,0 +1,24 @@
+{
+	"env": {
+		"commonjs": true,
+		"es6": true,
+		"node": true,
+		"jquery": true
+	},
+	"extends": ["eslint:recommended", "standard"],
+	"globals": {
+		"Atomics": "readonly",
+		"SharedArrayBuffer": "readonly"
+	},
+	"parserOptions": {
+		"ecmaVersion": 2018
+	},
+	"rules": {
+		"quotes": ["error", "double"],
+		"space-before-function-paren": ["warn", "never"],
+		"no-tabs": ["error", {"allowIndentationTabs": true}],
+		"indent": ["error", "tab", {"SwitchCase": 1}],
+		"curly": ["warn", "multi", "consistent"],
+		"no-extend-native": ["off"]
+	}
+}

@@ -1,0 +1,9 @@
+recurse: 1
+title: TeX
+actions:
+    Open TeX: editor main.tex
+    Open PDF: pdf
+    Copy PDF to Home: copy-pdf-to-main
+main-action: Open PDF
+file: main.pdf
+mime: application/pdf

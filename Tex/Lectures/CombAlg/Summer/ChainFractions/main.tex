@@ -1,0 +1,218 @@
+
+\documentclass[a4paper,12pt]{article}
+\usepackage[russian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=2.5truecm, top=1.8truecm, bottom=1.3truecm]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{tikz}
+
+\relpenalty=10000 \binoppenalty=10000
+\newcounter{theorems}
+\newcommand*{\lemma}{\refstepcounter{theorems}{\bf Лемма \arabic{theorems}. }}
+\newcommand*{\theorem}{\refstepcounter{theorems}{\bf Теорема \arabic{theorems}. }}
+\newcommand*{\lemman}[1]{\refstepcounter{theorems}{\bf Лемма \arabic{theorems} (#1). }}
+\newcommand*{\theoremn}[1]{\refstepcounter{theorems}{\bf Теорема \arabic{theorems} (#1). }}
+
+\newcommand*{\matrixtt}[4]{\binom{#1\ #2}{#3\ #4}}
+\newcommand*{\matrixot}[2]{\binom{#1}{#2}}
+\newcommand*{\matrixto}[2]{(#1\ #2)}
+\newcommand*{\chain}{\dfrac1}
+%\newcommand*{\det}[1]{\left|#1\right|}
+
+\newcounter{defs}
+\newcommand*{\definition}{\refstepcounter{defs}{\bf Определение \arabic{defs}. }}
+
+\newcommand*{\QEDA}{\hfill\ensuremath{\blacksquare}}
+
+\newcommand{\proof}{{\bf Доказательство. }}
+\begin{document}
+
+\begin{center}
+{\it Комбинаторика и алгоритмы}
+\vskip9pt\hrule\vskip14pt
+\vfill
+{\Large\bf Диаграммы Фарея, цепные дроби и топокарты}
+\vskip20pt
+{\large\bf Соколов Артемий Алексеевич}
+
+\vfill
+Берендеевы поляны, 19--23 августа 2019 г.
+\end{center}
+
+\newpage
+
+\centerline{\large\scshape Диаграммы Фарея}
+\definition Медианта отрезка с концами $\frac ab$ и $\frac cd$ ($(a,b)=(c,d)=1,\frac ab<\frac cd$) --- точка с координатами $\frac{a+c}{b+d}$.\\
+
+Заметим, что 
+\[
+\frac ab<\frac{a+c}{b+d}\iff a(b+d)<b(a+c)\iff ad<bc \iff d(a+c)<c(b+d) \iff\frac{a+c}{b+d}<\frac cd
+.\]
+
+Будем отмечать на отрезке $(0,1)$ точки по очереди таким образом. Изначально отмечены концы отрезка. За один шаг берутся все текущие отрезки и для каждого из них отмечается их медианта. Тогда получатся {\it диаграммы Фарея}.
+
+Заметим, что после каждого шага для соседних дробей $\frac ab$ и $\frac cd$ выполняется $ad-bc=-1$. Действительно, $a(b+d)-b(a+c)=ad-bc=(a+c)d-(b+d)c$ и изначально эта разность равна $-1$.
+
+\newpage
+
+\centerline{\large\scshape Цепные дроби}
+\begin{equation}
+	\dfrac pq=a_0+\chain{a_1+\chain{a_2+\dfrac{\vphantom{a_n1}\dots}{a_{n-1}+\chain{a_n}}}}
+\end{equation}
+
+Другие формы записи:
+\[\dfrac pq=[a_0;a_1,a_2,\dots,a_n]\]
+\[\dfrac pq=a_0+1/(a_1+1/\dots)\]
+
+Например:
+\begin{equation}
+	\dfrac7{11}=0+\chain{1+\dfrac47}=0+\chain{1+\chain{1+\dfrac34}}=0+\chain{1+\chain{1+\chain{1+\chain3}}}=[0;1,1,1,3]
+\end{equation}
+
+\centerline{\scshape Определение по Гурвицу}
+Идём по Диаграммам Фарея. Будем считать, что $0<p<q$. Вначале мы находимся справа от точки $1$ и движение направлено влево. На каждом шаге делаем один шаг диаграммы Фарея и идём в нужную сторону. Когда мы меняем направление (перед шагом по новому направлению), добавляем текущее число в (изначально пустой) массив в начало, затем обнуляем текущее число.\\
+
+\centerline{\scshape Способ подсчёта}
+Определяем $x=\dfrac pq$ рекурсивно по $[a_0;a_1\dots]$. Изначально $p_0=a_0,q_0=1$. Затем подставляем $a_0=0$ и пишем рекурренту: \[
+	p_{n+1}=p_na_{n+1}+a_{n-1},\ 
+	q_{n+1}=q_na_{n+1}+q_{n-1}
+\]
+Тогда $x=\dfrac{p_n}{q_n}$.
+\newpage
+
+\centerline{\large\scshape Матрицы}
+Будем сопоставлять дроби $\frac pq$ матрицу $\matrixot qp$.\\
+
+\centerline{\scshape Операции над матрицами}
+\begin{itemize}
+	\item Матрицы можно складывать: $\matrixtt abcd+\matrixtt pqrs=\matrixtt{a+p}{b+q}{c+r}{d+s}$.
+	\item Матрицы можно умножать на число: $\matrixtt abcd\cdot n=\matrixtt{an}{bn}{cn}{dn}$.
+	\item От матриц можно брать определитель: $\det\matrixtt abcd=ad-bc$. В частности, $\det\matrixtt a{ka}b{kb}=0$.
+	\item Матрицу $2\times1$ можно умножить на матрицу $1\times 2$, при этом получается число: $\matrixto ac\cdot\matrixot xy=ax+cy$. Умножение больших матриц делается по дистрибутивности, например: $\matrixtt acbd\cdot\matrixtt xzyt=\matrixtt{ax+cy}{az+ct}{bx+dy}{bz+dt}$.
+	\item Матрицу $2\times2$ можно обращать: $\matrixtt abcd^{-1}=\det^{-1}\matrixtt abcd\cdot\matrixtt d{-b}{-c}a$. Обращение работает так: $\matrixtt abcd\cdot\matrixtt abcd^{-1}=\matrixtt 1001$.
+	\item Матрицы $1\times2$ можно перемножать, при этом получается дробь: $\frac ab\otimes\frac cd=\matrixot ba\cdot\matrixot dc=\matrixot{b+d}{a+c}=\frac{a+c}{b+d}$.
+\end{itemize}
+
+\newpage
+\centerline{\large\scshape Квадратичные формы}
+\definition Квадратичная форма --- однородный многочлен от двух переменных степени 2, т.е. $ax^2+bxy+cy^2$. Если форма целочисленная, то $a,b,c,x,y\in\mathbb Z$ (можно считать, что это функция $Q:\mathbb Z^2\rightarrow\mathbb Z$).
+
+\definition Базис --- множество векторов в пространстве $\mathbb F^n$, через линейную комбинацию которых с коэффициентами из $\mathbb F$ представляется каждый вектор из пространства. При представлении $\vec v=k_1\vec{e_1}+\dots+k_n\vec{e_n}$ числа $k_1\dots k_n$ называются координатами $\vec v$ в базисе $\vec{e_1}\dots\vec{e_n}$. Нестрогим базисом назовём базис, перед каждым вектором которого стоит $\pm$.
+
+Если $\vec{e_1}=\matrixot ab,\vec{e_2}=\matrixot cd$, то $k\vec{e_1}+l\vec{e_2}=\matrixot{ka+lc}{kb+ld}=\matrixtt acbd\matrixot kl$. Поэтому если таким образом представляется любой вектор, то $\det\matrixtt abcd=\pm 1$.
+
+\definition Супербазис --- тройка векторов $(\vec{e_1},\vec{e_2},-\vec{e_1}-\vec{e_2})$, где $(\vec{e_1},\vec{e_2})$ образуют базис. Аналогично определяется нестрогий супербазис.\\
+
+% TODO: картинка базисного фрактала (topograph) --- супербазисы как вершины, базисы как рёбра, вектора как грани
+
+\lemman{об арифметической прогрессии}
+\begin{align*}
+	Q(v)&=Ax^2+Bxy+Cy^2\\
+	Q(v_1\pm v_2)&=A(x_1\pm x_2)^2+B(x_1\pm x_2)(y_1\pm y_2)+C(y_1\pm y_2)^2\\
+	Q(v_1+v_2)+Q(v_1-v_2)&=2(Q(v_1)+Q(v_2))
+\end{align*}
+
+В частности, если $Q(v)=x^2+y^2$, то это тождество параллелограмма.\\
+
+Будем писать на гранях фрактала $Q(k\vec{e_1}+l\vec{e_2})$, а на рёбрах --- разность числа на грани справа и суммы чисел на соседних гранях (или, что эквивалентно, разность суммы и числа на граммы слева). Затем проведём на грани стрелку в сторону увеличения.
+
+\lemman{о возрастании} Пусть $Q(x)>0,Q(y)>0,h>0$. Тогда справа от первого базиса все стрелки направлены вправо.\label{incr}
+
+\lemman{о колодцах} Пусть $Q(x)>0,Q(y)>0$. Тогда есть такая точка, что все стрелки на рёбрах направлены от неё.\\
+
+Будем красить ребро в красный, если с одной стороны от него положительное число, а с другой отрицательное. Тогда по~\ref{incr} получится ломаная (<<река>>). Она конечна (с одной стороны) тогда и только тогда, когда на топокарте есть грань, в которой записан $0$ (<<озеро>>), и конечна с обоих сторон тогда и только тогда, когда на топокарте два <<озера>>.\\
+
+\centerline{\scshape Решение квадратичных форм}
+Чтобы проверить, есть ли решение уравнения $ax^2+bxy+cy^2=n$ в целых числах, можно идти по реке, находить на ней все <<отростки>> нужного знака и идти по ним. На каждом отростке модуль увеличивается, значит, по каждому отростку мы будем идти конечное количество времени. Однако река обычно бесконечная. Докажем, что на самом деле она периодичная.
+
+Пусть форма имеет вид $ax^2+bxy+cy^2$. Тогда в грани с $x$ написано $a$, с $y$ --- $c$, с $x+y$ --- $a+b+c$, с $x+2y$ --- $a+2b+4c$ и т.п. Заметим, что форма представляется в виде перемножения матриц --- $Q(x,y)=\matrixto xy\matrixtt a{b/2}{b/2}c\matrixot xy$. Обозначим $D_Q=ac-\frac{b^2}4=\frac{-D}4$.\\
+
+\lemma Для каждого ребра топокарты $D_Q$ постоянен.
+
+\proof Доказываем по индукции по длине топокарты. Для первого ребра это верно по определению. Для следующего ребра это верно, так как: \[
+	a(a\pm b+c)-\left(a\pm\frac b2\right)^2=a^2+ab+ac-a^2-ab-\frac{b^2}4=ac-\frac{b^2}4
+.\QEDA\]
+
+\theorem Вершины реки топокарты периодичны.
+
+\proof $ac-\frac{b^2}4=-d_1$ --- константа. Тогда $d_1=-ac+\frac{b^2}4$, следовательно, $\frac{b^2}4<d_1$, т.к. $ac<0$ по определении реки. Следовательно, существует всего конечное количество чисел $b$, т.е. конечное количество чисел $ac$, а т.к. $a,c\in\mathbb Z$, то количество троек $(a,b,c)$ на реке конечно. С другой стороне, по тройке топокарта восстанавливается однозначно, значит, это период.\QEDA\\
+
+Следовательно, существует {\bf конечный} алгоритм проверки, принимает ли квадратичная форма заданное целое значение.
+
+\vskip20pt\hrule\vskip8pt
+\centerline{\large\scshape Связь с диаграммами Фарея}
+
+Нарисуем граф Диаграммы Фарея. Заметим, что двойственный к нему --- топокарта (как бесконечный граф со степенью 3). Каждая грань топокарты содержит единственную точку на границе Диаграммы. Тогда вектор, написанный в грани топокарты, равен дроби, записанной в этой точке диаграммы.
+
+\begin{tikzpicture}
+	\path[draw] (-2,0) -- (2,0);
+	\path[draw] (-3,3) -- (-2,0) -- (-3,-3);
+	\path[draw] (3,3) -- (2,0) -- (3,-3);
+	\path[draw] (-5,4) -- (-3,3) -- (-2,5);
+	\path[draw] (5,4) -- (3,3) -- (2,5);
+	\path[draw] (-5,-4) -- (-3,-3) -- (-2,-5);
+	\path[draw] (5,-4) -- (3,-3) -- (2,-5);
+
+	\node at(0,2) {$Q(0,1)$};
+	\node at(0,-2) {$Q(1,0)$};
+	\node at(4,0) {$Q(1,1)$};
+	\node at(-4,0) {$Q(1,-1)$};
+	\node at(3.5,-5) {$Q(2,1)$};
+	\node at(-3.5,-5) {$Q(2,-1)$};
+	\node at(3.5,5) {$Q(1,2)$};
+	\node at(-3.5,5) {$Q(1,-2)$};
+\end{tikzpicture}
+
+\newpage
+\centerline{\large\scshape Цепные дроби-II}
+Рассмотрим разложение $\sqrt2$ в цепную дробь:
+\begin{equation}
+	\sqrt2=1+\chain{\frac1{\sqrt2-1}}=1+\chain{\sqrt2+1}=1+\chain{2+\sqrt2-1}=[1;2,2,2\dots]=[1;\overline2]
+\end{equation}
+%\begin{equation}
+%	\sqrt3=1+\chain{\frac1{\sqrt3-1}}=1+\chain{\frac{\sqrt3+1}2}=[1;1,2,1,2\dots]=[1;\overline{1,2}]
+%\end{equation}
+
+\theoremn{Лагранж} Цепная дробь $\alpha$ периодична тогда и только тогда, когда $\exists a,b,c\in\mathbb Z:a\alpha^2+b\alpha+c=0$, т.е. $\exists a,b\in\mathbb Q,n\in\mathbb N:\alpha=a+b\sqrt n,n\neq m^2$.
+
+{\bf Идея доказательства.}
+\begin{equation}
+	\alpha(x)=a_0+\chain{a_1+\chain{a_2+\dfrac{\vphantom{a_n1}\dots}{a_{n-1}+\chain{a_n+x}}}}=\dfrac{m+nx}{l+kx}
+\end{equation} Тогда мы решаем уравнение вида $\dfrac{m+nx}{l+kx}=\dfrac{m'+n'x}{l'+k'x}$, а оно квадратное.\QEDA\\
+
+\theorem $\sqrt d=[a_0;\overline{a_1,a_2,\dots,a_n}]$, причём $a_n=2a_0$, а остальные $a_k$ образуют палиндром.\\
+
+Нарисуем топокарту для $Q=x^2-2y^2$, затем выпрямим реку. Тогда, если соединить соседние смежные с рекой грани отрезками, получится разложение $\sqrt2$ в цепную дробь по Гурвицу. Кроме того, вектора, находящиеся в гранях, в которых написано $\pm 1$, дают приближения $\sqrt2$ и решения уравнения Пелля. Наконец, если делать то же самое для формы $x^2-dy^2$, получится то же самое для $\sqrt d$.
+
+\begin{tikzpicture}
+	\path[draw,red] (-2,0) -- (2,0);
+	\path[draw] (-3,3) -- (-2,0);
+	\path[draw,red] (-2,0) -- (-3,-3);
+	\path[draw] (3,3) -- (2,0);
+	\path[draw,red] (2,0) -- (3,-3);
+	\path[draw] (-5,4) -- (-3,3) -- (-2,5);
+	\path[draw] (5,4) -- (3,3) -- (2,5);
+	\path[draw,red] (-5,-4) -- (-3,-3);
+	\path[draw] (-3,-3) -- (-2,-5);
+	\path[draw,red] (5,-4) -- (3,-3);
+	\path[draw] (3,-3) -- (2,-5);
+
+	\node at(0,2) (y) {$-2$};
+	\node at(0,-2) (x) {$1$};
+	\node at(4,0) (xy) {$-1$};
+	\node at(-4,0) (yx) {$-1$};
+	\node at(3.5,-5) (xxy) {$2$};
+	\node at(-3.5,-5) (yxx) {$2$};
+	\node at(3.5,5) (xyy) {$-7$};
+	\node at(-3.5,5) (yyx) {$-7$};
+
+	\path[draw,blue] (yxx) -- (yx) -- (x) -- (y);
+	\path[draw,blue] (x) -- (xy) -- (xxy);
+\end{tikzpicture}
+
+\centerline{\scshape Решение уравнений Пелля}
+Посмотрим на матрицу, умножение на которую переводит тривиальное решение уравнений $x^2-dy^2=\pm1$ в первое нетривиальное. Умножим тривиальное решение на эту матрицу в какой-то степени и получим решение. Например, для $\sqrt2$ это $\matrixtt 3423$, и умножение на эту матрицу даёт следующее решение, например, $\matrixtt 3423\cdot\matrixot 32=\matrixot{17}{12}$.
+
+\end{document}

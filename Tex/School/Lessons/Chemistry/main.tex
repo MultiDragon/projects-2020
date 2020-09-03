@@ -1,0 +1,436 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{tpl}
+\usepackage{chemfig}
+\usepackage{carbohydrates}
+\usepackage{multirow}
+\newcommand{\N}{\lewis{3.1.,N}}
+\newcommand{\Nh}{\N H_2}
+\newcommand{\Nht}{\N H_3}
+\dbegin[6 сентября 2019 г.]{Уроки в школе 179}{Химия, 11 класс}{Анфиногенов Дмитрий Николаевич}
+
+\hdr{Углеводы}\vskip10pt
+
+Общая формула углеводов --- $C_n(H_2O)_m$. Работает не для всех углеводов (например, формула дезоксирибозы --- $C_5H_{10}O_4$).\\
+
+\definition{Глюкоза} углевод формулы $C_6H_{12}O_6$ со следующей структурой:
+
+\chemfig{C(-[:110]O)(-[:250]H)-C(-[:90]OH)(-[:270]H)-C(-[:90]H)(-[:270]OH)-C(-[:90]OH)(-[:270]H)-C(-[:90]OH)(-[:270]H)-C(-[:90]OH)(-[:270]H)-H}
+\glucose[model=haworth,ring]
+
+Является альдегидоспиртом. Поэтому, в частности, ищется реакцией серебряного зеркала.\\
+
+\shdr{Окисление}\vskip10pt
+\schemestart
+	\chemfig{C_6H_{12}O_6+6O_2}\arrow
+	\chemfig{6CO_2+6H_{2}O}\+Q
+\schemestop\hskip6pt --- полное окисление
+
+\schemestart
+	\chemfig{C_6H_{12}O_6}\arrow
+	\chemfig{2CH_3-CH_2O-COOH}
+\schemestop\hskip6pt --- до молочной кислоты
+
+\schemestart
+	\chemfig{C_6H_{12}O_6}\arrow
+	\chemfig{2CH_3-CH_2OH}\+\chemfig{2CO_2\uparrow}\\
+\schemestop\hskip6pt --- до этилового спирта\\
+
+\shdr{Другие реакции}\vskip10pt
+\schemestart
+	\chemfig{C_6H_12O_6}\+
+	\chemfig{Cu{(}OH{)}_2}\arrow
+	\chemfig{C_6H_10O_6Cu+2H_2O}
+\schemestop\hskip6pt --- получение глюконата меди
+
+\schemestart
+\chemfig{C_6H_{12}O_6}\+
+	\chemfig{5CH_3COCl}\arrow
+	\chemfig{H-{[}CHOCOCH_3{]}_5-COOH}\+
+	\chemfig{5HCl}
+\schemestop\hskip6pt ---\\ получение пентаацетилглюкозы
+
+\schemestart
+	\chemfig{C_6H_{12}O_6}\+
+	\chemfig{2Cu{(}OH{)}_2}\arrow
+	\chemfig{C_6H_{12}O_7}\+
+	\chemfig{2CuOH}\+
+	\chemfig{H_2O}
+\schemestop\hskip6pt --- глюконовая кислота\\
+
+\schemestart
+	\chemfig{C_6H_{12}O_6}\+
+	\chemfig{Ag_2O}\arrow{->[\chemfig{NH_4OH}][$t$]}
+	\chemfig{C_6H_{12}O_7}\+
+	\chemfig{2Ag}
+\schemestop\hskip6pt --- серебряное зеркало
+
+\schemestart
+	\chemfig{C_6H_{12}O_6}\+
+	\chemfig{H_2}\arrow
+	\chemfig{CH_2OH-{[}CHOH{]}_4-CH_2OH}
+\schemestop\hskip6pt --- получение сорбита\\
+
+\definition{Сахароза} углевод формулы $C_{12}H_{22}O_{11}$.
+
+Является многоатомным спиртом, т.к. реакция с $Cu(OH)_2$ окрашивает в васильковый цвет. Не разлагается при нагревании, т.е. нет альдегидной группы. Гидролизуется на глюкозу и фруктозу.
+
+\shdr{Гидролиз}
+\schemestart
+	\chemfig{C_{12}H_{22}O_{11}}\+
+	\chemfig{H_2O}\arrow{->[\chemfig{H_2SO_4}][$t$]}
+	\chemfig{C_6H_{12}O_6}\+
+	\chemfig{C_6H_{12}O_6}
+\schemestop
+
+\begin{figure}
+	\begin{minipage}{0.32\textwidth}
+		\chemfig{H_3C-[:-30]CH(-[:-90]OH)-[:30]C(=[:90]O)-[:-30]OH}
+		\caption{молочная кислота}
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		\chemfig{HO-[:-30]-[:30](<[:90]OH)-[:-30](<:[:-90]OH)-[:30](<:[:90]OH)-[:-30](<:[:-90]OH)-[:30](=[:90]O)-[:-30]OH}
+		\caption{глюконовая кислота}
+	\end{minipage}
+\end{figure}
+\begin{figure}
+	\carbohydrate[pentose,model=haworth,ring,anomer=beta]{lrr}
+	\caption{фруктоза. К правому атому снизу прицеплена группа $CH_2OH$}
+\end{figure}
+\newpage
+
+\shdr{Схема получения сахарозы}
+\begin{enumerate}
+	\item Измельчение сахарной свеклы в стружку и извлечение сахарозы.
+	\item Обработка раствора известковым молоком.
+	\item Обработка раствора оксидом углерода.
+	\item Упаривание раствора в вакуумных аппаратах и его центрифугирование.
+	\item Дополнительная очистка.
+\end{enumerate}
+
+\shdr{Отличительные особенности полисахаридов}
+\vskip10pt
+
+\begin{tabular}{|p{4cm}|p{6.5cm}|p{5.5cm}|}
+	\hline
+	\multirow{2}{*}{\textbf{Характеристика}} & \multicolumn{2}{c|}{Полисахарид}\\
+	\cline{2-3} & Крахмал & Целлюлоза \\\hline
+	\textbf{Молекулярная формула} & $(C_6H_{10}O_5)_n\ (n\approx {10}^3)$ --- \newline амилоза (линейна) и аминопектин (разветвлён), остатки $\alpha$-глюкозы & $(C_6H_{12}O_6)_n\ (n\approx 10^4)$ --- \newline остатки $\beta$-глюкозы \\\hline
+	\textbf{Особенности \newline строения} & Высокоразветвлённая структура & Линеен \\\hline
+	\textbf{Нахождение и функции} & Пищевое вещество & Стенки растительных клеток \\\hline
+	\textbf{Физ. свойства} & Растворяется в воде & Высокопрочен \\\hline
+	\textbf{Хим. свойства} & \multicolumn{2}{c|}{Гидролизуются, горят и образуют эфиры} \\\hline
+\end{tabular}
+
+\vskip20pt\hdr{Амины}\vskip10pt
+\definition{Амины} азотосодержащие органические вещества, производные аммиака, в молекуле которого атомы водорода замещены на углеводородные радикалы.\\
+
+\schemestart
+	\chemfig{NH_3}\+
+	\chemfig{H_2O}\arrow
+	\chemfig{NH_4OH}
+\schemestop
+
+\schemestart
+	\chemfig{NH_3}\+
+	\chemfig{HCl}\arrow
+	\chemfig{NH_4Cl}
+\schemestop\hskip6pt
+
+\shdr{Изомеры аминов}
+\begin{itemize}
+	\item Первичный: \chemfig{\N(-[:0]C_4H_9)(-[:-90]H)(-[:180]H)} (4 изомера)
+	\item Вторичные:
+	\begin{itemize}
+		\item \chemfig{\N(-[:0]C_2H_5)(-[:-90]H)(-[:180]C_2H_5)}
+		\item \chemfig{\N(-[:0]C_3H_7)(-[:-90]H)(-[:180]CH_3)}, \chemfig{\N(-[:0](CH(-[:0]CH_3)(-[:-90]CH_3)))(-[:-90]H)(-[:180]CH_3)}
+	\end{itemize}
+	\item Третичный: \chemfig{\N(-[:0]CH_3)(-[:-90]C_2H_5)(-[:180]CH_3)}
+\end{itemize}
+
+\newpage
+\definition{Анилин} амин со следующей структурой:
+
+\vskip8pt
+\chemfig{**6(---(-\Nh)---)}
+
+Имеет слабо выраженные основные свойства (например, реагирует с кислотой, но не с водой). Высокую активность проявляет бензольное кольцо.
+
+\schemestart
+	\chemfig{**6(---(-N H_2)---)}\+
+	\chemfig{Br_2}\arrow(.base east--.base west)
+	\chemfig{**6((-Br)--(-Br)-(-\N H_2)-(-Br)--)}\+
+	\chemfig{3HBr}
+\schemestop\hskip6pt
+
+\vskip20pt\shdr{Получение анилина}\vskip10pt
+\schemestart
+	\chemfig{2CH_4}\arrow{->[$t$]}
+	\chemfig{C_2H_2}\+
+	\chemfig{3H_2O}
+\schemestop\hskip6pt
+
+\schemestart
+	\chemfig{3C_2H_2}\arrow
+	\chemfig{C_6H_6}
+\schemestop\vskip5pt
+
+\schemestart
+	\chemfig{C_6H_6}\+
+	\chemfig{HNO_3}\arrow{->[\chemfig{H_2SO_4}]}
+	\chemfig{C_6H_5NO_2}\+
+	\chemfig{H_2O}
+\schemestop\hskip6pt
+
+\schemestart
+	\chemfig{C_6H_5NO_2}\+
+	\chemfig{3H_2}\arrow
+	\chemfig{C_6H_5NH_2}\+
+	\chemfig{2H_2O}
+\schemestop\hskip6pt
+
+\vskip10pt\shdr{Различные реакции}\vskip10pt
+\schemestart
+	\chemfig{C_2H_5NH_2}\+
+	\chemfig{HCl}\arrow
+	\chemfig{C_2H_5-NH_3Cl}
+\schemestop\hskip6pt
+
+\schemestart
+	\chemfig{C_2H_5NH_2}\+
+	\chemfig{H_2O}\arrow
+	\chemfig{C_2H_5NH_3OH}
+\schemestop\hskip6pt
+
+\vskip20pt\hdr{Аминокислоты}\vskip10pt
+\definition{Аминокислоты} органические вещества, в которых углеводородные радикалы связаны с амино- и карбокси-группой. (\chemfig{\N} и \chemfig{COOH}). Являются амфотерными органическими веществами.\\
+
+\definition{Глицин} аминокислота с формулой \chemfig{\Nh-CH2-COOH}.
+
+\vskip10pt\shdr{Свойства}
+\begin{itemize}
+	\item Кислотные: 
+	\schemestart
+		\chemfig{\Nh-CH_2-COOH}\+
+		\chemfig{NaOH}
+		\arrow{->}
+		\chemfig{H_2O}\+
+		\chemfig{\Nh-CH_2-COO-Na}
+	\schemestop
+	\item Основные: 
+	\schemestart
+		\chemfig{\Nh-CH_2-COOH}\+
+		\chemfig{HCl}
+		\arrow{->}
+		\chemfig{\Nht-CH_2-COOH-Cl}
+	\schemestop
+\end{itemize}
+
+\vskip10pt\shdr{Изомерия}
+\begin{itemize}
+	\item \textbf{$\alpha$-аланин} --- \chemfig{\Nh-CH(-[:-90]CH_3)-COOH}.
+	\item \textbf{$\beta$-аланин} --- \chemfig{\Nh-CH_2-CH_2-COOH}.
+	\item \textbf{$\varepsilon$-аминокапроновая кислота} --- \chemfig{\Nh-{(}CH2{)}_5-COOH}.
+\end{itemize}
+
+\newpage
+\hdr{Белки}
+\definition{Белки} высокомолекулярные соединения (полипептиды), построенные из остатков $\alpha$-аминокислот.
+
+\shdr{Структура белковой молекулы}
+\begin{enumerate}
+	\item Цепь $\alpha$-аминокислотных остатков, связанных пептидными связями. Образуется в результате поликонденсации.\\
+	\schemestart
+		\chemfig{\Nh-CH(-[:90]CH_3)-COOH}\+
+		\chemfig{\Nh-CH_2-COOH}\+
+		\chemfig{\Nh-CH(-[:90]CH_2C_6H_5)-COOH}
+		\arrow[-90]
+		\chemfig{\Nh-CH(-[:90]CH_3)-C(=[:90]O)-N(-[:90]H)-CH_2-C(=[:90]O)-N(-[:90]H)-CH(-[:90]CH_2C_6H_5)-COOH}\+
+		\chemfig{2H_2O}
+	\schemestop
+	\item Спираль, связанная водородными связями.
+	\item Глобула.
+	\item Много глобул.
+\end{enumerate}
+
+\newpage
+\hdr{Классификация реакций}
+\shdr{Классификация по числу и составу веществ}
+\begin{itemize}
+	\item Реакции соединения ($A+B\to AB$).
+	\item Реакции разложения ($AB\to A+B$).
+	\item Реакции замещения ($A+BC\to AB+C$, $A$ и $C$ --- простые вещества).
+	\item Реакции обмена ($AB+CD\to AC+BD$).
+\end{itemize}\vskip10pt
+
+\shdr{Классификация по изменению степени окисления}
+\begin{itemize}
+	\item Окислительно-восстановительные реакции (СО меняются). Можно рассчитывать методом электронного баланса, например:
+	\begin{itemize}
+		\item $2Mg^0+O_2^0\to 2Mg^{+2}O^{-2}$
+		\item $[Mg^0-2e^-\to Mg^{+2}] \times 2$ --- окисление, $Mg$ --- восстановитель.
+		\item $[O_2^0+4e^-\to 2O^{-2}] \times 1$ --- восстановление, $O_2$ --- окислитель. 
+	\end{itemize}
+	\item Без изменения степени окисления.
+\end{itemize}\vskip10pt
+
+\shdr{Классификация по тепловому эффекту}
+\begin{itemize}
+	\item Экзотермические (тепло выделяется).
+	\item Эндотермические (тепло поглощается).
+\end{itemize}\vskip10pt
+
+\shdr{Классификация по направлению течения процесса}
+\begin{itemize}
+	\item Необратимые (одно из веществ <<улетает>> из раствора, напр., газ или осадок).
+	\item Обратимые.
+\end{itemize}\vskip10pt
+
+\shdr{Классификация по использованию катализатора}
+\begin{itemize}
+	\item Каталитические.
+	\item Некаталитические.
+\end{itemize}\vskip10pt
+
+\definition{Катализатор} вещество, ускоряющее химический процесс и не расходующееся в реакции.
+
+\definition{Ингибитор} вещество, замедляющее химический процесс и не расходующееся в реакции.
+
+\definition{Химическая связь} это совокупность сил, удерживающих атомы друг около друга. В её образовании участвуют валентные электроны.
+
+\begin{enumerate}
+	\item \textbf{Водородная} --- образуется между атомами водорода и электроотрицательного атома (N, O или F), например, между молекулами воды. 
+	\item \textbf{Ковалентная} --- образуется между атомами неметаллов. Бывает полярной и неполярной, образует атомные и молекулярные решётки. 
+	\item \textbf{Ионная} --- образуется между атомом металла и атомом неметалла.
+	\item \textbf{Металлическая} --- образуется между атомами металлов. Образует металлич. решётки.
+\end{enumerate}
+\newpage
+
+\hdr{Скорость реакции}\vskip10pt
+
+\definition{$c$ --- концентрация} количество \textbf{молей} вещества на \textbf{литр} системы. Если вещество твёрдое, то считается единицей.
+
+\definition{$v$ --- скорость} изменение \textbf{концентрации} за \textbf{секунду}.  
+
+\theoremn{Закон действующих масс} Если происходит реакция $xA+yB\to z_1X_1+z_2X_2+\ldots$, то $v=k\cdot c_a^x\cdot c_b^y$. Тут под $c_a^x$ имеется в виду не биномиальный коэффициент, а $c_a$ (концентрация $a$) в степени $y$. $k$ --- константа скорости ---зависит от реакции, температуры, катализаторов и т.п. и имеет свою единицу измерения для каждой реакции.
+
+\theoremn{Правило Вант-Гоффа} $v_{t_2}=v_{t_1}\cdot\gamma^{\frac{t_2-t_1}{10}}$, где $\gamma$ --- температурный коэффициент реакции. Он обычно лежит в пределах от 2 до 4.
+
+\vskip15pt\hdr{Химическое равновесие}\vskip10pt
+Рассмотрим какую-то обратимую реакцию, например:
+
+\schemestart
+	\chemfig{H_2}\+
+	\chemfig{I_2}\arrow{<->}
+	\chemfig{2HI}\+
+	\chemfig{Q}
+\schemestop\hskip6pt
+
+Как у прямой реакции, так и у обратной есть какие-то скорости:
+\begin{align*}
+v_1=k_1\cdot C_{H_2}\cdot C_{I_2}\\
+v_2=k_2\cdot C^2_{HI}
+\end{align*}
+
+\definition{Химическое равновесие} состояние, при котором $v_1=v_2$.
+
+\definition{Константа равновесия $k_p$} величина, равная $\frac{k_1}{k_2}$. В нашем случае это также $\frac{C^2_{HI}}{C_{H_2}C_{I_2}}$. Если $k_p>1$, то считается, что равновесие смещено вправо, а если $k_p<1$, то смещено влево.\\ 
+
+\theoremn{принцип Ле-Шателье} Если на систему, находящуюся в равновесии, оказать внешнее воздействие, то оно способствует протеканию реакции в сторону, ослабляющую это воздействие.\\
+
+\textbf{Пример.} Рассмотрим реакцию 
+\schemestart
+	\chemfig{2NO}\+
+	\chemfig{Cl_2}\arrow{<->}
+	\chemfig{2NOCl}\ ---
+	\chemfig{Q}
+\schemestop. Если понизить температуру, то будет протекать экзотермическая реакция, а не эндотермическая. Если повысить концентрацию $NOCl$, то ускорится реакция влево. Использование катализатора ничего не даст. Если же повысить давление, то ускорится реакция со сжатием, т.е. реакция вправо.\\
+
+\hdr{Реакции в растворах электролитов}
+
+\definition{Электролит} вещество, обладающее ионной электропроводимостью.
+
+\definition{Электролитическая диссоциация} процесс распада электролита на ионы.
+
+\definition{Слабый электролит} вещество, диссоциирующее на ионы не более чем на $30\%$.
+
+\begin{align*}
+	K_p=\frac{C_{H^+}\times C_{OH^-}}{C_{H_2O}}=\frac{[H^+][OH^-]}{[H_2O]}\\
+	10^{-14}=K_p[H_2O]=[H^+][OH^-]=10^{-14}\\
+	NaOH[0.1 \frac{m}{l}]\to Na^+[0.1 \frac ml]+OH^-[0.1 \frac{m}{l}]\\
+	[OH^-]=0.1 \iff [H^+]=10^{-13}\iff 13 pH
+\end{align*}
+
+При произведении концентрации, большем константы, образуется осадок. Например, для $Fe(OH)_3$ эта константа равна $10^{-33}$, если $[Fe^{3+}]=10^{-10},[OH^-]=10^{-7}$, то произведение $10^{-31}$ --- осадок получится.
+
+\newpage
+\definition{Гидролиз} реакция обменного разложения веществ водой.
+
+Список слабых электролитов:
+\begin{itemize}
+	\item Гидроксид аммония.
+	\item Все нерастворимые гидроксиды. 
+	\item Плавиковая кислота \chemfig{HF}, сероводородная кислота \chemfig{H_2S}, сернистая кислота \chemfig{H_2SO_3}, кремниевая кислота \chemfig{H_2SiO_3}.
+	\item Все органические кислоты, кроме уксусной.
+	\item Дигидрофосфат-ион (слабый) и гидрофосфат-ион (очень слабый).
+\end{itemize}
+
+\shdr{Гидролиз соли, образованной сильным основанием и слабой кислотой}
+
+\textbf{Пример}: \chemfig{K_2CO_3\to 2K^\oplus+CO_3^{2\ominus}}.
+
+\textbf{Реакция}: \chemfig{K_2CO_3+H_2O\leftrightarrow KOH+KHCO_3}
+
+Есть два способа ускорить гидролиз --- повышение температуры и понижение концентрации.
+
+\textbf{Вывод}: соли сильного основания и слабой кислоты имеют щелочную реакцию.\\
+
+\shdr{Гидролиз соли, образованной сильной кислотой и слабым основанием}
+
+\textbf{Пример}: \chemfig{AlCl_3\to Al^{3\oplus}+3Cl^\ominus}
+
+\textbf{Реакция}: \chemfig{AlCl_3+H_2O\leftrightarrow AlCl{(}OH{)}_2+2HCl}
+
+\textit{При дополнительном нагревании и уменьшении концентрации может пойти и 3-й уровень гидролиза.}
+
+\textbf{Вывод}: соли сильной кислоты и слабого основания имеют кислотную реакцию.\\
+
+\shdr{Гидролиз слабой соли}
+
+Гидролиз слабой соли идёт до конца. Пример:
+
+\schemestart
+	\chemfig{{(}NH4{)}_2S}\+
+	\chemfig{2H_2O}\arrow
+	\chemfig{H_2S}\+
+	\chemfig{2NH_4OH}
+\schemestop\hskip6pt\\
+
+\shdr{Гидролиз сильной соли}
+Ничего не происходит.
+
+\newpage\vskip10pt
+\hdr{Кислоты и основания}
+
+\schemestart
+	\chemfig{NH_3}\+
+	\chemfig{HOH}\arrow
+	\chemfig{OH^{-}}\+
+	\chemfig{NH^+_4}
+\schemestop\hskip6pt
+
+\schemestart
+	\chemfig{HCl}\+
+	\chemfig{HOH}\arrow
+	\chemfig{H_3O^+}\+
+	\chemfig{Cl^{-}}
+\schemestop\hskip6pt
+
+\definition{Кислота} соединение, которое при диссоциации образует протон.
+
+\definition{Основание} соединение, которое при диссоциации образует ион \chemfig{OH^{-}}.\\
+
+Заметим, что вода в первом процессе является кислотой, а во второй --- основанием. Значит, вещества могут иметь разные свойства в разных реакциях.
+
+\definition{Амфотерное соединение} соединение, обладающие как кислотными, так и основными свойствами.
+
+\end{document}

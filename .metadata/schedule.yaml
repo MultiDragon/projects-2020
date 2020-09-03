@@ -1,0 +1,120 @@
+Monday:
+    -
+        name: English
+        startTime: 9:30
+        endTime: 10:50
+        room: 210
+        type: Lesson
+    -
+        name: Analysis
+        startTime: 11:10
+        endTime: 12:30
+        room: 213
+        type: Seminar
+    -
+        name: Geometry
+        startTime: 14:40
+        endTime: 16:00
+        room: 427
+        type: Lecture
+    -
+        name: Triviality
+        startTime: 16:20
+        endTime: 17:40
+        room: 110
+        type: Seminar
+        week: 2
+Tuesday:
+    -
+        name: Discrete Math
+        startTime: 9:30
+        endTime: 10:50
+        room: 208
+        type: Seminar
+    -
+        name: Algebra
+        startTime: 11:10
+        endTime: 12:30
+        room: 427
+        type: Lecture
+        week: 1
+    -
+        name: Geometry
+        startTime: 11:10
+        endTime: 12:30
+        room: 427
+        type: Lecture
+        week: 2
+    -
+        name: Algebra
+        startTime: 14:40
+        endTime: 16:00
+        room: 213
+        type: Seminar
+Wednesday:
+    -
+        name: Analysis
+        startTime: 11:10
+        endTime: 12:30
+        room: 427
+        type: Seminar
+        week: 1
+    -
+        name: Discrete Math
+        startTime: 11:10
+        endTime: 12:30
+        room: 427
+        type: Lecture
+        week: 2
+    -
+        name: Geometry
+        startTime: 14:40
+        endTime: 16:00
+        room: 210
+        type: Seminar
+Thursday:
+    -
+        name: Analysis
+        startTime: 9:30
+        endTime: 10:50
+        room: 208
+        type: Seminar
+    -
+        name: Discrete Math
+        startTime: 11:10
+        endTime: 12:30
+        room: 427
+        type: Lecture
+    -
+        name: Geometry
+        startTime: 14:40
+        endTime: 16:00
+        room: 210
+        type: Seminar
+        week: 1
+Friday:
+    -
+        name: Algebra
+        startTime: 9:30
+        endTime: 10:50
+        room: 427
+        type: Lecture
+    -
+        name: Analysis
+        startTime: 11:10
+        endTime: 12:30
+        room: 427
+        type: Lecture
+    -
+        name: English
+        startTime: 14:40
+        endTime: 16:00
+        room: 210
+        type: Lesson
+    -
+        name: Algebra
+        startTime: 16:20
+        endTime: 17:40
+        room: 427
+        type: Seminar
+        week: 2

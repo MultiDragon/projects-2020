@@ -1,0 +1,147 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[russian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=2.5truecm, top=1.8truecm, bottom=1.3truecm]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{color}
+
+\relpenalty=10000 \binoppenalty=10000
+\newcounter{theorems}
+\newcommand*{\lemma}{\refstepcounter{theorems}{\bf Лемма \arabic{theorems}. }}
+\newcommand*{\theorem}{\refstepcounter{theorems}{\bf Теорема \arabic{theorems}. }}
+\newcommand*{\lemman}[1]{\refstepcounter{theorems}{\bf Лемма \arabic{theorems} (#1). }}
+\newcommand*{\theoremn}[1]{\refstepcounter{theorems}{\bf Теорема \arabic{theorems} (#1). }}
+\newcommand*{\prooft}[1]{{\bf Доказательство теоремы~\ref{#1}. }}
+
+\newcounter{defs}
+\newcommand*{\definition}{\refstepcounter{defs}{\bf Определение \arabic{defs}. }}
+
+\newcommand*{\QEDA}{\hfill\ensuremath{\blacksquare}}
+
+\newcommand{\proof}{{\bf Доказательство. }}
+\begin{document}
+
+\begin{center}
+{\it Комбинаторика и алгоритмы}
+\vskip9pt\hrule\vskip14pt
+\vfill
+{\Large\bf Перечисление графов}
+\vskip20pt
+{\large\bf Воронов Всеволод Александрович}
+
+\vfill
+Берендеевы поляны, 15--23 августа 2019 г.
+\end{center}
+
+\newpage
+
+\definition Помеченным графом называется граф на заданных пронумерованных вершинах.
+
+\theorem Число помеченных графов на $n$ вершинах ровно $2^\frac{n(n-1)}2$.
+
+\proof Каждая пара вершин либо соединена, либо нет.\QEDA\\
+
+\definition Производящей функцией последовательности $a_i$ называется выражение $A(x)=\sum\limits_i a_i\cdot x^i$.
+
+{\bf Примеры.}
+\begin{itemize}
+	\item Если $a_i=1$, то $A(x)=\dfrac1{1-x}$.
+	\item Если $a_i=i+1$, то $A(x)=\dfrac1{(1-x)^2}$.
+	\item Если $a_i=2^i$, то $A(x)=\dfrac1{1-2x}$.
+	\item Если $a_i=(-1)^{i-1}i$, то $A(x)=\dfrac1{(1+x)^2}$.
+	\item Если $a_i=i(i+1)$, то $A(x)=\dfrac2{(1-x)^3}$.
+	\item Если $a_i=(i+1)^2$, то $A(x)=\dfrac2{(1-x)^3}-\dfrac1{(1-x)^2}$.
+	\item Если $a_i=(i+1)^3$, то $A(x)=\dfrac6{(1-x)^4}-\dfrac6{(1-x)^3}+\dfrac1{(1-x)^2}$.
+\item Пусть $a_i$ --- числа Фибоначчи. Тогда $a_{i+2}=a_{i+1}+a_i$, т.е. $\dfrac{A(x)-a_0-a_1x}{x^2}=\dfrac{A(x)-a_0}x+A(x)$ и после решения этого уравнения получаем $A(x)=\dfrac1{1-x-x^2}$, т.е. \\$a_i=(\frac12-\frac1{2\sqrt5})(\frac{1-\sqrt5}2)^i + (\frac12+\frac1{2\sqrt5})(\frac{1+\sqrt5}2)^i$.
+\end{itemize}
+
+{\bf Свойства рядов.}
+\begin{itemize}
+	\item Ряды можно складывать: $A(x)+B(x)=\sum\limits_i(a_i+b_i)x^i$.
+	\item Ряды можно умножать: $A(x)B(x)=\sum\limits_i x^i\cdot\sum\limits_j(a_j+b_{i-j})$.
+	\item Ряды можно обращать: $\dfrac1{c-A(x)}=\sum\limits_i (\frac Ac)^i(x)$, если $a_0=0$. $\left(\dfrac{A(x)}{B(x)}=A(x)\cdot\dfrac1{B(x)}\right)$.
+	\item Из ряда с свободным членом, большим нуля, или равным нулю при условии, что минимальное $n$ такое, что $a_n\neq0$, чётно, можно извлекать корень, причём свободный член результата будет положительным корнем из свободного члена. \proof Будем находить коэффициенты корня $K(x)$ по очереди. Вначале разделим ряд на $x^n$, чтобы компенсировать это, в конце умножим $K(x)$ на $x^\frac n2$. $k_0=\sqrt{a_0}$, и для всех остальных коэффициентов получаем такое уравнение: $\sum\limits_ik_ik_{m-i}=a_m$, линейное уравнение относительно $k_m$ с старшим членом, не равным 0. Кроме того, очевидно, что при отрицательном свободном члене или если $n\not\vdots2,\ K(x)$ найти не удастся. \QEDA
+\end{itemize}
+
+\newpage
+\centerline{\large\scshape Бинарные корневые деревья на $n$ вершинах}
+\definition Бинарными корневыми деревьями называются деревья с выделенной вершиной (корнем), подвешенные на корне, такие, что от каждой вершины вниз идут не более двух рёбер и рёбра, идущие вниз из вершины, пронумерованы подмножеством $\{R,L\}$.
+
+Пусть $b_i$ --- количество таких деревьев. Заметим, что $b_{n+1}=\sum\limits_i b_ib_{n-i}$, поэтому $\dfrac{B(x)-b_0}x=B^2(x)$. Если решить это уравнение (например, через дискриминант), получится $B(x)=\dfrac{1\pm\sqrt{1-4x}}{2x}$. Чтобы узнать знак перед корнем, посмотрим на свободный член числителя. Если в числителе стоит знак $+$, этот член равен двум и делить на $2x$ нельзя. Значит, $B(x)=\dfrac{1-\sqrt{1-4x}}{2x}$ (это числа Каталана).
+
+\vskip20pt\hrule\vskip8pt
+\centerline{\large\scshape Бином Ньютона}
+\[
+	(1+x)^\alpha=\sum\limits_k\binom\alpha k\cdot x^k,
+	\text{ где }\binom\alpha k=\dfrac{\prod\limits_{i=0}^{k-1}(\alpha-i)}{k!}
+\]
+
+\vskip20pt\hrule\vskip8pt
+\centerline{\large\scshape Производящая комбинаторика}
+\begin{itemize}
+	\item Если $a_n$ --- число способов представить $n$ в виде суммы $m$ слагаемых (порядок не важен), то $a_n=\dfrac1{(1-x)^n}$.
+	\item Если $a_n$ --- число способов представить $n$ в виде суммы $m$ слагаемых (порядок важен), то $a_n=\prod\limits_i\dfrac1{1-x^i}$.
+\end{itemize}
+
+\vskip20pt\hrule\vskip8pt
+\centerline{\large\scshape Группы перестановок}
+\definition Группа --- множество $G$ с определённой на ней операцией $\times$ со следующими свойствами:
+\begin{enumerate}
+	\item $\forall a,b\in G\ a\times b\in G$;
+	\item $\exists e\in G:\forall a\in G\ e\times a=a\times e=a$;
+	\item $\forall a\in G\exists a^{-1}\in G:\ a\times a^{-1}=a^{-1}\times a=e$;
+	\item $\forall a,b,c\in G\ (a\times b)\times c=a\times(b\times c)$.
+\end{enumerate}
+
+\definition Симметрическая группа $S_n$ --- множество всех перестановок $M_n=\{1,2,\ldots,n\}$ с операцией их композиции. Запись операций: $(a_{1,1}a_{1,2}\ldots a_{1,m_1})\ldots(a_{k,1}\ldots a_{k,m_k})$ переставляет элементы по циклу: $a_{k,l}$ переходит в $a_{k,l+1}$. $|S_n|=n!$
+
+\definition Подгруппа $H$ группы $G$ --- подмножество $G$ такое, что $\forall a,b\in H\ a\times b\in H$.
+
+\definition Стабилизатор $St(n,M)$ --- подгруппа $S_n$ такая, что все действия из неё оставляют элементы $M$ на месте.
+
+\definition Цикловой индекс --- полином от $n$ переменных: $z(\alpha)=\prod_i x_i^{f(i)}$, где $f(i)$ --- кол-во циклов длины $i$ у $\alpha$; $Z(A)=\text{avg}_{\alpha\in A}z(\alpha)$. Например: \[
+	z((1)(2)(3))=x_1^3,z((13)(2))=x_1x_2,Z(S_2)=\frac12\cdot(x_1^2+x_2),Z(S_3)=\frac16\cdot(x_1^3+2x_3+3x_1x_2)
+.\]
+
+\newpage
+\lemma Для любой группы перестановок $G$ выполняется $|G|=|Orb(x)|\cdot|St(x)|$, где $Orb(x)$ обозначает орбиту точки $x$ (множество точек, в которые может перейти $x$ при действии действий из $G$).\label{orbstab}
+
+\proof Пусть $Orb(x)=\{x_1,x_2,\ldots,x_n\}$. Тогда количество перестановок, переводящих $x_i$ в $x_j$, не зависит от $i$ и $j$. Действительно, можно взять все перестановки, переводящие $x_i$ в себя, и при умножении их на конкретную перестановку, переводящую $x_i$ в $x_j$, получатся все перестановки такого вида.\QEDA\\
+
+\lemman{Бернсайд} $|Orb_G|=\frac1{|G|}\cdot\sum\limits_\alpha(fix(\alpha))$, где $fix(\alpha)$ --- число неподвижных точек перестановки.\label{bernside}
+
+\proof Возьмём по одной вершине из каждой орбиты. Пусть мы взяли точки $x_1,x_2,\ldots,x_n$. Запишем для этих точек утверждение~\ref{orbstab} и сложим. Получим $|Orb_G|\cdot|A|=\sum\limits_i |Orb(x_i)|\cdot|St(x_i)|$, откуда всё следует.\QEDA\\
+
+\lemma Утверждение~\ref{bernside} верно для объединения нескольких орбит.
+
+\proof Это частный случай~\ref{bernside}.\QEDA\\
+
+Присвоим каждой орбите вес $w(Orb(x))$ и определим $w(fix(\alpha))$ как сумму весов орбит неподвижных точек $\alpha$.
+
+\lemman{Взвешенный Бернсайд} $\sum\limits_i w(Orb_i)=\frac1{|A|}\cdot\sum\limits_\alpha w(fix(\alpha))$.\label{bernsidew}
+
+\proof Аналогично~\ref{bernside}.\QEDA\\
+
+Пусть $P=\{0,1\},G=(V,E)$. Рассмотрим $P^V$ --- множество всевозможных $f:V\rightarrow P$. Пусть $G$ --- подгруппа $S_n$. Определим $\alpha(f)=x\mapsto f(\alpha x)$ для $f\in P^V$. Наконец, определим $w(p)=p$ для $p\in P$ и $w(f)=\sum\limits_{v\in V} w(f(v))$ для $f\in P^V$.\\
+
+Пусть $\varphi(y)=a_0+a_1y+\ldots$ --- производящая функция от количеств элементов $P$ по их весам (для $P=\{0,1\}\ \varphi(y)=1+y$), а $\Phi(y)=b_0+b_1y+\ldots$ --- производящая функция от количеств элементов $P^V$ по их весам с точностью до перестановок из $A$.\\
+
+\theoremn{Пойа} $\Phi(y)=Z(A;\varphi(y),\varphi(y^2),\ldots,\varphi(y^n))$.\label{poja}\\
+
+\centerline{\scshape Применение теоремы Пойа}
+{\bf Пример.} Хотим посчитать раскраски ожерелья из 4 элементов в 2 цвета с точностью до поворотов и переворотов. Тогда $A=D_4$. Известно, что $Z(D_4)=\frac18\cdot(s_1^4+3s_2^2+2s_4+2s_1^2s_2)$. Тогда $\Phi(y)=\frac18\cdot((1+y)^4+3(1+y^2)^2+2(1+y^4)+2(1+y)^2(1+y^2))$. Подставим $y=1$ (тогда все $s_i$ равны 2): $\Phi(1)=6$, что равно количеству перестановок ожерелья. Также при раскрытии скобок в $\Phi(y)$ коэффициент при $y^n$ будет равен количеству раскрасок с $n$ синими элементами --- $\Phi(y)=1+y+2y^2+y^3+y^4$. Также утверждается, что $Z(A;m,m,\ldots,m)$ равно количеству раскрасок ожерелья в $m$ цветов (это так, потому что соответственное взвешенное число имеет вид $1+y+y^2+\ldots+y^{m-1}$ и мы подставляем $y=1$).\\
+
+\centerline{\scshape Подсчёт графов}
+Рассмотрим $K_n$ и пронумеруем его рёбра. Применим на рёбра группу $S_n$, посчитаем от получившейся группы перестановок $\frac{n(n-1)}2$ элементов цикловой индекс и применим теорему. Получим кол-во раскрасок рёбер полного графа в 2 цвета, т.е. кол-во графов на $n$ вершинах.
+
+\newpage
+\prooft{poja} Заметим, что число раскрасок ---  это число орбит на множестве раскрасок. Применим~\ref{bernsidew}, получим $\Phi(x)=\frac1{|A|}\cdot\sum\limits_\alpha w(fix(\alpha))$. Пусть вес раскраски стоимости $k$ равен $x^k$. Найдём $w(\alpha):=\sum\limits_{y\in fix(\alpha)}w(y)$. Пусть $\alpha=(\overbrace{\vphantom|\ldots}^{l_1})(\overbrace{\vphantom|\ldots}^{l_2})\ldots$. Пусть раскраска имеет стоимость $k$. Тогда $k=\sum c_il_i$, где $c_i$ --- стоимость вершин $i$-го цикла. Можно понять, что число раскрасок стоимости $k$ равно количеству способов представить $k$ в виде такой суммы для фиксированных $l_i$ и неотрицательных целых $c_i$. Тогда $w(\alpha)=\prod\limits_i\dfrac1{1-x^{l_i}}$. Вернее, так было бы при наличии ровно одного цвета каждой стоимости, а в нашем случае $w(\alpha)=\prod\limits_i\varphi(x^i)$. С другой стороны, слагаемое $\prod\limits_is_{l_i}$ в цикловом индексе выражается $w(\alpha)$, но это то же самое, что мы бы получили после подстановки $s_{l_i}=\varphi(x^{l_i})$ в условие теоремы.\QEDA\\
+
+\vskip8pt\hrule\vskip8pt
+\centerline{\large\scshape Число корневых деревьев на $n$ вершинах}
+Пусть у корня дерева степень $k$. Пусть $t_{n,k}$ --- число способов сопоставить каждому из соседей корня дерево на меньшем числе вершин так, что суммарное число вершин у этих деревьев равно $n-1$. Обозначим за $T_k(x)$ производящую функцию от $t_{n,k}$ по $n$, а за $T(x)$ --- сумму $T_k(x)$ по всем $k$. Тогда по~\ref{poja} выполняется \[
+	Z(S_n;T(x),T(x^2),\ldots,T(x^k))x=T_k(x)
+.\]
+\end{document}

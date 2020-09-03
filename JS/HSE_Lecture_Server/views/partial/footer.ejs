@@ -1,0 +1,17 @@
+<% if (context.errors) { %>
+	<% for (let i of context.errors) { %>
+		<div class="alert alert-danger alert-dismissible fade show">
+			<button type="button" data-dismiss="alert" class="close">&times;</button>
+			<%- i.text %>
+		</div>
+	<% } %>
+<% } %>
+
+<% if (context.success) { %>
+	<% for (let i of context.success) { %>
+		<div class="alert alert-success alert-dismissible fade show">
+			<button type="button" data-dismiss="alert" class="close">&times;</button>
+			<%- i.text %>
+		</div>
+	<% } %>
+<% } %>

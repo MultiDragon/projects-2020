@@ -1,0 +1,108 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{tpl}
+\dbegin[24 февраля 2020 г.]{Комбинаторика и алгоритмы, зима 2020 г.}{Распределение простых чисел}{Райгородский Андрей Михайлович}
+
+\textit{<<Анекдот из жизни: семинар в МГУ. Семинарист --- выдающийся специалист по теории чисел, по диофантовым уравнениям. Приходит кто-то, говорит, что доцент и послушает семинар. Этот доцент выдержал весь семинар, на семинаре рассказывали распределение простых чисел. После семинара не удержался, спрашивает, занимался ли кто-то тут диофантовыми уравнениями. Специалист говорит, что нет, потому что понял, что ферматист. Тогда доцент спрашивает про простые числа. И говорит: вот, придумал два простых числа и два других простых числа, перемножил и получил одно и то же!>> --- Райгородский}
+
+\definition{$\pi(x)$} количество простых чисел, не больших $x$.
+
+\definition{$\nu(x)$} количество различных простых чисел в разложении $x$ на простые множители. Например, $\nu(2^4\cdot 5^{11}\cdot 7^{12345})=3$.\\
+
+Мы хотим как-то оценить $\pi(x)$ и $\nu(x)$. Для этого нам понадобятся следующие функции:
+
+\definition{$\vartheta(x)$} сумма по всем $p\leq x$ их натуральных логарифмов.
+
+\definition{$\psi(x)$} сумма по всем $p\leq x$ их натуральных логарифмов с коэффициентами $\alpha_p=\floor{\log_px}$.\\
+
+\textit{<<Когда я начинал заниматься наукой, я выбирал обозначение для случайной величины --- $M\eta$ или $E\eta$. Выбирал из соображений патриотизма --- $M$ от слова Матожидание, а $E$ --- от слова Expectation. Когда я привык, я узнал, что $M$ от слова Mid Value\ldots>> --- Райгородский}
+
+\definition{Математическое ожидание $\mathbb EX$ случайной величины $X$} сумма $X(G)P(G)$. В частности, если все события равновероятны, $\mathbb EX=\frac{\sum X(G)}{|\Omega|}$.
+
+{\bf Утверждение.} $\mathbb E[c_1X_1+c_2X_2]=c_1\mathbb EX_1+c_2\mathbb EX_2$.
+
+{\bf Пример.} Пусть $X$ --- количество треугольников в графе. Тогда считать $\mathbb EX$ по определению очень сложно (получается $\sum\limits_i iP(X=i)$ и очевидно, например, как считать графы без треугольников). Рассмотрим такие $\binom n3$ случайных величин:
+\begin{equation*}
+	Y_{ijk}(V,E)=\begin{cases}
+		1,(i,j)\in E,(j,k)\in E,(k,i)\in E\\
+		0, \text{ иначе}
+	\end{cases}
+\end{equation*}
+
+Тогда, с одной стороны, $\mathbb EY_{ijk}=\frac18$, с другой стороны, $\mathbb EX=\mathbb E[\sum\limits_{i,j,k}Y_{ijk}]=\sum\limits_{i,j,k}\mathbb EY_{ijk}=\binom n3\cdot\frac 18$.\\
+
+\definition{Дисперсия случайной величины} $\mathbb DX=\mathbb E[(X-\mathbb EX)^2]$.
+
+\lemma $\mathbb DX=\mathbb E[X^2]-\mathbb E^2X$.
+
+\proof Раскроем скобки и получим нужное равенство.\QEDA\\
+
+\theoremn{Марков} Пусть $X\geq0$ и $a>0$. Тогда $P(X>a)\leq\frac{\mathbb EX}a$.\label{markov}
+
+\proof \[
+	\mathbb EX=\sum\limits_i y_iP(X=y_i)=\sum\limits_{y_i>a}y_iP(X=y_i)+\sum\limits_{y_j\leq a}y_jP(X=y_j)\geq\sum\limits_{y_i>a}y_iP(X=y_i)>aP(x>a)
+.\QEDA\]
+
+\theoremn{Чебышёв} Пусть $a>0$. Тогда $P(|X-\mathbb EX|>a)\leq\frac{\mathbb DX}{a^2}$.\label{cheb}
+
+\proof Пусть $Y=(X-\mathbb EX)^2$. Применим \ref{markov} для $Y$ и $a^2$. Получим $P((X-\mathbb EX)^2>a^2)\leq\frac{\mathbb DX}{a^2}$, откуда следует утверждение задачи.\QEDA\\
+
+
+
+
+\newpage
+\shdr{Распределение простых чисел}
+
+Обозначим $\limsup\frac{\vartheta(x)}{x}=\lambda_1,\limsup\frac{\psi(x)}{x}=\lambda_2,\limsup\frac{\pi(x)\ln x}{x}=\lambda_3$.
+
+\lemma $\lambda_1=\lambda_2=\lambda_3$.\label{mlemma}
+
+\proof Очевидно, что $\vartheta(x)\leq\psi(x)\leq\pi(x)\ln x$. Значит, $\lambda_1\leq\lambda_2\leq\lambda_3$.
+
+Докажем, что $\lambda_3\leq\lambda_1$. Зафиксируем любое $\alpha\in[0,1)$. Тогда \[
+	\vartheta(x)=\sum\limits_{p\leq x}\ln p\geq \sum\limits_{x^\alpha<p\leq x}\ln p\geq\sum\limits_{x^\alpha<p\leq x}\ln(x^\alpha)=\alpha\ln x\sum\limits_{x^\alpha<p\leq x}1=\alpha\ln x(\pi(x)-\pi(x^\alpha)\geq\alpha\ln x(\pi(x)-x^\alpha)
+.\] Поделим обе части на $x$. Получим \[
+\frac{\vartheta(x)}{x}\geq \frac{\alpha\ln x}{x}(\pi(x)-x^\alpha)=\alpha\left(\frac{\pi(x)\ln x}{x}-\frac{\ln x}{x^{1-\alpha}}\right)
+.\] Заметим, что $\ln x<x^\beta$ при любом  $\beta>0$ начиная с какого-то момента. Подставим $\beta=1-\alpha$. Это значит, что второе слагаемое стремится к $0$ вне зависимости от $\alpha$, то есть $\lambda_1\geq \alpha\lambda_3$ при любом $\alpha<1$. Перейдём к пределу $\alpha\to1$, получим искомый результат.\QEDA
+
+Аналогично можно доказать, что $\mu_1=\liminf\frac{\vartheta(x)}{x}=\mu_2=\liminf\frac{\psi(x)}{x}=\mu_3=\liminf\frac{\pi(x)\ln x}{x}$.\\
+
+\theoremn{Чебышёв} Существуют $a,b$ такие, что $0<a<b<\infty$ и для любого  $x$ выполняется $\frac{ax}{\ln x}\leq\pi(x)\leq \frac{bx}{\ln x}$.\label{chebyshev}
+
+\proof Рассмотрим $f(n)=\binom{2n}n$. Заметим, что оно лежит между $\frac{2^{2n}}{2n+1}$ и $2^{2n}$. Кроме того, \[
+	f(n)\geq \prod\limits_{n<p<2n}p\implies 2n\ln2>\ln f(n)\geq \sum\limits_{n<p<2n}\ln p=\vartheta(2n)-\vartheta(n)
+.\] Подставим $n=1,2,4,\ldots ,2^{k-1}$ и просуммируем. Получим $\vartheta(2^k)<2^k\cdot 2\ln2$. Кроме того, т.к. $\vartheta(x)$ не убывает, то $\vartheta(x)<4x\ln2$. Тогда по \ref{mlemma} получаем $\pi(x)\ln x<4x\ln2$ в пределе. Таким образом, подходит $b=4\ln2$.
+
+Теперь докажем, что подходит $a=\ln2$. Заметим, что \[
+	\binom{2n}n=\prod\limits_{p\leq 2n}p^{\sum_j\floor{\frac{2n}{p^j}}-2\floor{\frac{n}{p^j}}}\leq\prod\limits_{p\leq 2n}p^{\sum_j 1}=\prod\limits_{p\leq 2n}p^{\floor{\frac{\ln 2n}{\ln p}}}
+.\] Прологарифмируем обе части неравенства: \[
+2n\ln2-\ln(2n+1)\leq\ln\binom{2n}n\leq \sum\limits_{p\leq 2n}\ln p\floor{\frac{\ln 2n}{\ln p}}=\psi(2n)
+.\] Т.к. второе слагаемое левой части растёт медленно, получаем $\mu_2\geq\ln2$. Тогда $\mu_3\geq\ln2$.\QEDA\\
+
+\theorem Пусть $n\in[x]$. Тогда почти наверное почти верно $\nu(n)=c\ln\ln x$. Более точно, \[
+	P\left[|\nu(x)-\ln\ln n|\geq \omega(n)\sqrt{\ln\ln n}\right]\to0,n\to\infty,x\in\{1,\ldots ,n\}
+,\] где $\omega(n)$ --- любая наперёд заданная функция, которая стремится к $\infty$.\label{magic}
+
+\proof Если мы хотим вывести это неравенство из \ref{cheb}, мы хотим доказать, что $\mathbb E[\nu(n)]=\mathbb D[\nu(n)]=\ln\ln n$.
+
+Для подсчёта $\mathbb E\nu$ введём величины $\nu_p(x)=1$ для $x\equiv 0\mod p$ и $\nu_p(x)$ иначе. Тогда \[
+	\mathbb E\nu =\mathbb E\left[\sum\limits_{p\leq n}\nu_p\right]=\sum\limits_{p\leq n}\mathbb E\nu_p=\sum\limits_{p\leq n}\frac{\floor{\frac{n}{p}}}{n}
+.\]
+
+\newpage
+\lemma $p_m\sim m\ln m$.
+
+\proof Пусть мы знаем, что $\pi(x)\sim \frac{x}{\ln x}$. Допустим, это не так. Пусть, например, $p_m>x=cm\ln m$ для $c>1$ с какого-то момента. Тогда $m>\pi(x)\sim \frac{x}{\ln x}=\frac{cm\ln m}{\ln(cm\ln m)}\sim cm>m$ --- противоречие.\QEDA\\
+'
+\lemma $SP_n=\frac{1}{p_1}+\frac{1}{p_2}+\ldots +\frac{1}{p_n}\sim \ln\ln n$.
+
+\proof $SP_n\sim \int_1^n \frac{1}{x\ln x}dx$. С другой стороны, $(\ln\ln x)'=\frac{1}{\ln x}\cdot \frac{1}{x}=\frac{1}{x\ln x}$.\QEDA\\
+
+Продолжим разбираться с $\mathbb E\nu$: \[
+	\mathbb E\nu=\sum\limits_{p\leq n}\frac{\floor{\frac{n}{p}}}{n}=\sum\limits_{p\leq n}\left(\frac{1}{p}+O\left(\frac{1}{n}\right)\right)=\ln\ln n+O(1)+O\lrp{\frac{1}{\ln n}}=\ln\ln n+O(1)
+.\] Осталось оценить $\mathbb D\nu$: \[
+	\mathbb D\nu\sim \mathbb E\nu^2-\ln\ln^2n=\mathbb E\lrb{\sum \nu^2_p+\sum_{(p,q)\leq n}\nu_p\nu_q}-\ln\ln^2n\sim \ln\ln n-\ln\ln^2n+\sum_{(p,q)\leq n}\frac{\floor{\frac{n}{pq}}}{n}
+.\]
+
+На этом месте у нас возникают трудности, потому что эта сумма слишком большая. Но можно вместо $\nu$ рассматривать $\nu'$ --- количество простых делителей $n$, каждый из которых меньше $\sqrt[5]n$. Эти числа различаются максимум на 4, поэтому асимптотически это не важно, но эта сумма сильно уменьшилась и стала пропорциональна $\frac{5n^{0.4}}{n\ln^2n}$. Значит, и дисперсия, и матожидание стали порядка $\Theta(\ln\ln n)$, что и требовалось получить.\QEDA\\
+
+\end{document}

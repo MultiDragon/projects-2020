@@ -1,0 +1,7 @@
+recurse: 0
+title: 7th grade Math club
+location: 
+        - School
+        - Room 306
+actions:
+        Export Solutions: rofi ExportSolutions export-sol

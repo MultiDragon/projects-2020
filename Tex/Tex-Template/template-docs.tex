@@ -1,0 +1,205 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{tpl}
+\dbegin{Школа 179}{Документация шаблона}
+
+\zn{теоремы, задачи и прочее} Теоремы создаются командами \com{theorem}, \com{theoremn}, а так же \com{lemma} и \com{lemman}. Нумерация общая для теорем и лемм. Варианты с \texttt{n} имеют аргумент, обозначающий автора или название, например:
+
+\begin{verbatim}
+\lemma Вписанные углы, опирающиеся на одну дугу, равны.
+\theoremn{Пифагор} Если $\angle ABC=90^\circ$, то $AB^2+BC^2=AC^2$.\label{pifagor}
+\end{verbatim}
+
+\lemma Вписанные углы, опирающиеся на одну дугу, равны.
+
+\theoremn{Пифагор} Если $\angle ABC=90^\circ$, то $AB^2+BC^2=AC^2$.\label{pifagor}\\
+
+Определения создаются командой \com{definition} с аргументом --- названием понятия:
+
+\begin{verbatim}
+\definition{Чётное число} число, кратное 2.
+\end{verbatim}
+
+\definition{Чётное число} число, кратное 2.\\
+
+Задачи создаются командами \com{z}, \com{n}, \com{p}. Первая команда просто создаёт задачу, вторая --- задачу с пунктами, третья --- пункт задачи, добавление \texttt{n} к названию добавляет аргумент --- название задачи. Номера задач и буквы пунктов можно изменять через счётчики \texttt{probs} и \texttt{sprobs} соответственно.
+
+\begin{verbatim}
+\n Сколько существует раскрасок ожерелья из $p$ элементов ($p$ простое) в $n$ цветов?
+\pn{малая теорема Ферма} Докажите, что если $p$ простое, то $n^p-n$ делится на $p$.
+\nn{теорема Ферма} Докажите, что если функция $f(x)$ непрерывна на $[a,b]$, 
+дифференцируема на $(a,b)$ и достигает максимума в точке $x_0\neq a,x_0\neq b$, то
+$f'(x_0)=0$.
+\p Верно ли, что если $f'(x_0)=0$, то это точка локального максимума или минимума?
+\zn{Закон квадратичной взаимности Гаусса} Докажите, что если $p,q$ --- различные
+простые нечётные числа, то $\binom pq\binom qp=(-1)^{(p-1)(q-1)/4}$.
+\setcounter{probs}{100}
+\z Докажите, что корень многочлена является кратным тогда и только тогда, когда он
+является корнем его производной.
+\end{verbatim}
+
+\setcounter{probs}0
+\n Сколько существует раскрасок ожерелья из $p$ элементов ($p$ простое) в $n$ цветов?
+
+\pn{малая теорема Ферма} Докажите, что если $p$ простое, то $n^p-n$ делится на $p$.\\
+
+\nn{теорема Ферма} Докажите, что если функция $f(x)$ непрерывна на $[a,b]$,дифференцируема на $(a,b)$ и достигает максимума в точке $x_0\neq a,x_0\neq b$, то $f'(x_0)=0$.
+
+\p Верно ли, что если $f'(x_0)=0$, то это точка локального максимума или минимума?\\
+
+\zn{Закон квадратичной взаимности Гаусса} Докажите, что если $p,q$ --- различные простые нечётные числа, то $\binom pq\binom qp=(-1)^{(p-1)(q-1)/4}$.
+
+\setcounter{probs}{100}
+\z Докажите, что корень многочлена является кратным тогда и только тогда, когда он является корнем его производной.\\
+
+\setcounter{probs}1
+\setcounter{theorems}1
+
+Доказательства создаются командами \com{proof(tl(m(s)))}. Просто команда \com{proof} не имеет аргументов, команды \com{prooft} и \com{proofl} (и их модификации) имеют по одному элементу --- названию ссылки на задачу/теорему. Модификатор $m$ позволяет делать много доказательств одной и той же теоремы, для этого нужно вначале применить команду с модификатором $ms$. Для конца доказательства используется команда \com{QEDA}. Кроме того, решения к задачам можно создавать командой \com{s}.
+
+\begin{verbatim}
+\z Найдите матожидание числа, выпавшего на игральном кубике.
+\s Так как все исходы равновероятны, то это \frac{1+2+3+4+5+6}6=3.5.\QEDA
+\lemma $\{x_n\}$ ограничена тогда и только тогда, когда $\exists C>0:\forall n:|x_n|<C$.
+\proof Мы знаем, что $\exists D>0,E>0:\forall n:-E<x_n<D$. Возьмём $C=\max(D,E)$, оно 
+подойдёт.\QEDA
+\prooft{pifagor} Опустим высоту из $B$ на $AC$, пусть она попадает в точку $D$. Тогда 
+$\triangle DAB\sim\triangle BAC$ с коэффициентом $\frac{AB}{AC}$ и 
+$\triangle DCB\sim\triangle BCA$ с коэффициентом $\frac{BC}{AC}$, откуда их площади
+относятся как $AB^2:BC^2:AC^2$, откуда и следует теорема.\QEDA
+\prooftms{pifagor}
+\prooftm{pifagor} Проведём биссектрису из $A$ на $BC$, пусть она попадает в точку $D$, 
+затем проведём высоту из $D$ на $AC$, пусть она попадает в $E$. Тогда четырёхугольник
+$ABDE$ вписанный и степень точки $C$ относительно его описанной окружности равна
+$AC(AC-AB)=BC^2\cdot\frac{AC}{AB+AC}$, откуда и следует теорема.\QEDA
+\prooftm{pifagor} Построим треугольники, подобные исходному, на сторонах исходного 
+треугольника как на гипотенузах. Заметим, что можно сложить треугольник с гипотенузой
+$AC$ из двух других, откуда $AC^2=AB^2+BC^2$.\QEDA
+\end{verbatim}
+
+\setcounter{probs}0
+\z Найдите матожидание числа, выпавшего на игральном кубике.
+
+\s Так как все исходы равновероятны, то это $\frac{1+2+3+4+5+6}6=3.5$.\QEDA\\
+
+\lemma $\{x_n\}$ ограничена тогда и только тогда, когда $\exists C>0:\forall n:|x_n|<C$.
+
+\proof Мы знаем, что $\exists D>0,E>0:\forall n:-E<x_n<D$. Возьмём $C=\max(D,E)$, оно подойдёт.\QEDA\\
+
+\prooft{pifagor} Опустим высоту из $B$ на $AC$, пусть она попадает в точку $D$. Тогда $\triangle DAB\sim\triangle BAC$ с коэффициентом $\frac{AB}{AC}$ и $\triangle DCB\sim\triangle BCA$ с коэффициентом $\frac{BC}{AC}$, откуда их площади относятся как $AB^2:BC^2:AC^2$, откуда и следует теорема.\QEDA\\
+
+\prooftms{pifagor}
+\prooftm{pifagor} Проведём биссектрису из $A$ на $BC$, пусть она попадает в точку $D$, затем проведём высоту из $D$ на $AC$, пусть она попадает в $E$. Тогда четырёхугольник $ABDE$ вписанный и степень точки $C$ относительно его описанной окружности равна $AC(AC-AB)=BC^2\cdot\frac{AC}{AB+AC}$, откуда и следует теорема.\QEDA\\
+
+\prooftm{pifagor} Построим треугольники, подобные исходному, на сторонах исходного треугольника как на гипотенузах. Заметим, что можно сложить треугольник с гипотенузой $AC$ из двух других, откуда $AC^2=AB^2+BC^2$.\QEDA\\
+
+Документ с заголовком создаётся командой \com{dbegin[дата]\{место\}\{тема\}}, например,
+первые три строки этого документа такие:
+
+\begin{verbatim}
+\documentclass[12pt,a4paper]{article}
+\usepackage{tpl}
+\dbegin{Школа 179}{Документация шаблона}
+\end{verbatim}
+
+Подзаголовки создаются командами \com{hdr} и \com{shdr}:
+
+\begin{verbatim}
+\hdr{Основная теорема арифметики}
+\shdr{Доказательство через идеалы}
+\end{verbatim}
+
+\hdr{Основная теорема арифметики}
+\shdr{Доказательство через идеалы}
+
+\newpage
+\zn{Полезные команды}
+\begin{itemize}
+	\item \com{com} --- ввод команды. Например, команду слева я ввёл так: \com{com\{com\}}.
+	\item \com{floor} --- округление вниз. Например, \com{floor{\com{frac 12}}}=$\floor{\frac 12}$.
+\end{itemize}
+
+\zn{Планиметрия} Шаблон создаёт большое количество планиметрических функций. Их нужно выполнять в окружении \com{begin\{tikzpicture\}}. Их список:
+\begin{itemize}
+	\item \com{qsetscale\{$k$\}} --- установить масштаб. По умолчанию 1. Он работает только на моих командах.
+	\item \com{qrectangle[params]\{$x$\}\{$y$\}\{$w$\}\{$h$\}} --- нарисовать прямоугольник с левым нижним углом $(x,y)$. По умолчанию он закрашивается чёрным.
+	\item \com{qgrid[params]\{$w$\}\{$h$\}} --- нарисовать сетку. По умолчанию она светло-серая.
+	\item \com{qtriangle[params]\{$x_1$\}\{$y_1$\}\{$x_2$\}\{$y_2$\}\{$x_3$\}\{$y_3$\}} --- нарисовать треугольник. 
+	\item \com{qpoint[params]\{caption\}\{$x$\}\{$y$\}} --- нарисовать точку. По умолчанию заголовок рисуется над точкой.
+	\item \com{qsegment\{$x_1$\}\{$y_1$\}\{$x_2$\}\{$y_2$\}} --- нарисовать отрезок.
+\end{itemize}
+\vskip15pt
+
+Также есть система сохранения координат точек. Все последующие функции её используют:
+\begin{itemize}
+	\item \com{qcoord\{name\}\{$x$\}\{$y$\}} --- задать координаты точки. Также есть команда \com{qrcoord} с теми же аргументами, она работает глобально (обычно это не нужно).
+	\item \com{qcx\{name\}} и \com{qcy\{name\}} --- получить координаты точки.
+	\item \com{qctriangle[params]\{A\}\{B\}\{C\}} --- нарисовать треугольник $ABC$.
+	\item \com{qcpoint[params]\{A\}\{caption\}} --- нарисовать точку $A$ с заголовком.
+	\item \com{qcspoint[params]\{A\}} --- нарисовать точку $A$ с заголовком $A$.
+	\item \com{qcsegment\{A\}\{B\}} --- нарисовать отрезок $AB$.
+	\item \com{qccircle\{A\}\{B\}} --- нарисовать окружность с центром $A$, проходящую через $B$.
+	\item \com{qcccircle\{A\}\{B\}\{C\}} --- нарисовать описанную окружность $\triangle ABC$.
+	\item \com{qcicircle\{A\}\{B\}\{C\}} --- нарисовать вписанную окружность $\triangle ABC$.
+\end{itemize}
+\vskip15pt
+
+Следующие функции используют систему координат точек для вычислений. Они ничего не рисуют.
+\begin{itemize}
+	\item \com{qcgMidpoint\{X\}\{A\}\{B\}} --- сохранить середину $AB$ в точку $X$.
+	\item \com{qcgIntersection\{X\}\{A\}\{B\}\{C\}\{D\}} --- сохранить пересечение $AB$ и $CD$ в точку $X$.
+	\item \com{qcgHeight\{X\}\{A\}\{P\}\{Q\}} --- сохранить основание высоты из $A$ на $PQ$ в точку $X$.
+	\item \com{qcgCenter\{X\}\{A\}\{B\}\{C\}} --- сохранить центр описанной окружности $\triangle ABС$ в точку $X$.
+	\item \com{qcgBisector\{X\}\{A\}\{P\}\{Q\}} --- сохранить основание биссектрисы $\triangle APQ$ из $A$ на $PQ$ в точку $X$.
+\end{itemize}
+
+Пример их использования:
+
+\begin{verbatim}
+\begin{tikzpicture}
+    \qsetscale{1.5}
+    \qgrid{10}{10}
+    \qcoord{A}{0}{0}\qcoord{B}{10}{2}\qcoord{C}{8}{10}
+    \qctriangle ABC
+    \qcspoint[left]A \qcspoint[right]B \qcspoint C
+    \qcicircle ABC
+    \qcgMidpoint{Am}BC\qcgMidpoint{Bm}AC\qcgMidpoint{Cm}AB
+    \qcpoint{Am}{$A_0$}\qcpoint{Bm}{$B_0$}\qcpoint{Cm}{$C_0$}
+    \qcccircle{Am}{Bm}{Cm}
+    \qcsegment A{Am}\qcsegment B{Bm}\qcsegment C{Cm}
+    \qcgIntersection MA{Am}B{Bm}
+    \qcspoint M
+    \qcgBisector{Al}ABC\qcgBisector{Bl}BAC\qcgBisector{Cl}CAB
+    \qcpoint{Al}{$A_1$}\qcpoint{Bl}{$B_1$}\qcpoint{Cl}{$C_1$}
+    \qcsegment A{Al}\qcsegment B{Bl}\qcsegment C{Cl}
+    \qcgIntersection LA{Al}B{Bl}
+    \qcspoint L
+    \qcgHeight{Ah}ABC
+\end{tikzpicture}
+\end{verbatim}
+
+\begin{tikzpicture}
+	\qsetscale{1.5}
+	\qgrid{10}{10}
+	\qcoord{A}{0}{0}\qcoord{B}{10}{2}\qcoord{C}{8}{10}
+	\qctriangle ABC
+	\qcspoint[left]A \qcspoint[right]B \qcspoint C
+
+	\qcicircle ABC
+	\qcgMidpoint{Am}BC\qcgMidpoint{Bm}AC\qcgMidpoint{Cm}AB
+	\qcpoint{Am}{$A_0$}\qcpoint{Bm}{$B_0$}\qcpoint{Cm}{$C_0$}
+	\qcccircle{Am}{Bm}{Cm}
+	\qcsegment A{Am}\qcsegment B{Bm}\qcsegment C{Cm}
+	\qcgIntersection MA{Am}B{Bm}
+	\qcspoint M
+
+	\qcgBisector{Al}ABC\qcgBisector{Bl}BAC\qcgBisector{Cl}CAB
+	\qcpoint{Al}{$A_1$}\qcpoint{Bl}{$B_1$}\qcpoint{Cl}{$C_1$}
+	\qcsegment A{Al}\qcsegment B{Bl}\qcsegment C{Cl}
+	\qcgIntersection LA{Al}B{Bl}
+	\qcspoint L
+
+	\qcgHeight{Ah}ABC
+	\qcpoint{Ah}{$A_2$}
+\end{tikzpicture}
+
+\end{document}

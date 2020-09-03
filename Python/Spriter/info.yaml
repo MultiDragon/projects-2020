@@ -1,0 +1,5 @@
+recurse: 0
+title: Chart Generator
+actions:
+    View Charts: photoqt out
+main-action: View Charts

@@ -1,0 +1,6 @@
+recurse: 1
+title: JS
+actions:
+    Open Editor: editor index.js
+    Open HTML: browser index.html
+main-action: Open Editor

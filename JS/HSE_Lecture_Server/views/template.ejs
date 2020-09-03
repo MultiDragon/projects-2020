@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+	<head><%- include("partial/head.ejs") -%></head>
+	<body>
+		<header><%- include("partial/header.ejs") -%></header>
+		<%- include("partial/nav.ejs") -%>
+		<main class="container-fluid"><%- include(`pages/${context.page}.ejs`) -%></main>
+		<footer class="container"><%- include("partial/footer.ejs") -%></footer>
+	</body>
+</html>

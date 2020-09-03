@@ -1,0 +1,1685 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:ns0="http://www.iki.fi/pav/software/textext/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="300mm"
+   height="180mm"
+   viewBox="0 0 300 180"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
+   sodipodi:docname="ex2.svg">
+  <defs
+     id="defs2">
+    <marker
+       inkscape:stockid="ArrowAxisStart"
+       style="overflow:visible"
+       refY="0.0"
+       refX="0.0"
+       orient="auto"
+       id="ArrowAxisStart">
+      <path
+         id="path270"
+         transform="scale(0.4) rotate(0) translate(8.818,0)"
+         style="stroke-width:1.0;stroke:#000000;fill:#000000;fill-rule:evenodd"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z " />
+    </marker>
+    <marker
+       inkscape:stockid="ArrowAxisEnd"
+       style="overflow:visible"
+       refY="0.0"
+       refX="0.0"
+       orient="auto"
+       id="ArrowAxisEnd">
+      <path
+         id="path273"
+         transform="scale(0.4) rotate(180) translate(8.818,0)"
+         style="stroke-width:1.0;stroke:#000000;fill:#000000;fill-rule:evenodd"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z " />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="400"
+     inkscape:cy="560"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1364"
+     inkscape:window-height="739"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="0"
+     height="180mm" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-117)" />
+  <g
+     id="g180"
+     inkscape:label="PlotData">
+    <g
+       id="g176"
+       transform="translate(110.000000 40.000000)"
+       inkscape:label="Plot">
+      <g
+         id="g154"
+         inkscape:label="Ticks">
+        <g
+           transform="translate(3.125000 6.250000) translate(-331.094688 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $0$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="content">
+<path
+   id="path17"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M228.02,480.41 L228.02,480.56 L228.02,480.71 L228.01,480.86 L228.01,481.01 L228,481.16 L227.98,481.3 L227.97,481.45 L227.95,481.6 L227.93,481.74 L227.9,481.89 L227.87,482.03 L227.83,482.18 L227.79,482.32 L227.74,482.46 L227.68,482.6 L227.65,482.67 L227.62,482.74 C227.16,483.69,226.34,483.85,225.93,483.85 C225.33,483.85,224.6,483.59,224.19,482.67 C223.87,481.98,223.82,481.21,223.82,480.41 C223.82,479.67,223.86,478.77,224.27,478.02 C224.7,477.21,225.43,477.02,225.91,477.02 V477.23 C225.53,477.23,224.94,477.48,224.76,478.44 C224.65,479.03,224.65,479.95,224.65,480.53 C224.65,481.17,224.65,481.82,224.73,482.36 C224.92,483.54,225.67,483.63,225.91,483.63 C226.24,483.63,226.9,483.45,227.09,482.47 C227.19,481.91,227.19,481.16,227.19,480.53 C227.19,479.79,227.19,479.11,227.08,478.48 C226.93,477.53,226.36,477.23,225.91,477.23 H225.91 V477.02 C226.45,477.02,227.21,477.23,227.65,478.17 C227.97,478.85,228.02,479.63,228.02,480.41 Z " />
+</g>        <path
+           id="path20"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  50.0,100.0 50.0,-400.0" />
+        <path
+           id="path22"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m 50.0 -3.125 0,6.25" />
+        <g
+           transform="translate(46.875000 6.250000) translate(-336.701197 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $1$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g26">
+<path
+   id="path24"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M226.36,483.59 L226.36,483.6 L226.36,483.61 L226.36,483.63 L226.36,483.64 L226.36,483.64 L226.36,483.65 L226.36,483.66 L226.36,483.67 L226.36,483.68 L226.36,483.69 L226.36,483.7 L226.36,483.71 L226.36,483.71 L226.36,483.72 L226.36,483.73 L226.36,483.73 L226.36,483.74 L226.36,483.75 L226.36,483.76 L226.35,483.77 L226.35,483.78 L226.35,483.79 L226.34,483.8 L226.34,483.8 L226.34,483.81 L226.33,483.82 L226.32,483.82 L226.32,483.83 L226.31,483.83 L226.3,483.84 L226.29,483.84 L226.29,483.84 L226.28,483.84 L226.28,483.84 L226.27,483.84 L226.27,483.84 L226.26,483.85 L226.25,483.85 L226.25,483.85 L226.24,483.85 L226.23,483.85 L226.23,483.85 L226.22,483.85 L226.21,483.85 L226.2,483.85 L226.19,483.85 L226.18,483.85 L226.17,483.85 L226.16,483.85 L226.15,483.85 L226.14,483.85 L226.13,483.85 C225.52,483.21,224.64,483.21,224.32,483.21 V482.91 C224.52,482.91,225.11,482.91,225.63,483.17 V478.02 C225.63,477.66,225.6,477.54,224.7,477.54 H224.38 V477.23 C224.73,477.27,225.6,477.27,225.99,477.27 C226.39,477.27,227.26,477.27,227.61,477.23 V477.54 H227.29 C226.39,477.54,226.36,477.65,226.36,478.02 Z " />
+</g>        <path
+           id="path28"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  100.0,100.0 100.0,-400.0" />
+        <path
+           id="path30"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m 100.0 -3.125 0,6.25" />
+        <g
+           transform="translate(96.875000 6.250000) translate(-337.144984 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $2$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g34">
+<path
+   id="path32"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M224.7,478 L225.76,479.02 C227.31,480.39,227.91,480.93,227.91,481.92 C227.91,483.06,227.01,483.85,225.79,483.85 C224.67,483.85,223.93,482.94,223.93,482.05 C223.93,481.5,224.43,481.5,224.46,481.5 C224.63,481.5,224.98,481.62,224.98,482.02 C224.98,482.28,224.8,482.54,224.45,482.54 C224.37,482.54,224.35,482.54,224.32,482.53 C224.55,483.17,225.09,483.54,225.67,483.54 C226.57,483.54,227,482.74,227,481.92 C227,481.13,226.5,480.34,225.96,479.73 L224.04,477.6 C223.93,477.49,223.93,477.47,223.93,477.23 H227.63 L227.91,478.96 H227.66 C227.61,478.67,227.54,478.23,227.44,478.08 C227.37,478,226.71,478,226.49,478 Z " />
+</g>        <path
+           id="path36"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -50.0,100.0 -50.0,-400.0" />
+        <path
+           id="path38"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -50.0 -3.125 0,6.25" />
+        <g
+           transform="translate(-53.125000 6.250000) translate(-348.165694 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $-1$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g44">
+<path
+   id="path40"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M230,479.52 L230.04,479.52 L230.07,479.52 L230.1,479.52 L230.11,479.52 L230.13,479.52 L230.14,479.52 L230.16,479.53 L230.17,479.53 L230.19,479.53 L230.2,479.53 L230.22,479.54 L230.23,479.54 L230.24,479.54 L230.25,479.55 L230.27,479.56 L230.28,479.56 L230.29,479.57 L230.3,479.58 L230.31,479.58 L230.31,479.59 L230.32,479.6 L230.33,479.61 L230.33,479.61 L230.33,479.62 L230.34,479.63 L230.34,479.63 L230.34,479.64 L230.34,479.65 L230.34,479.65 L230.35,479.66 L230.35,479.67 L230.35,479.68 L230.35,479.68 L230.35,479.69 L230.35,479.7 L230.35,479.71 L230.35,479.72 C230.35,479.92,230.17,479.92,230,479.92 H224.61 C224.44,479.92,224.26,479.92,224.26,479.72 C224.26,479.52,224.44,479.52,224.61,479.52 Z " />
+<path
+   id="path42"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M234.11,483.59 L234.11,483.6 L234.11,483.61 L234.11,483.63 L234.11,483.64 L234.11,483.64 L234.11,483.65 L234.11,483.66 L234.11,483.67 L234.11,483.68 L234.11,483.69 L234.11,483.7 L234.11,483.71 L234.11,483.71 L234.11,483.72 L234.11,483.73 L234.11,483.73 L234.11,483.74 L234.11,483.75 L234.11,483.76 L234.1,483.77 L234.1,483.78 L234.1,483.79 L234.09,483.8 L234.09,483.8 L234.08,483.81 L234.08,483.82 L234.07,483.82 L234.06,483.83 L234.06,483.83 L234.05,483.84 L234.04,483.84 L234.04,483.84 L234.03,483.84 L234.03,483.84 L234.02,483.84 L234.02,483.84 L234.01,483.85 L234,483.85 L234,483.85 L233.99,483.85 L233.98,483.85 L233.97,483.85 L233.97,483.85 L233.96,483.85 L233.95,483.85 L233.94,483.85 L233.93,483.85 L233.92,483.85 L233.91,483.85 L233.9,483.85 L233.89,483.85 L233.88,483.85 C233.26,483.21,232.39,483.21,232.07,483.21 V482.91 C232.27,482.91,232.86,482.91,233.38,483.17 V478.02 C233.38,477.66,233.35,477.54,232.45,477.54 H232.13 V477.23 C232.48,477.27,233.35,477.27,233.74,477.27 C234.14,477.27,235.01,477.27,235.36,477.23 V477.54 H235.04 C234.14,477.54,234.11,477.65,234.11,478.02 Z " />
+</g>        <path
+           id="path46"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -100.0,100.0 -100.0,-400.0" />
+        <path
+           id="path48"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -100.0 -3.125 0,6.25" />
+        <g
+           transform="translate(-103.125000 6.250000) translate(-348.609481 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $-2$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g54">
+<path
+   id="path50"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M230,479.52 L230.04,479.52 L230.07,479.52 L230.1,479.52 L230.11,479.52 L230.13,479.52 L230.14,479.52 L230.16,479.53 L230.17,479.53 L230.19,479.53 L230.2,479.53 L230.22,479.54 L230.23,479.54 L230.24,479.54 L230.25,479.55 L230.27,479.56 L230.28,479.56 L230.29,479.57 L230.3,479.58 L230.31,479.58 L230.31,479.59 L230.32,479.6 L230.33,479.61 L230.33,479.61 L230.33,479.62 L230.34,479.63 L230.34,479.63 L230.34,479.64 L230.34,479.65 L230.34,479.65 L230.35,479.66 L230.35,479.67 L230.35,479.68 L230.35,479.68 L230.35,479.69 L230.35,479.7 L230.35,479.71 L230.35,479.72 C230.35,479.92,230.17,479.92,230,479.92 H224.61 C224.44,479.92,224.26,479.92,224.26,479.72 C224.26,479.52,224.44,479.52,224.61,479.52 Z " />
+<path
+   id="path52"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M232.45,478 L233.5,479.02 C235.06,480.39,235.66,480.93,235.66,481.92 C235.66,483.06,234.76,483.85,233.54,483.85 C232.42,483.85,231.68,482.94,231.68,482.05 C231.68,481.5,232.18,481.5,232.21,481.5 C232.38,481.5,232.73,481.62,232.73,482.02 C232.73,482.28,232.55,482.54,232.2,482.54 C232.12,482.54,232.1,482.54,232.07,482.53 C232.3,483.17,232.84,483.54,233.41,483.54 C234.32,483.54,234.75,482.74,234.75,481.92 C234.75,481.13,234.25,480.34,233.7,479.73 L231.79,477.6 C231.68,477.49,231.68,477.47,231.68,477.23 H235.38 L235.66,478.96 H235.41 C235.36,478.67,235.29,478.23,235.19,478.08 C235.12,478,234.46,478,234.24,478 Z " />
+</g>        <path
+           id="path56"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,100.0 -150.0,-400.0" />
+        <path
+           id="path58"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -150.0 -3.125 0,6.25" />
+        <g
+           transform="translate(-153.125000 6.250000) translate(-348.727825 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $-3$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g64">
+<path
+   id="path60"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M230,479.52 L230.04,479.52 L230.07,479.52 L230.1,479.52 L230.11,479.52 L230.13,479.52 L230.14,479.52 L230.16,479.53 L230.17,479.53 L230.19,479.53 L230.2,479.53 L230.22,479.54 L230.23,479.54 L230.24,479.54 L230.25,479.55 L230.27,479.56 L230.28,479.56 L230.29,479.57 L230.3,479.58 L230.31,479.58 L230.31,479.59 L230.32,479.6 L230.33,479.61 L230.33,479.61 L230.33,479.62 L230.34,479.63 L230.34,479.63 L230.34,479.64 L230.34,479.65 L230.34,479.65 L230.35,479.66 L230.35,479.67 L230.35,479.68 L230.35,479.68 L230.35,479.69 L230.35,479.7 L230.35,479.71 L230.35,479.72 C230.35,479.92,230.17,479.92,230,479.92 H224.61 C224.44,479.92,224.26,479.92,224.26,479.72 C224.26,479.52,224.44,479.52,224.61,479.52 Z " />
+<path
+   id="path62"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M234.07,480.73 L234.15,480.76 L234.22,480.79 L234.3,480.82 L234.37,480.85 L234.44,480.89 L234.51,480.93 L234.57,480.97 L234.64,481.01 L234.7,481.05 L234.76,481.1 L234.82,481.15 L234.87,481.2 L234.93,481.25 L234.98,481.3 L235.03,481.36 L235.08,481.41 L235.12,481.47 L235.17,481.53 L235.21,481.59 L235.24,481.65 L235.28,481.72 L235.31,481.78 L235.34,481.85 L235.37,481.91 L235.39,481.98 L235.41,482.05 L235.43,482.12 L235.44,482.19 L235.45,482.26 L235.46,482.33 L235.47,482.41 L235.47,482.48 C235.47,483.3,234.59,483.85,233.63,483.85 C232.63,483.85,231.87,483.26,231.87,482.5 C231.87,482.17,232.09,481.98,232.38,481.98 C232.69,481.98,232.89,482.2,232.89,482.49 C232.89,482.99,232.42,482.99,232.27,482.99 C232.58,483.47,233.24,483.6,233.59,483.6 C234,483.6,234.55,483.38,234.55,482.49 C234.55,482.37,234.53,481.8,234.27,481.36 C233.97,480.88,233.63,480.85,233.38,480.84 C233.3,480.83,233.07,480.81,233,480.81 C232.92,480.8,232.85,480.79,232.85,480.69 C232.85,480.58,232.92,480.58,233.09,480.58 H233.52 C234.34,480.58,234.71,479.91,234.71,478.93 C234.71,477.58,234.02,477.3,233.58,477.3 C233.16,477.3,232.41,477.46,232.06,478.05 C232.41,478,232.72,478.22,232.72,478.6 C232.72,478.95,232.45,479.15,232.16,479.15 C231.92,479.15,231.6,479.01,231.6,478.58 C231.6,477.67,232.53,477.02,233.61,477.02 C234.83,477.02,235.74,477.92,235.74,478.93 C235.74,479.75,235.11,480.52,234.07,480.73 Z " />
+</g>        <g
+           transform="translate(-6.250000 -3.125000) translate(-337.307706 705.650916) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $0$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g68">
+<path
+   id="path66"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M228.02,480.41 L228.02,480.56 L228.02,480.71 L228.01,480.86 L228.01,481.01 L228,481.16 L227.98,481.3 L227.97,481.45 L227.95,481.6 L227.93,481.74 L227.9,481.89 L227.87,482.03 L227.83,482.18 L227.79,482.32 L227.74,482.46 L227.68,482.6 L227.65,482.67 L227.62,482.74 C227.16,483.69,226.34,483.85,225.93,483.85 C225.33,483.85,224.6,483.59,224.19,482.67 C223.87,481.98,223.82,481.21,223.82,480.41 C223.82,479.67,223.86,478.77,224.27,478.02 C224.7,477.21,225.43,477.02,225.91,477.02 V477.23 C225.53,477.23,224.94,477.48,224.76,478.44 C224.65,479.03,224.65,479.95,224.65,480.53 C224.65,481.17,224.65,481.82,224.73,482.36 C224.92,483.54,225.67,483.63,225.91,483.63 C226.24,483.63,226.9,483.45,227.09,482.47 C227.19,481.91,227.19,481.16,227.19,480.53 C227.19,479.79,227.19,479.11,227.08,478.48 C226.93,477.53,226.36,477.23,225.91,477.23 H225.91 V477.02 C226.45,477.02,227.21,477.23,227.65,478.17 C227.97,478.85,228.02,479.63,228.02,480.41 Z " />
+</g>        <path
+           id="path70"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,-50.0 100.0,-50.0" />
+        <path
+           id="path72"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 -50.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 -46.875000) translate(-336.701197 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $1$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g76">
+<path
+   id="path74"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M226.36,483.59 L226.36,483.6 L226.36,483.61 L226.36,483.63 L226.36,483.64 L226.36,483.64 L226.36,483.65 L226.36,483.66 L226.36,483.67 L226.36,483.68 L226.36,483.69 L226.36,483.7 L226.36,483.71 L226.36,483.71 L226.36,483.72 L226.36,483.73 L226.36,483.73 L226.36,483.74 L226.36,483.75 L226.36,483.76 L226.35,483.77 L226.35,483.78 L226.35,483.79 L226.34,483.8 L226.34,483.8 L226.34,483.81 L226.33,483.82 L226.32,483.82 L226.32,483.83 L226.31,483.83 L226.3,483.84 L226.29,483.84 L226.29,483.84 L226.28,483.84 L226.28,483.84 L226.27,483.84 L226.27,483.84 L226.26,483.85 L226.25,483.85 L226.25,483.85 L226.24,483.85 L226.23,483.85 L226.23,483.85 L226.22,483.85 L226.21,483.85 L226.2,483.85 L226.19,483.85 L226.18,483.85 L226.17,483.85 L226.16,483.85 L226.15,483.85 L226.14,483.85 L226.13,483.85 C225.52,483.21,224.64,483.21,224.32,483.21 V482.91 C224.52,482.91,225.11,482.91,225.63,483.17 V478.02 C225.63,477.66,225.6,477.54,224.7,477.54 H224.38 V477.23 C224.73,477.27,225.6,477.27,225.99,477.27 C226.39,477.27,227.26,477.27,227.61,477.23 V477.54 H227.29 C226.39,477.54,226.36,477.65,226.36,478.02 Z " />
+</g>        <path
+           id="path78"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,-100.0 100.0,-100.0" />
+        <path
+           id="path80"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 -100.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 -96.875000) translate(-337.144984 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $2$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g84">
+<path
+   id="path82"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M224.7,478 L225.76,479.02 C227.31,480.39,227.91,480.93,227.91,481.92 C227.91,483.06,227.01,483.85,225.79,483.85 C224.67,483.85,223.93,482.94,223.93,482.05 C223.93,481.5,224.43,481.5,224.46,481.5 C224.63,481.5,224.98,481.62,224.98,482.02 C224.98,482.28,224.8,482.54,224.45,482.54 C224.37,482.54,224.35,482.54,224.32,482.53 C224.55,483.17,225.09,483.54,225.67,483.54 C226.57,483.54,227,482.74,227,481.92 C227,481.13,226.5,480.34,225.96,479.73 L224.04,477.6 C223.93,477.49,223.93,477.47,223.93,477.23 H227.63 L227.91,478.96 H227.66 C227.61,478.67,227.54,478.23,227.44,478.08 C227.37,478,226.71,478,226.49,478 Z " />
+</g>        <path
+           id="path86"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,-150.0 100.0,-150.0" />
+        <path
+           id="path88"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 -150.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 -146.875000) translate(-337.263327 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $3$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g92">
+<path
+   id="path90"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M226.32,480.73 L226.4,480.76 L226.47,480.79 L226.55,480.82 L226.62,480.85 L226.69,480.89 L226.76,480.93 L226.82,480.97 L226.89,481.01 L226.95,481.05 L227.01,481.1 L227.07,481.15 L227.13,481.2 L227.18,481.25 L227.23,481.3 L227.28,481.36 L227.33,481.41 L227.37,481.47 L227.42,481.53 L227.46,481.59 L227.49,481.65 L227.53,481.72 L227.56,481.78 L227.59,481.85 L227.62,481.91 L227.64,481.98 L227.66,482.05 L227.68,482.12 L227.69,482.19 L227.71,482.26 L227.71,482.33 L227.72,482.41 L227.72,482.48 C227.72,483.3,226.84,483.85,225.88,483.85 C224.88,483.85,224.12,483.26,224.12,482.5 C224.12,482.17,224.34,481.98,224.63,481.98 C224.94,481.98,225.14,482.2,225.14,482.49 C225.14,482.99,224.67,482.99,224.52,482.99 C224.83,483.47,225.49,483.6,225.85,483.6 C226.25,483.6,226.8,483.38,226.8,482.49 C226.8,482.37,226.78,481.8,226.52,481.36 C226.22,480.88,225.88,480.85,225.64,480.84 C225.56,480.83,225.32,480.81,225.25,480.81 C225.17,480.8,225.1,480.79,225.1,480.69 C225.1,480.58,225.17,480.58,225.34,480.58 H225.77 C226.59,480.58,226.96,479.91,226.96,478.93 C226.96,477.58,226.27,477.3,225.84,477.3 C225.41,477.3,224.66,477.46,224.31,478.05 C224.66,478,224.97,478.22,224.97,478.6 C224.97,478.95,224.7,479.15,224.41,479.15 C224.17,479.15,223.85,479.01,223.85,478.58 C223.85,477.67,224.78,477.02,225.87,477.02 C227.08,477.02,227.99,477.92,227.99,478.93 C227.99,479.75,227.36,480.52,226.32,480.73 Z " />
+</g>        <path
+           id="path94"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,-200.0 100.0,-200.0" />
+        <path
+           id="path96"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 -200.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 -196.875000) translate(-337.470428 715.917188) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $4$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g100">
+<path
+   id="path98"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M226.36,478.87 V478.01 C226.36,477.65,226.34,477.54,225.61,477.54 H225.4 V477.23 C225.8,477.27,226.32,477.27,226.74,477.27 C227.16,477.27,227.69,477.27,228.1,477.23 V477.54 H227.89 C227.15,477.54,227.13,477.65,227.13,478.01 V478.87 H228.13 V479.18 H227.13 V483.7 C227.13,483.9,227.13,483.96,226.97,483.96 C226.88,483.96,226.85,483.96,226.77,483.84 L223.71,479.18 H223.99 L226.42,482.89 V479.18 H223.99 H223.71 V478.87 Z " />
+</g>        <path
+           id="path102"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,-250.0 100.0,-250.0" />
+        <path
+           id="path104"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 -250.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 -246.875000) translate(-337.144984 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $5$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g108">
+<path
+   id="path106"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M227.91,479.23 L227.91,479.34 L227.9,479.45 L227.89,479.56 L227.87,479.66 L227.85,479.77 L227.83,479.87 L227.8,479.97 L227.77,480.07 L227.73,480.17 L227.69,480.26 L227.64,480.35 L227.59,480.44 L227.54,480.53 L227.49,480.61 L227.43,480.69 L227.37,480.76 L227.3,480.84 L227.23,480.9 L227.16,480.97 L227.09,481.03 L227.01,481.09 L226.93,481.14 L226.85,481.19 L226.77,481.23 L226.68,481.27 L226.59,481.31 L226.5,481.34 L226.41,481.36 L226.31,481.38 L226.21,481.4 L226.12,481.4 L226.01,481.41 C225.54,481.41,225.11,481.25,224.75,480.9 V482.84 C224.95,482.78,225.28,482.71,225.6,482.71 C226.82,482.71,227.52,483.61,227.52,483.74 C227.52,483.8,227.49,483.85,227.42,483.85 C227.41,483.85,227.39,483.85,227.34,483.82 C227.14,483.73,226.65,483.53,225.99,483.53 C225.59,483.53,225.13,483.6,224.66,483.81 C224.58,483.84,224.56,483.84,224.54,483.84 C224.44,483.84,224.44,483.76,224.44,483.6 V480.66 C224.44,480.48,224.44,480.4,224.58,480.4 C224.65,480.4,224.67,480.43,224.71,480.49 C224.82,480.65,225.19,481.19,225.99,481.19 C226.51,481.19,226.76,480.73,226.84,480.55 C227,480.18,227.02,479.8,227.02,479.3 C227.02,478.95,227.02,478.36,226.78,477.94 C226.54,477.55,226.17,477.3,225.72,477.3 C224.99,477.3,224.42,477.82,224.25,478.41 C224.28,478.4,224.31,478.39,224.42,478.39 C224.75,478.39,224.92,478.64,224.92,478.87 C224.92,479.11,224.75,479.36,224.42,479.36 C224.28,479.36,223.93,479.29,223.93,478.83 C223.93,477.98,224.62,477.02,225.74,477.02 C226.89,477.02,227.91,477.97,227.91,479.23 Z " />
+</g>        <path
+           id="path110"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,-300.0 100.0,-300.0" />
+        <path
+           id="path112"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 -300.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 -296.875000) translate(-337.263327 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $6$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g116">
+<path
+   id="path114"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M224.75,480.49 V480.73 C224.75,483.24,225.99,483.6,226.49,483.6 C226.73,483.6,227.15,483.54,227.37,483.2 C227.22,483.2,226.82,483.2,226.82,482.76 C226.82,482.45,227.06,482.3,227.28,482.3 C227.44,482.3,227.74,482.39,227.74,482.78 C227.74,483.37,227.3,483.85,226.47,483.85 C225.2,483.85,223.85,482.57,223.85,480.37 C223.85,477.72,225.01,477.02,225.93,477.02 C227.04,477.02,227.99,477.95,227.99,479.26 C227.99,480.52,227.1,481.48,225.99,481.48 L225.99,481.25 C226.14,481.25,226.6,481.25,226.91,480.63 C227.09,480.27,227.09,479.76,227.09,479.27 C227.09,478.8,227.09,478.3,226.92,477.94 C226.62,477.34,226.16,477.3,225.93,477.3 H225.93 C225.31,477.3,225.01,477.89,224.95,478.04 C224.77,478.51,224.77,479.3,224.77,479.48 C224.77,480.26,225.09,481.25,225.99,481.25 L225.99,481.48 C225.32,481.48,224.95,480.97,224.75,480.49 Z " />
+</g>        <path
+           id="path118"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,-350.0 100.0,-350.0" />
+        <path
+           id="path120"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 -350.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 -346.875000) translate(-337.677528 715.902396) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $7$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g124">
+<path
+   id="path122"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M228.18,483.29 L228.19,483.3 L228.19,483.31 L228.2,483.32 L228.21,483.33 L228.21,483.33 L228.22,483.34 L228.23,483.35 L228.23,483.36 L228.23,483.37 L228.24,483.38 L228.24,483.38 L228.25,483.39 L228.25,483.4 L228.25,483.41 L228.25,483.42 L228.26,483.43 L228.26,483.43 L228.26,483.44 L228.26,483.45 L228.26,483.46 L228.26,483.47 L228.27,483.48 L228.27,483.49 L228.27,483.51 L228.27,483.52 L228.27,483.53 L228.27,483.55 L228.27,483.56 L228.27,483.58 L228.27,483.6 L228.27,483.61 L228.27,483.62 L228.27,483.63 H225.85 C224.63,483.63,224.61,483.76,224.57,483.95 H224.32 L223.99,481.9 H224.24 C224.27,482.06,224.36,482.69,224.49,482.81 C224.56,482.87,225.34,482.87,225.47,482.87 H227.53 C227.42,482.71,226.63,481.63,226.41,481.3 C225.52,479.96,225.19,478.58,225.19,477.56 C225.19,477.46,225.19,477.02,225.65,477.02 C226.1,477.02,226.1,477.46,226.1,477.56 V478.07 C226.1,478.62,226.13,479.16,226.21,479.7 C226.25,479.93,226.39,480.78,226.83,481.4 Z " />
+</g>        <path
+           id="path126"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,-400.0 100.0,-400.0" />
+        <path
+           id="path128"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 -400.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 -396.875000) translate(-337.263327 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $8$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g132">
+<path
+   id="path130"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M226.51,480.83 L226.58,480.87 L226.64,480.9 L226.71,480.94 L226.77,480.98 L226.83,481.01 L226.89,481.05 L226.95,481.09 L227,481.13 L227.06,481.18 L227.11,481.22 L227.16,481.26 L227.21,481.31 L227.26,481.35 L227.3,481.4 L227.34,481.45 L227.39,481.49 L227.42,481.54 L227.46,481.59 L227.5,481.64 L227.53,481.69 L227.56,481.74 L227.58,481.8 L227.61,481.85 L227.63,481.91 L227.65,481.96 L227.67,482.02 L227.69,482.07 L227.7,482.13 L227.71,482.19 L227.71,482.25 L227.72,482.31 L227.72,482.37 C227.72,483.29,226.83,483.85,225.93,483.85 L225.91,483.6 C226.64,483.6,227.28,483.09,227.28,482.37 C227.28,481.8,226.89,481.33,226.29,480.98 L225.06,481.77 C224.6,482.07,224.56,482.41,224.56,482.58 C224.56,483.18,225.21,483.6,225.91,483.6 L225.93,483.85 C224.93,483.85,224.12,483.12,224.12,482.19 C224.12,482.01,224.14,481.57,224.56,481.1 C224.67,480.98,225.04,480.73,225.29,480.56 L225.52,480.41 L226.74,479.64 C227.02,479.45,227.49,479.15,227.49,478.55 C227.49,477.81,226.74,477.3,225.93,477.3 C225.07,477.3,224.35,477.91,224.35,478.73 C224.35,479.31,224.67,479.95,225.52,480.41 H225.52 L225.29,480.56 C224.71,480.27,223.85,479.72,223.85,478.73 C223.85,477.68,224.87,477.02,225.91,477.02 C227.04,477.02,227.99,477.84,227.99,478.9 C227.99,479.26,227.88,479.71,227.5,480.13 C227.31,480.33,227.15,480.43,226.51,480.83 Z " />
+</g>        <path
+           id="path134"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,50.0 100.0,50.0" />
+        <path
+           id="path136"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 50.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 53.125000) translate(-348.165694 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $-1$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g142">
+<path
+   id="path138"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M230,479.52 L230.04,479.52 L230.07,479.52 L230.1,479.52 L230.11,479.52 L230.13,479.52 L230.14,479.52 L230.16,479.53 L230.17,479.53 L230.19,479.53 L230.2,479.53 L230.22,479.54 L230.23,479.54 L230.24,479.54 L230.25,479.55 L230.27,479.56 L230.28,479.56 L230.29,479.57 L230.3,479.58 L230.31,479.58 L230.31,479.59 L230.32,479.6 L230.33,479.61 L230.33,479.61 L230.33,479.62 L230.34,479.63 L230.34,479.63 L230.34,479.64 L230.34,479.65 L230.34,479.65 L230.35,479.66 L230.35,479.67 L230.35,479.68 L230.35,479.68 L230.35,479.69 L230.35,479.7 L230.35,479.71 L230.35,479.72 C230.35,479.92,230.17,479.92,230,479.92 H224.61 C224.44,479.92,224.26,479.92,224.26,479.72 C224.26,479.52,224.44,479.52,224.61,479.52 Z " />
+<path
+   id="path140"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M234.11,483.59 L234.11,483.6 L234.11,483.61 L234.11,483.63 L234.11,483.64 L234.11,483.64 L234.11,483.65 L234.11,483.66 L234.11,483.67 L234.11,483.68 L234.11,483.69 L234.11,483.7 L234.11,483.71 L234.11,483.71 L234.11,483.72 L234.11,483.73 L234.11,483.73 L234.11,483.74 L234.11,483.75 L234.11,483.76 L234.1,483.77 L234.1,483.78 L234.1,483.79 L234.09,483.8 L234.09,483.8 L234.08,483.81 L234.08,483.82 L234.07,483.82 L234.06,483.83 L234.06,483.83 L234.05,483.84 L234.04,483.84 L234.04,483.84 L234.03,483.84 L234.03,483.84 L234.02,483.84 L234.02,483.84 L234.01,483.85 L234,483.85 L234,483.85 L233.99,483.85 L233.98,483.85 L233.97,483.85 L233.97,483.85 L233.96,483.85 L233.95,483.85 L233.94,483.85 L233.93,483.85 L233.92,483.85 L233.91,483.85 L233.9,483.85 L233.89,483.85 L233.88,483.85 C233.26,483.21,232.39,483.21,232.07,483.21 V482.91 C232.27,482.91,232.86,482.91,233.38,483.17 V478.02 C233.38,477.66,233.35,477.54,232.45,477.54 H232.13 V477.23 C232.48,477.27,233.35,477.27,233.74,477.27 C234.14,477.27,235.01,477.27,235.36,477.23 V477.54 H235.04 C234.14,477.54,234.11,477.65,234.11,478.02 Z " />
+</g>        <path
+           id="path144"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,100.0 100.0,100.0" />
+        <path
+           id="path146"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 100.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 103.125000) translate(-348.609481 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $-2$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g152">
+<path
+   id="path148"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M230,479.52 L230.04,479.52 L230.07,479.52 L230.1,479.52 L230.11,479.52 L230.13,479.52 L230.14,479.52 L230.16,479.53 L230.17,479.53 L230.19,479.53 L230.2,479.53 L230.22,479.54 L230.23,479.54 L230.24,479.54 L230.25,479.55 L230.27,479.56 L230.28,479.56 L230.29,479.57 L230.3,479.58 L230.31,479.58 L230.31,479.59 L230.32,479.6 L230.33,479.61 L230.33,479.61 L230.33,479.62 L230.34,479.63 L230.34,479.63 L230.34,479.64 L230.34,479.65 L230.34,479.65 L230.35,479.66 L230.35,479.67 L230.35,479.68 L230.35,479.68 L230.35,479.69 L230.35,479.7 L230.35,479.71 L230.35,479.72 C230.35,479.92,230.17,479.92,230,479.92 H224.61 C224.44,479.92,224.26,479.92,224.26,479.72 C224.26,479.52,224.44,479.52,224.61,479.52 Z " />
+<path
+   id="path150"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M232.45,478 L233.5,479.02 C235.06,480.39,235.66,480.93,235.66,481.92 C235.66,483.06,234.76,483.85,233.54,483.85 C232.42,483.85,231.68,482.94,231.68,482.05 C231.68,481.5,232.18,481.5,232.21,481.5 C232.38,481.5,232.73,481.62,232.73,482.02 C232.73,482.28,232.55,482.54,232.2,482.54 C232.12,482.54,232.1,482.54,232.07,482.53 C232.3,483.17,232.84,483.54,233.41,483.54 C234.32,483.54,234.75,482.74,234.75,481.92 C234.75,481.13,234.25,480.34,233.7,479.73 L231.79,477.6 C231.68,477.49,231.68,477.47,231.68,477.23 H235.38 L235.66,478.96 H235.41 C235.36,478.67,235.29,478.23,235.19,478.08 C235.12,478,234.46,478,234.24,478 Z " />
+</g>      </g>
+      <g
+         id="g174"
+         inkscape:label="Axis">
+        <path
+           id="path156"
+           inkscape:label="Xaxis"
+           style="stroke-linejoin:round;marker-end:url(#ArrowAxisEnd);stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="M  -150.0,0.0 125.0,0.0" />
+        <g
+           transform="translate(120.833333 6.250000) translate(-413.683337 890.587813) scale(1.849112 -1.849112)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $x$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g160">
+<path
+   id="path158"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M226.76,480.23 L226.77,480.26 L226.78,480.29 L226.78,480.32 L226.79,480.36 L226.8,480.4 L226.82,480.44 L226.83,480.48 L226.84,480.53 L226.86,480.57 L226.88,480.62 L226.9,480.67 L226.92,480.72 L226.94,480.77 L226.96,480.82 L226.99,480.87 L227.02,480.92 L227.05,480.97 L227.08,481.01 L227.11,481.06 L227.15,481.1 L227.18,481.15 L227.22,481.19 L227.27,481.23 L227.31,481.26 L227.36,481.29 L227.4,481.32 L227.43,481.33 L227.46,481.35 L227.48,481.36 L227.51,481.37 L227.54,481.38 L227.57,481.38 L227.59,481.39 L227.62,481.4 L227.65,481.4 L227.69,481.4 L227.72,481.41 L227.75,481.41 C227.8,481.41,228.04,481.41,228.25,481.28 C227.97,481.23,227.77,480.98,227.77,480.74 C227.77,480.58,227.88,480.39,228.15,480.39 C228.37,480.39,228.69,480.57,228.69,480.97 C228.69,481.49,228.1,481.63,227.76,481.63 C227.18,481.63,226.83,481.1,226.71,480.87 C226.46,481.53,225.93,481.63,225.64,481.63 C224.6,481.63,224.03,480.34,224.03,480.1 C224.03,480,224.13,480,224.15,480 C224.23,480,224.26,480.02,224.28,480.11 C224.62,481.16,225.28,481.41,225.62,481.41 C225.8,481.41,226.15,481.32,226.15,480.74 C226.15,480.43,225.99,479.77,225.62,478.38 C225.46,477.76,225.11,477.34,224.67,477.34 C224.61,477.34,224.38,477.34,224.17,477.47 C224.42,477.52,224.64,477.73,224.64,478.01 C224.64,478.28,224.42,478.36,224.27,478.36 C223.97,478.36,223.72,478.1,223.72,477.78 C223.72,477.32,224.22,477.13,224.66,477.13 C225.32,477.13,225.68,477.82,225.71,477.88 C225.82,477.51,226.18,477.13,226.78,477.13 C227.81,477.13,228.38,478.41,228.38,478.66 C228.38,478.76,228.29,478.76,228.26,478.76 C228.17,478.76,228.15,478.71,228.13,478.65 C227.8,477.58,227.12,477.34,226.8,477.34 C226.41,477.34,226.25,477.66,226.25,478 C226.25,478.22,226.31,478.44,226.42,478.87 Z " />
+</g>        <path
+           id="path162"
+           inkscape:label="Yaxis"
+           style="stroke-linejoin:round;marker-end:url(#ArrowAxisEnd);stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="M  0.0,100.0 0.0,-437.5" />
+        <g
+           transform="translate(6.250000 -437.500000) translate(-413.683337 896.227604) scale(1.849112 -1.849112)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $y(x)$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g172">
+<path
+   id="path164"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M228.28,481.02 L228.28,481.03 L228.28,481.03 L228.28,481.04 L228.29,481.04 L228.29,481.06 L228.29,481.07 L228.29,481.08 L228.3,481.09 L228.3,481.1 L228.3,481.1 L228.3,481.11 L228.3,481.12 L228.31,481.13 L228.31,481.14 L228.31,481.14 L228.31,481.15 L228.31,481.15 L228.31,481.16 L228.31,481.17 L228.31,481.17 L228.32,481.18 L228.32,481.18 L228.32,481.19 L228.32,481.2 L228.32,481.21 L228.32,481.22 L228.32,481.23 L228.32,481.24 L228.32,481.24 L228.32,481.25 C228.32,481.43,228.18,481.52,228.03,481.52 C227.93,481.52,227.77,481.46,227.68,481.31 C227.66,481.26,227.58,480.95,227.54,480.77 C227.47,480.51,227.4,480.24,227.34,479.98 L226.89,478.19 C226.85,478.04,226.42,477.34,225.76,477.34 C225.26,477.34,225.15,477.78,225.15,478.15 C225.15,478.61,225.32,479.22,225.66,480.1 C225.82,480.5,225.85,480.61,225.85,480.81 C225.85,481.26,225.54,481.63,225.04,481.63 C224.09,481.63,223.72,480.18,223.72,480.1 C223.72,480,223.82,480,223.84,480 C223.94,480,223.95,480.02,224,480.17 C224.27,481.11,224.67,481.41,225.01,481.41 C225.09,481.41,225.26,481.41,225.26,481.09 C225.26,480.84,225.16,480.58,225.09,480.39 C224.69,479.34,224.51,478.77,224.51,478.31 C224.51,477.42,225.14,477.13,225.73,477.13 C226.12,477.13,226.45,477.3,226.73,477.57 C226.6,477.06,226.48,476.57,226.09,476.04 C225.82,475.7,225.45,475.42,224.99,475.42 C224.85,475.42,224.4,475.45,224.23,475.83 C224.39,475.83,224.52,475.83,224.66,475.95 C224.76,476.04,224.86,476.17,224.86,476.36 C224.86,476.67,224.59,476.71,224.49,476.71 C224.26,476.71,223.93,476.55,223.93,476.06 C223.93,475.57,224.37,475.2,224.99,475.2 C226.01,475.2,227.04,476.1,227.32,477.23 Z " />
+<path
+   id="path166"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M231.98,474.85 L231.97,474.86 L231.97,474.86 L231.97,474.86 L231.97,474.87 L231.97,474.87 L231.97,474.87 L231.97,474.88 L231.97,474.88 L231.97,474.88 L231.97,474.89 L231.96,474.89 L231.96,474.9 L231.96,474.9 L231.95,474.91 L231.95,474.91 L231.94,474.92 L231.94,474.93 L231.93,474.93 L231.93,474.94 L231.93,474.94 L231.92,474.95 L231.92,474.95 L231.92,474.95 L231.91,474.96 L231.91,474.96 L231.9,474.97 L231.9,474.97 L231.89,474.98 L231.89,474.98 L231.88,474.99 L231.88,474.99 L231.87,475 L231.87,475.01 L231.86,475.01 L231.85,475.02 L231.85,475.03 L231.84,475.03 L231.83,475.04 L231.83,475.05 L231.82,475.05 L231.81,475.06 L231.8,475.07 C230.56,476.32,230.24,478.2,230.24,479.72 C230.24,481.45,230.62,483.17,231.85,484.42 C231.98,484.54,231.98,484.56,231.98,484.59 C231.98,484.66,231.93,484.68,231.88,484.68 C231.77,484.68,230.88,484.01,230.29,482.75 C229.78,481.66,229.66,480.55,229.66,479.72 C229.66,478.94,229.77,477.74,230.32,476.62 C230.92,475.4,231.77,474.75,231.88,474.75 C231.93,474.75,231.98,474.78,231.98,474.85 Z " />
+<path
+   id="path168"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M235.88,480.23 L235.89,480.26 L235.89,480.29 L235.9,480.32 L235.91,480.36 L235.92,480.4 L235.93,480.44 L235.95,480.48 L235.96,480.53 L235.98,480.57 L235.99,480.62 L236.01,480.67 L236.03,480.72 L236.06,480.77 L236.08,480.82 L236.11,480.87 L236.13,480.92 L236.16,480.97 L236.19,481.01 L236.23,481.06 L236.26,481.1 L236.3,481.15 L236.34,481.19 L236.38,481.23 L236.43,481.26 L236.47,481.29 L236.52,481.32 L236.55,481.33 L236.57,481.35 L236.6,481.36 L236.63,481.37 L236.65,481.38 L236.68,481.38 L236.71,481.39 L236.74,481.4 L236.77,481.4 L236.8,481.4 L236.83,481.41 L236.87,481.41 C236.92,481.41,237.15,481.41,237.37,481.28 C237.09,481.23,236.89,480.98,236.89,480.74 C236.89,480.58,236.99,480.39,237.26,480.39 C237.48,480.39,237.8,480.57,237.8,480.97 C237.8,481.49,237.21,481.63,236.88,481.63 C236.3,481.63,235.95,481.1,235.83,480.87 C235.58,481.53,235.04,481.63,234.75,481.63 C233.71,481.63,233.15,480.34,233.15,480.1 C233.15,480,233.25,480,233.27,480 C233.35,480,233.38,480.02,233.4,480.11 C233.74,481.16,234.39,481.41,234.73,481.41 C234.92,481.41,235.27,481.32,235.27,480.74 C235.27,480.43,235.1,479.77,234.73,478.38 C234.57,477.76,234.22,477.34,233.79,477.34 C233.73,477.34,233.49,477.34,233.29,477.47 C233.54,477.52,233.76,477.73,233.76,478.01 C233.76,478.28,233.54,478.36,233.39,478.36 C233.09,478.36,232.84,478.1,232.84,477.78 C232.84,477.32,233.34,477.13,233.77,477.13 C234.43,477.13,234.79,477.82,234.82,477.88 C234.94,477.51,235.3,477.13,235.9,477.13 C236.93,477.13,237.49,478.41,237.49,478.66 C237.49,478.76,237.4,478.76,237.37,478.76 C237.29,478.76,237.26,478.71,237.24,478.65 C236.92,477.58,236.24,477.34,235.92,477.34 C235.53,477.34,235.37,477.66,235.37,478 C235.37,478.22,235.43,478.44,235.54,478.87 Z " />
+<path
+   id="path170"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M241.12,479.72 L241.12,479.79 L241.12,479.87 L241.12,479.95 L241.12,480.03 L241.11,480.2 L241.1,480.37 L241.08,480.55 L241.06,480.74 L241.03,480.94 L241,481.14 L240.96,481.34 L240.92,481.55 L240.86,481.76 L240.8,481.97 L240.73,482.18 L240.65,482.39 L240.61,482.5 L240.56,482.61 L240.52,482.71 L240.47,482.82 C239.87,484.04,239.01,484.68,238.91,484.68 C238.85,484.68,238.81,484.65,238.81,484.59 C238.81,484.56,238.81,484.54,239,484.36 C239.98,483.37,240.55,481.8,240.55,479.72 C240.55,478.02,240.18,476.27,238.94,475.02 C238.81,474.9,238.81,474.88,238.81,474.85 C238.81,474.79,238.85,474.75,238.91,474.75 C239.01,474.75,239.91,475.43,240.5,476.69 C241,477.78,241.12,478.88,241.12,479.72 Z " />
+</g>      </g>
+    </g>
+    <path
+       id="path178"
+       inkscape:label="none"
+       style="stroke-linejoin:round;stroke:#0000FF;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.66666666667;fill:none"
+       d="M  -40.0,140.0 -33.58974358974359,133.5897435897436 -27.179487179487182,127.17948717948718 -20.769230769230774,120.76923076923077 -14.358974358974365,114.35897435897436 -7.948717948717956,107.94871794871796 -1.5384615384615472,101.53846153846155 4.871794871794862,95.12820512820514 11.28205128205127,88.71794871794873 17.692307692307693,82.30769230769232 24.102564102564102,75.89743589743591 30.51282051282051,69.48717948717949 36.92307692307692,63.07692307692308 43.33333333333333,56.66666666666667 49.74358974358974,50.25641025641026 56.153846153846146,43.846153846153854 62.564102564102555,37.435897435897445 68.97435897435896,31.025641025641036 75.38461538461537,24.615384615384627 81.79487179487178,18.205128205128215 88.20512820512819,11.794871794871806 94.6153846153846,5.384615384615394 101.02564102564101,-1.025641025641015 107.43589743589742,-7.435897435897424 113.84615384615384,-13.846153846153832 120.25641025641025,-20.25641025641024 126.66666666666666,-26.666666666666657 133.07692307692307,-33.076923076923066 139.48717948717947,-39.487179487179475 145.89743589743588,-45.897435897435884 152.3076923076923,-52.30769230769229 158.7179487179487,-58.7179487179487 165.1282051282051,-65.12820512820511 171.5384615384615,-71.53846153846149 177.94871794871793,-77.94871794871793 184.35897435897436,-84.35897435897436 190.76923076923075,-90.76923076923075 197.17948717948713,-97.17948717948713 203.58974358974356,-103.58974358974356 210.0,-110.0" />
+  </g>
+  <g
+     id="g527"
+     inkscape:label="PlotData">
+    <g
+       id="g523"
+       transform="translate(110.000000 40.000000)"
+       inkscape:label="Plot">
+      <g
+         id="g501"
+         inkscape:label="Ticks">
+        <g
+           transform="translate(3.125000 6.250000) translate(-331.094688 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $0$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g365">
+<path
+   id="path363"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M228.02,480.41 L228.02,480.56 L228.02,480.71 L228.01,480.86 L228.01,481.01 L228,481.16 L227.98,481.3 L227.97,481.45 L227.95,481.6 L227.93,481.74 L227.9,481.89 L227.87,482.03 L227.83,482.18 L227.79,482.32 L227.74,482.46 L227.68,482.6 L227.65,482.67 L227.62,482.74 C227.16,483.69,226.34,483.85,225.93,483.85 C225.33,483.85,224.6,483.59,224.19,482.67 C223.87,481.98,223.82,481.21,223.82,480.41 C223.82,479.67,223.86,478.77,224.27,478.02 C224.7,477.21,225.43,477.02,225.91,477.02 V477.23 C225.53,477.23,224.94,477.48,224.76,478.44 C224.65,479.03,224.65,479.95,224.65,480.53 C224.65,481.17,224.65,481.82,224.73,482.36 C224.92,483.54,225.67,483.63,225.91,483.63 C226.24,483.63,226.9,483.45,227.09,482.47 C227.19,481.91,227.19,481.16,227.19,480.53 C227.19,479.79,227.19,479.11,227.08,478.48 C226.93,477.53,226.36,477.23,225.91,477.23 H225.91 V477.02 C226.45,477.02,227.21,477.23,227.65,478.17 C227.97,478.85,228.02,479.63,228.02,480.41 Z " />
+</g>        <path
+           id="path367"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  50.0,100.0 50.0,-400.0" />
+        <path
+           id="path369"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m 50.0 -3.125 0,6.25" />
+        <g
+           transform="translate(46.875000 6.250000) translate(-336.701197 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $1$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g373">
+<path
+   id="path371"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M226.36,483.59 L226.36,483.6 L226.36,483.61 L226.36,483.63 L226.36,483.64 L226.36,483.64 L226.36,483.65 L226.36,483.66 L226.36,483.67 L226.36,483.68 L226.36,483.69 L226.36,483.7 L226.36,483.71 L226.36,483.71 L226.36,483.72 L226.36,483.73 L226.36,483.73 L226.36,483.74 L226.36,483.75 L226.36,483.76 L226.35,483.77 L226.35,483.78 L226.35,483.79 L226.34,483.8 L226.34,483.8 L226.34,483.81 L226.33,483.82 L226.32,483.82 L226.32,483.83 L226.31,483.83 L226.3,483.84 L226.29,483.84 L226.29,483.84 L226.28,483.84 L226.28,483.84 L226.27,483.84 L226.27,483.84 L226.26,483.85 L226.25,483.85 L226.25,483.85 L226.24,483.85 L226.23,483.85 L226.23,483.85 L226.22,483.85 L226.21,483.85 L226.2,483.85 L226.19,483.85 L226.18,483.85 L226.17,483.85 L226.16,483.85 L226.15,483.85 L226.14,483.85 L226.13,483.85 C225.52,483.21,224.64,483.21,224.32,483.21 V482.91 C224.52,482.91,225.11,482.91,225.63,483.17 V478.02 C225.63,477.66,225.6,477.54,224.7,477.54 H224.38 V477.23 C224.73,477.27,225.6,477.27,225.99,477.27 C226.39,477.27,227.26,477.27,227.61,477.23 V477.54 H227.29 C226.39,477.54,226.36,477.65,226.36,478.02 Z " />
+</g>        <path
+           id="path375"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  100.0,100.0 100.0,-400.0" />
+        <path
+           id="path377"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m 100.0 -3.125 0,6.25" />
+        <g
+           transform="translate(96.875000 6.250000) translate(-337.144984 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $2$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g381">
+<path
+   id="path379"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M224.7,478 L225.76,479.02 C227.31,480.39,227.91,480.93,227.91,481.92 C227.91,483.06,227.01,483.85,225.79,483.85 C224.67,483.85,223.93,482.94,223.93,482.05 C223.93,481.5,224.43,481.5,224.46,481.5 C224.63,481.5,224.98,481.62,224.98,482.02 C224.98,482.28,224.8,482.54,224.45,482.54 C224.37,482.54,224.35,482.54,224.32,482.53 C224.55,483.17,225.09,483.54,225.67,483.54 C226.57,483.54,227,482.74,227,481.92 C227,481.13,226.5,480.34,225.96,479.73 L224.04,477.6 C223.93,477.49,223.93,477.47,223.93,477.23 H227.63 L227.91,478.96 H227.66 C227.61,478.67,227.54,478.23,227.44,478.08 C227.37,478,226.71,478,226.49,478 Z " />
+</g>        <path
+           id="path383"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -50.0,100.0 -50.0,-400.0" />
+        <path
+           id="path385"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -50.0 -3.125 0,6.25" />
+        <g
+           transform="translate(-53.125000 6.250000) translate(-348.165694 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $-1$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g391">
+<path
+   id="path387"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M230,479.52 L230.04,479.52 L230.07,479.52 L230.1,479.52 L230.11,479.52 L230.13,479.52 L230.14,479.52 L230.16,479.53 L230.17,479.53 L230.19,479.53 L230.2,479.53 L230.22,479.54 L230.23,479.54 L230.24,479.54 L230.25,479.55 L230.27,479.56 L230.28,479.56 L230.29,479.57 L230.3,479.58 L230.31,479.58 L230.31,479.59 L230.32,479.6 L230.33,479.61 L230.33,479.61 L230.33,479.62 L230.34,479.63 L230.34,479.63 L230.34,479.64 L230.34,479.65 L230.34,479.65 L230.35,479.66 L230.35,479.67 L230.35,479.68 L230.35,479.68 L230.35,479.69 L230.35,479.7 L230.35,479.71 L230.35,479.72 C230.35,479.92,230.17,479.92,230,479.92 H224.61 C224.44,479.92,224.26,479.92,224.26,479.72 C224.26,479.52,224.44,479.52,224.61,479.52 Z " />
+<path
+   id="path389"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M234.11,483.59 L234.11,483.6 L234.11,483.61 L234.11,483.63 L234.11,483.64 L234.11,483.64 L234.11,483.65 L234.11,483.66 L234.11,483.67 L234.11,483.68 L234.11,483.69 L234.11,483.7 L234.11,483.71 L234.11,483.71 L234.11,483.72 L234.11,483.73 L234.11,483.73 L234.11,483.74 L234.11,483.75 L234.11,483.76 L234.1,483.77 L234.1,483.78 L234.1,483.79 L234.09,483.8 L234.09,483.8 L234.08,483.81 L234.08,483.82 L234.07,483.82 L234.06,483.83 L234.06,483.83 L234.05,483.84 L234.04,483.84 L234.04,483.84 L234.03,483.84 L234.03,483.84 L234.02,483.84 L234.02,483.84 L234.01,483.85 L234,483.85 L234,483.85 L233.99,483.85 L233.98,483.85 L233.97,483.85 L233.97,483.85 L233.96,483.85 L233.95,483.85 L233.94,483.85 L233.93,483.85 L233.92,483.85 L233.91,483.85 L233.9,483.85 L233.89,483.85 L233.88,483.85 C233.26,483.21,232.39,483.21,232.07,483.21 V482.91 C232.27,482.91,232.86,482.91,233.38,483.17 V478.02 C233.38,477.66,233.35,477.54,232.45,477.54 H232.13 V477.23 C232.48,477.27,233.35,477.27,233.74,477.27 C234.14,477.27,235.01,477.27,235.36,477.23 V477.54 H235.04 C234.14,477.54,234.11,477.65,234.11,478.02 Z " />
+</g>        <path
+           id="path393"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -100.0,100.0 -100.0,-400.0" />
+        <path
+           id="path395"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -100.0 -3.125 0,6.25" />
+        <g
+           transform="translate(-103.125000 6.250000) translate(-348.609481 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $-2$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g401">
+<path
+   id="path397"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M230,479.52 L230.04,479.52 L230.07,479.52 L230.1,479.52 L230.11,479.52 L230.13,479.52 L230.14,479.52 L230.16,479.53 L230.17,479.53 L230.19,479.53 L230.2,479.53 L230.22,479.54 L230.23,479.54 L230.24,479.54 L230.25,479.55 L230.27,479.56 L230.28,479.56 L230.29,479.57 L230.3,479.58 L230.31,479.58 L230.31,479.59 L230.32,479.6 L230.33,479.61 L230.33,479.61 L230.33,479.62 L230.34,479.63 L230.34,479.63 L230.34,479.64 L230.34,479.65 L230.34,479.65 L230.35,479.66 L230.35,479.67 L230.35,479.68 L230.35,479.68 L230.35,479.69 L230.35,479.7 L230.35,479.71 L230.35,479.72 C230.35,479.92,230.17,479.92,230,479.92 H224.61 C224.44,479.92,224.26,479.92,224.26,479.72 C224.26,479.52,224.44,479.52,224.61,479.52 Z " />
+<path
+   id="path399"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M232.45,478 L233.5,479.02 C235.06,480.39,235.66,480.93,235.66,481.92 C235.66,483.06,234.76,483.85,233.54,483.85 C232.42,483.85,231.68,482.94,231.68,482.05 C231.68,481.5,232.18,481.5,232.21,481.5 C232.38,481.5,232.73,481.62,232.73,482.02 C232.73,482.28,232.55,482.54,232.2,482.54 C232.12,482.54,232.1,482.54,232.07,482.53 C232.3,483.17,232.84,483.54,233.41,483.54 C234.32,483.54,234.75,482.74,234.75,481.92 C234.75,481.13,234.25,480.34,233.7,479.73 L231.79,477.6 C231.68,477.49,231.68,477.47,231.68,477.23 H235.38 L235.66,478.96 H235.41 C235.36,478.67,235.29,478.23,235.19,478.08 C235.12,478,234.46,478,234.24,478 Z " />
+</g>        <path
+           id="path403"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,100.0 -150.0,-400.0" />
+        <path
+           id="path405"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -150.0 -3.125 0,6.25" />
+        <g
+           transform="translate(-153.125000 6.250000) translate(-348.727825 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $-3$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g411">
+<path
+   id="path407"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M230,479.52 L230.04,479.52 L230.07,479.52 L230.1,479.52 L230.11,479.52 L230.13,479.52 L230.14,479.52 L230.16,479.53 L230.17,479.53 L230.19,479.53 L230.2,479.53 L230.22,479.54 L230.23,479.54 L230.24,479.54 L230.25,479.55 L230.27,479.56 L230.28,479.56 L230.29,479.57 L230.3,479.58 L230.31,479.58 L230.31,479.59 L230.32,479.6 L230.33,479.61 L230.33,479.61 L230.33,479.62 L230.34,479.63 L230.34,479.63 L230.34,479.64 L230.34,479.65 L230.34,479.65 L230.35,479.66 L230.35,479.67 L230.35,479.68 L230.35,479.68 L230.35,479.69 L230.35,479.7 L230.35,479.71 L230.35,479.72 C230.35,479.92,230.17,479.92,230,479.92 H224.61 C224.44,479.92,224.26,479.92,224.26,479.72 C224.26,479.52,224.44,479.52,224.61,479.52 Z " />
+<path
+   id="path409"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M234.07,480.73 L234.15,480.76 L234.22,480.79 L234.3,480.82 L234.37,480.85 L234.44,480.89 L234.51,480.93 L234.57,480.97 L234.64,481.01 L234.7,481.05 L234.76,481.1 L234.82,481.15 L234.87,481.2 L234.93,481.25 L234.98,481.3 L235.03,481.36 L235.08,481.41 L235.12,481.47 L235.17,481.53 L235.21,481.59 L235.24,481.65 L235.28,481.72 L235.31,481.78 L235.34,481.85 L235.37,481.91 L235.39,481.98 L235.41,482.05 L235.43,482.12 L235.44,482.19 L235.45,482.26 L235.46,482.33 L235.47,482.41 L235.47,482.48 C235.47,483.3,234.59,483.85,233.63,483.85 C232.63,483.85,231.87,483.26,231.87,482.5 C231.87,482.17,232.09,481.98,232.38,481.98 C232.69,481.98,232.89,482.2,232.89,482.49 C232.89,482.99,232.42,482.99,232.27,482.99 C232.58,483.47,233.24,483.6,233.59,483.6 C234,483.6,234.55,483.38,234.55,482.49 C234.55,482.37,234.53,481.8,234.27,481.36 C233.97,480.88,233.63,480.85,233.38,480.84 C233.3,480.83,233.07,480.81,233,480.81 C232.92,480.8,232.85,480.79,232.85,480.69 C232.85,480.58,232.92,480.58,233.09,480.58 H233.52 C234.34,480.58,234.71,479.91,234.71,478.93 C234.71,477.58,234.02,477.3,233.58,477.3 C233.16,477.3,232.41,477.46,232.06,478.05 C232.41,478,232.72,478.22,232.72,478.6 C232.72,478.95,232.45,479.15,232.16,479.15 C231.92,479.15,231.6,479.01,231.6,478.58 C231.6,477.67,232.53,477.02,233.61,477.02 C234.83,477.02,235.74,477.92,235.74,478.93 C235.74,479.75,235.11,480.52,234.07,480.73 Z " />
+</g>        <g
+           transform="translate(-6.250000 -3.125000) translate(-337.307706 705.650916) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $0$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g415">
+<path
+   id="path413"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M228.02,480.41 L228.02,480.56 L228.02,480.71 L228.01,480.86 L228.01,481.01 L228,481.16 L227.98,481.3 L227.97,481.45 L227.95,481.6 L227.93,481.74 L227.9,481.89 L227.87,482.03 L227.83,482.18 L227.79,482.32 L227.74,482.46 L227.68,482.6 L227.65,482.67 L227.62,482.74 C227.16,483.69,226.34,483.85,225.93,483.85 C225.33,483.85,224.6,483.59,224.19,482.67 C223.87,481.98,223.82,481.21,223.82,480.41 C223.82,479.67,223.86,478.77,224.27,478.02 C224.7,477.21,225.43,477.02,225.91,477.02 V477.23 C225.53,477.23,224.94,477.48,224.76,478.44 C224.65,479.03,224.65,479.95,224.65,480.53 C224.65,481.17,224.65,481.82,224.73,482.36 C224.92,483.54,225.67,483.63,225.91,483.63 C226.24,483.63,226.9,483.45,227.09,482.47 C227.19,481.91,227.19,481.16,227.19,480.53 C227.19,479.79,227.19,479.11,227.08,478.48 C226.93,477.53,226.36,477.23,225.91,477.23 H225.91 V477.02 C226.45,477.02,227.21,477.23,227.65,478.17 C227.97,478.85,228.02,479.63,228.02,480.41 Z " />
+</g>        <path
+           id="path417"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,-50.0 100.0,-50.0" />
+        <path
+           id="path419"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 -50.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 -46.875000) translate(-336.701197 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $1$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g423">
+<path
+   id="path421"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M226.36,483.59 L226.36,483.6 L226.36,483.61 L226.36,483.63 L226.36,483.64 L226.36,483.64 L226.36,483.65 L226.36,483.66 L226.36,483.67 L226.36,483.68 L226.36,483.69 L226.36,483.7 L226.36,483.71 L226.36,483.71 L226.36,483.72 L226.36,483.73 L226.36,483.73 L226.36,483.74 L226.36,483.75 L226.36,483.76 L226.35,483.77 L226.35,483.78 L226.35,483.79 L226.34,483.8 L226.34,483.8 L226.34,483.81 L226.33,483.82 L226.32,483.82 L226.32,483.83 L226.31,483.83 L226.3,483.84 L226.29,483.84 L226.29,483.84 L226.28,483.84 L226.28,483.84 L226.27,483.84 L226.27,483.84 L226.26,483.85 L226.25,483.85 L226.25,483.85 L226.24,483.85 L226.23,483.85 L226.23,483.85 L226.22,483.85 L226.21,483.85 L226.2,483.85 L226.19,483.85 L226.18,483.85 L226.17,483.85 L226.16,483.85 L226.15,483.85 L226.14,483.85 L226.13,483.85 C225.52,483.21,224.64,483.21,224.32,483.21 V482.91 C224.52,482.91,225.11,482.91,225.63,483.17 V478.02 C225.63,477.66,225.6,477.54,224.7,477.54 H224.38 V477.23 C224.73,477.27,225.6,477.27,225.99,477.27 C226.39,477.27,227.26,477.27,227.61,477.23 V477.54 H227.29 C226.39,477.54,226.36,477.65,226.36,478.02 Z " />
+</g>        <path
+           id="path425"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,-100.0 100.0,-100.0" />
+        <path
+           id="path427"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 -100.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 -96.875000) translate(-337.144984 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $2$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g431">
+<path
+   id="path429"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M224.7,478 L225.76,479.02 C227.31,480.39,227.91,480.93,227.91,481.92 C227.91,483.06,227.01,483.85,225.79,483.85 C224.67,483.85,223.93,482.94,223.93,482.05 C223.93,481.5,224.43,481.5,224.46,481.5 C224.63,481.5,224.98,481.62,224.98,482.02 C224.98,482.28,224.8,482.54,224.45,482.54 C224.37,482.54,224.35,482.54,224.32,482.53 C224.55,483.17,225.09,483.54,225.67,483.54 C226.57,483.54,227,482.74,227,481.92 C227,481.13,226.5,480.34,225.96,479.73 L224.04,477.6 C223.93,477.49,223.93,477.47,223.93,477.23 H227.63 L227.91,478.96 H227.66 C227.61,478.67,227.54,478.23,227.44,478.08 C227.37,478,226.71,478,226.49,478 Z " />
+</g>        <path
+           id="path433"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,-150.0 100.0,-150.0" />
+        <path
+           id="path435"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 -150.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 -146.875000) translate(-337.263327 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $3$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g439">
+<path
+   id="path437"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M226.32,480.73 L226.4,480.76 L226.47,480.79 L226.55,480.82 L226.62,480.85 L226.69,480.89 L226.76,480.93 L226.82,480.97 L226.89,481.01 L226.95,481.05 L227.01,481.1 L227.07,481.15 L227.13,481.2 L227.18,481.25 L227.23,481.3 L227.28,481.36 L227.33,481.41 L227.37,481.47 L227.42,481.53 L227.46,481.59 L227.49,481.65 L227.53,481.72 L227.56,481.78 L227.59,481.85 L227.62,481.91 L227.64,481.98 L227.66,482.05 L227.68,482.12 L227.69,482.19 L227.71,482.26 L227.71,482.33 L227.72,482.41 L227.72,482.48 C227.72,483.3,226.84,483.85,225.88,483.85 C224.88,483.85,224.12,483.26,224.12,482.5 C224.12,482.17,224.34,481.98,224.63,481.98 C224.94,481.98,225.14,482.2,225.14,482.49 C225.14,482.99,224.67,482.99,224.52,482.99 C224.83,483.47,225.49,483.6,225.85,483.6 C226.25,483.6,226.8,483.38,226.8,482.49 C226.8,482.37,226.78,481.8,226.52,481.36 C226.22,480.88,225.88,480.85,225.64,480.84 C225.56,480.83,225.32,480.81,225.25,480.81 C225.17,480.8,225.1,480.79,225.1,480.69 C225.1,480.58,225.17,480.58,225.34,480.58 H225.77 C226.59,480.58,226.96,479.91,226.96,478.93 C226.96,477.58,226.27,477.3,225.84,477.3 C225.41,477.3,224.66,477.46,224.31,478.05 C224.66,478,224.97,478.22,224.97,478.6 C224.97,478.95,224.7,479.15,224.41,479.15 C224.17,479.15,223.85,479.01,223.85,478.58 C223.85,477.67,224.78,477.02,225.87,477.02 C227.08,477.02,227.99,477.92,227.99,478.93 C227.99,479.75,227.36,480.52,226.32,480.73 Z " />
+</g>        <path
+           id="path441"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,-200.0 100.0,-200.0" />
+        <path
+           id="path443"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 -200.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 -196.875000) translate(-337.470428 715.917188) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $4$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g447">
+<path
+   id="path445"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M226.36,478.87 V478.01 C226.36,477.65,226.34,477.54,225.61,477.54 H225.4 V477.23 C225.8,477.27,226.32,477.27,226.74,477.27 C227.16,477.27,227.69,477.27,228.1,477.23 V477.54 H227.89 C227.15,477.54,227.13,477.65,227.13,478.01 V478.87 H228.13 V479.18 H227.13 V483.7 C227.13,483.9,227.13,483.96,226.97,483.96 C226.88,483.96,226.85,483.96,226.77,483.84 L223.71,479.18 H223.99 L226.42,482.89 V479.18 H223.99 H223.71 V478.87 Z " />
+</g>        <path
+           id="path449"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,-250.0 100.0,-250.0" />
+        <path
+           id="path451"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 -250.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 -246.875000) translate(-337.144984 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $5$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g455">
+<path
+   id="path453"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M227.91,479.23 L227.91,479.34 L227.9,479.45 L227.89,479.56 L227.87,479.66 L227.85,479.77 L227.83,479.87 L227.8,479.97 L227.77,480.07 L227.73,480.17 L227.69,480.26 L227.64,480.35 L227.59,480.44 L227.54,480.53 L227.49,480.61 L227.43,480.69 L227.37,480.76 L227.3,480.84 L227.23,480.9 L227.16,480.97 L227.09,481.03 L227.01,481.09 L226.93,481.14 L226.85,481.19 L226.77,481.23 L226.68,481.27 L226.59,481.31 L226.5,481.34 L226.41,481.36 L226.31,481.38 L226.21,481.4 L226.12,481.4 L226.01,481.41 C225.54,481.41,225.11,481.25,224.75,480.9 V482.84 C224.95,482.78,225.28,482.71,225.6,482.71 C226.82,482.71,227.52,483.61,227.52,483.74 C227.52,483.8,227.49,483.85,227.42,483.85 C227.41,483.85,227.39,483.85,227.34,483.82 C227.14,483.73,226.65,483.53,225.99,483.53 C225.59,483.53,225.13,483.6,224.66,483.81 C224.58,483.84,224.56,483.84,224.54,483.84 C224.44,483.84,224.44,483.76,224.44,483.6 V480.66 C224.44,480.48,224.44,480.4,224.58,480.4 C224.65,480.4,224.67,480.43,224.71,480.49 C224.82,480.65,225.19,481.19,225.99,481.19 C226.51,481.19,226.76,480.73,226.84,480.55 C227,480.18,227.02,479.8,227.02,479.3 C227.02,478.95,227.02,478.36,226.78,477.94 C226.54,477.55,226.17,477.3,225.72,477.3 C224.99,477.3,224.42,477.82,224.25,478.41 C224.28,478.4,224.31,478.39,224.42,478.39 C224.75,478.39,224.92,478.64,224.92,478.87 C224.92,479.11,224.75,479.36,224.42,479.36 C224.28,479.36,223.93,479.29,223.93,478.83 C223.93,477.98,224.62,477.02,225.74,477.02 C226.89,477.02,227.91,477.97,227.91,479.23 Z " />
+</g>        <path
+           id="path457"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,-300.0 100.0,-300.0" />
+        <path
+           id="path459"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 -300.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 -296.875000) translate(-337.263327 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $6$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g463">
+<path
+   id="path461"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M224.75,480.49 V480.73 C224.75,483.24,225.99,483.6,226.49,483.6 C226.73,483.6,227.15,483.54,227.37,483.2 C227.22,483.2,226.82,483.2,226.82,482.76 C226.82,482.45,227.06,482.3,227.28,482.3 C227.44,482.3,227.74,482.39,227.74,482.78 C227.74,483.37,227.3,483.85,226.47,483.85 C225.2,483.85,223.85,482.57,223.85,480.37 C223.85,477.72,225.01,477.02,225.93,477.02 C227.04,477.02,227.99,477.95,227.99,479.26 C227.99,480.52,227.1,481.48,225.99,481.48 L225.99,481.25 C226.14,481.25,226.6,481.25,226.91,480.63 C227.09,480.27,227.09,479.76,227.09,479.27 C227.09,478.8,227.09,478.3,226.92,477.94 C226.62,477.34,226.16,477.3,225.93,477.3 H225.93 C225.31,477.3,225.01,477.89,224.95,478.04 C224.77,478.51,224.77,479.3,224.77,479.48 C224.77,480.26,225.09,481.25,225.99,481.25 L225.99,481.48 C225.32,481.48,224.95,480.97,224.75,480.49 Z " />
+</g>        <path
+           id="path465"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,-350.0 100.0,-350.0" />
+        <path
+           id="path467"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 -350.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 -346.875000) translate(-337.677528 715.902396) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $7$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g471">
+<path
+   id="path469"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M228.18,483.29 L228.19,483.3 L228.19,483.31 L228.2,483.32 L228.21,483.33 L228.21,483.33 L228.22,483.34 L228.23,483.35 L228.23,483.36 L228.23,483.37 L228.24,483.38 L228.24,483.38 L228.25,483.39 L228.25,483.4 L228.25,483.41 L228.25,483.42 L228.26,483.43 L228.26,483.43 L228.26,483.44 L228.26,483.45 L228.26,483.46 L228.26,483.47 L228.27,483.48 L228.27,483.49 L228.27,483.51 L228.27,483.52 L228.27,483.53 L228.27,483.55 L228.27,483.56 L228.27,483.58 L228.27,483.6 L228.27,483.61 L228.27,483.62 L228.27,483.63 H225.85 C224.63,483.63,224.61,483.76,224.57,483.95 H224.32 L223.99,481.9 H224.24 C224.27,482.06,224.36,482.69,224.49,482.81 C224.56,482.87,225.34,482.87,225.47,482.87 H227.53 C227.42,482.71,226.63,481.63,226.41,481.3 C225.52,479.96,225.19,478.58,225.19,477.56 C225.19,477.46,225.19,477.02,225.65,477.02 C226.1,477.02,226.1,477.46,226.1,477.56 V478.07 C226.1,478.62,226.13,479.16,226.21,479.7 C226.25,479.93,226.39,480.78,226.83,481.4 Z " />
+</g>        <path
+           id="path473"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,-400.0 100.0,-400.0" />
+        <path
+           id="path475"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 -400.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 -396.875000) translate(-337.263327 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $8$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g479">
+<path
+   id="path477"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M226.51,480.83 L226.58,480.87 L226.64,480.9 L226.71,480.94 L226.77,480.98 L226.83,481.01 L226.89,481.05 L226.95,481.09 L227,481.13 L227.06,481.18 L227.11,481.22 L227.16,481.26 L227.21,481.31 L227.26,481.35 L227.3,481.4 L227.34,481.45 L227.39,481.49 L227.42,481.54 L227.46,481.59 L227.5,481.64 L227.53,481.69 L227.56,481.74 L227.58,481.8 L227.61,481.85 L227.63,481.91 L227.65,481.96 L227.67,482.02 L227.69,482.07 L227.7,482.13 L227.71,482.19 L227.71,482.25 L227.72,482.31 L227.72,482.37 C227.72,483.29,226.83,483.85,225.93,483.85 L225.91,483.6 C226.64,483.6,227.28,483.09,227.28,482.37 C227.28,481.8,226.89,481.33,226.29,480.98 L225.06,481.77 C224.6,482.07,224.56,482.41,224.56,482.58 C224.56,483.18,225.21,483.6,225.91,483.6 L225.93,483.85 C224.93,483.85,224.12,483.12,224.12,482.19 C224.12,482.01,224.14,481.57,224.56,481.1 C224.67,480.98,225.04,480.73,225.29,480.56 L225.52,480.41 L226.74,479.64 C227.02,479.45,227.49,479.15,227.49,478.55 C227.49,477.81,226.74,477.3,225.93,477.3 C225.07,477.3,224.35,477.91,224.35,478.73 C224.35,479.31,224.67,479.95,225.52,480.41 H225.52 L225.29,480.56 C224.71,480.27,223.85,479.72,223.85,478.73 C223.85,477.68,224.87,477.02,225.91,477.02 C227.04,477.02,227.99,477.84,227.99,478.9 C227.99,479.26,227.88,479.71,227.5,480.13 C227.31,480.33,227.15,480.43,226.51,480.83 Z " />
+</g>        <path
+           id="path481"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,50.0 100.0,50.0" />
+        <path
+           id="path483"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 50.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 53.125000) translate(-348.165694 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $-1$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g489">
+<path
+   id="path485"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M230,479.52 L230.04,479.52 L230.07,479.52 L230.1,479.52 L230.11,479.52 L230.13,479.52 L230.14,479.52 L230.16,479.53 L230.17,479.53 L230.19,479.53 L230.2,479.53 L230.22,479.54 L230.23,479.54 L230.24,479.54 L230.25,479.55 L230.27,479.56 L230.28,479.56 L230.29,479.57 L230.3,479.58 L230.31,479.58 L230.31,479.59 L230.32,479.6 L230.33,479.61 L230.33,479.61 L230.33,479.62 L230.34,479.63 L230.34,479.63 L230.34,479.64 L230.34,479.65 L230.34,479.65 L230.35,479.66 L230.35,479.67 L230.35,479.68 L230.35,479.68 L230.35,479.69 L230.35,479.7 L230.35,479.71 L230.35,479.72 C230.35,479.92,230.17,479.92,230,479.92 H224.61 C224.44,479.92,224.26,479.92,224.26,479.72 C224.26,479.52,224.44,479.52,224.61,479.52 Z " />
+<path
+   id="path487"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M234.11,483.59 L234.11,483.6 L234.11,483.61 L234.11,483.63 L234.11,483.64 L234.11,483.64 L234.11,483.65 L234.11,483.66 L234.11,483.67 L234.11,483.68 L234.11,483.69 L234.11,483.7 L234.11,483.71 L234.11,483.71 L234.11,483.72 L234.11,483.73 L234.11,483.73 L234.11,483.74 L234.11,483.75 L234.11,483.76 L234.1,483.77 L234.1,483.78 L234.1,483.79 L234.09,483.8 L234.09,483.8 L234.08,483.81 L234.08,483.82 L234.07,483.82 L234.06,483.83 L234.06,483.83 L234.05,483.84 L234.04,483.84 L234.04,483.84 L234.03,483.84 L234.03,483.84 L234.02,483.84 L234.02,483.84 L234.01,483.85 L234,483.85 L234,483.85 L233.99,483.85 L233.98,483.85 L233.97,483.85 L233.97,483.85 L233.96,483.85 L233.95,483.85 L233.94,483.85 L233.93,483.85 L233.92,483.85 L233.91,483.85 L233.9,483.85 L233.89,483.85 L233.88,483.85 C233.26,483.21,232.39,483.21,232.07,483.21 V482.91 C232.27,482.91,232.86,482.91,233.38,483.17 V478.02 C233.38,477.66,233.35,477.54,232.45,477.54 H232.13 V477.23 C232.48,477.27,233.35,477.27,233.74,477.27 C234.14,477.27,235.01,477.27,235.36,477.23 V477.54 H235.04 C234.14,477.54,234.11,477.65,234.11,478.02 Z " />
+</g>        <path
+           id="path491"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#B2B2B2;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.0;fill:none"
+           d="M  -150.0,100.0 100.0,100.0" />
+        <path
+           id="path493"
+           inkscape:label="none"
+           style="stroke-linejoin:round;stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="m -3.125 100.0 6.25,0" />
+        <g
+           transform="translate(-6.250000 103.125000) translate(-348.609481 715.754467) scale(1.479290 -1.479290)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $-2$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g499">
+<path
+   id="path495"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M230,479.52 L230.04,479.52 L230.07,479.52 L230.1,479.52 L230.11,479.52 L230.13,479.52 L230.14,479.52 L230.16,479.53 L230.17,479.53 L230.19,479.53 L230.2,479.53 L230.22,479.54 L230.23,479.54 L230.24,479.54 L230.25,479.55 L230.27,479.56 L230.28,479.56 L230.29,479.57 L230.3,479.58 L230.31,479.58 L230.31,479.59 L230.32,479.6 L230.33,479.61 L230.33,479.61 L230.33,479.62 L230.34,479.63 L230.34,479.63 L230.34,479.64 L230.34,479.65 L230.34,479.65 L230.35,479.66 L230.35,479.67 L230.35,479.68 L230.35,479.68 L230.35,479.69 L230.35,479.7 L230.35,479.71 L230.35,479.72 C230.35,479.92,230.17,479.92,230,479.92 H224.61 C224.44,479.92,224.26,479.92,224.26,479.72 C224.26,479.52,224.44,479.52,224.61,479.52 Z " />
+<path
+   id="path497"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M232.45,478 L233.5,479.02 C235.06,480.39,235.66,480.93,235.66,481.92 C235.66,483.06,234.76,483.85,233.54,483.85 C232.42,483.85,231.68,482.94,231.68,482.05 C231.68,481.5,232.18,481.5,232.21,481.5 C232.38,481.5,232.73,481.62,232.73,482.02 C232.73,482.28,232.55,482.54,232.2,482.54 C232.12,482.54,232.1,482.54,232.07,482.53 C232.3,483.17,232.84,483.54,233.41,483.54 C234.32,483.54,234.75,482.74,234.75,481.92 C234.75,481.13,234.25,480.34,233.7,479.73 L231.79,477.6 C231.68,477.49,231.68,477.47,231.68,477.23 H235.38 L235.66,478.96 H235.41 C235.36,478.67,235.29,478.23,235.19,478.08 C235.12,478,234.46,478,234.24,478 Z " />
+</g>      </g>
+      <g
+         id="g521"
+         inkscape:label="Axis">
+        <path
+           id="path503"
+           inkscape:label="Xaxis"
+           style="stroke-linejoin:round;marker-end:url(#ArrowAxisEnd);stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="M  -150.0,0.0 125.0,0.0" />
+        <g
+           transform="translate(120.833333 6.250000) translate(-413.683337 890.587813) scale(1.849112 -1.849112)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $x$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g507">
+<path
+   id="path505"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M226.76,480.23 L226.77,480.26 L226.78,480.29 L226.78,480.32 L226.79,480.36 L226.8,480.4 L226.82,480.44 L226.83,480.48 L226.84,480.53 L226.86,480.57 L226.88,480.62 L226.9,480.67 L226.92,480.72 L226.94,480.77 L226.96,480.82 L226.99,480.87 L227.02,480.92 L227.05,480.97 L227.08,481.01 L227.11,481.06 L227.15,481.1 L227.18,481.15 L227.22,481.19 L227.27,481.23 L227.31,481.26 L227.36,481.29 L227.4,481.32 L227.43,481.33 L227.46,481.35 L227.48,481.36 L227.51,481.37 L227.54,481.38 L227.57,481.38 L227.59,481.39 L227.62,481.4 L227.65,481.4 L227.69,481.4 L227.72,481.41 L227.75,481.41 C227.8,481.41,228.04,481.41,228.25,481.28 C227.97,481.23,227.77,480.98,227.77,480.74 C227.77,480.58,227.88,480.39,228.15,480.39 C228.37,480.39,228.69,480.57,228.69,480.97 C228.69,481.49,228.1,481.63,227.76,481.63 C227.18,481.63,226.83,481.1,226.71,480.87 C226.46,481.53,225.93,481.63,225.64,481.63 C224.6,481.63,224.03,480.34,224.03,480.1 C224.03,480,224.13,480,224.15,480 C224.23,480,224.26,480.02,224.28,480.11 C224.62,481.16,225.28,481.41,225.62,481.41 C225.8,481.41,226.15,481.32,226.15,480.74 C226.15,480.43,225.99,479.77,225.62,478.38 C225.46,477.76,225.11,477.34,224.67,477.34 C224.61,477.34,224.38,477.34,224.17,477.47 C224.42,477.52,224.64,477.73,224.64,478.01 C224.64,478.28,224.42,478.36,224.27,478.36 C223.97,478.36,223.72,478.1,223.72,477.78 C223.72,477.32,224.22,477.13,224.66,477.13 C225.32,477.13,225.68,477.82,225.71,477.88 C225.82,477.51,226.18,477.13,226.78,477.13 C227.81,477.13,228.38,478.41,228.38,478.66 C228.38,478.76,228.29,478.76,228.26,478.76 C228.17,478.76,228.15,478.71,228.13,478.65 C227.8,477.58,227.12,477.34,226.8,477.34 C226.41,477.34,226.25,477.66,226.25,478 C226.25,478.22,226.31,478.44,226.42,478.87 Z " />
+</g>        <path
+           id="path509"
+           inkscape:label="Yaxis"
+           style="stroke-linejoin:round;marker-end:url(#ArrowAxisEnd);stroke:#4C4C4C;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.42857142857;fill:none"
+           d="M  0.0,100.0 0.0,-437.5" />
+        <g
+           transform="translate(6.250000 -437.500000) translate(-413.683337 896.227604) scale(1.849112 -1.849112)  "
+           ns0:preamble="/home/wizzerinus/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
+           ns0:text=" $y(x)$"
+           text-anchor="start"
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           fill-opacity="1"
+           fill-rule="evenodd"
+           fill="none"
+           stroke-opacity="1"
+           stroke-dashoffset="0"
+           stroke-dasharray="none"
+           stroke-miterlimit="10.433"
+           stroke-linejoin="miter"
+           stroke-linecap="butt"
+           stroke="black"
+           xml:space="preserve"
+           id="g519">
+<path
+   id="path511"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M228.28,481.02 L228.28,481.03 L228.28,481.03 L228.28,481.04 L228.29,481.04 L228.29,481.06 L228.29,481.07 L228.29,481.08 L228.3,481.09 L228.3,481.1 L228.3,481.1 L228.3,481.11 L228.3,481.12 L228.31,481.13 L228.31,481.14 L228.31,481.14 L228.31,481.15 L228.31,481.15 L228.31,481.16 L228.31,481.17 L228.31,481.17 L228.32,481.18 L228.32,481.18 L228.32,481.19 L228.32,481.2 L228.32,481.21 L228.32,481.22 L228.32,481.23 L228.32,481.24 L228.32,481.24 L228.32,481.25 C228.32,481.43,228.18,481.52,228.03,481.52 C227.93,481.52,227.77,481.46,227.68,481.31 C227.66,481.26,227.58,480.95,227.54,480.77 C227.47,480.51,227.4,480.24,227.34,479.98 L226.89,478.19 C226.85,478.04,226.42,477.34,225.76,477.34 C225.26,477.34,225.15,477.78,225.15,478.15 C225.15,478.61,225.32,479.22,225.66,480.1 C225.82,480.5,225.85,480.61,225.85,480.81 C225.85,481.26,225.54,481.63,225.04,481.63 C224.09,481.63,223.72,480.18,223.72,480.1 C223.72,480,223.82,480,223.84,480 C223.94,480,223.95,480.02,224,480.17 C224.27,481.11,224.67,481.41,225.01,481.41 C225.09,481.41,225.26,481.41,225.26,481.09 C225.26,480.84,225.16,480.58,225.09,480.39 C224.69,479.34,224.51,478.77,224.51,478.31 C224.51,477.42,225.14,477.13,225.73,477.13 C226.12,477.13,226.45,477.3,226.73,477.57 C226.6,477.06,226.48,476.57,226.09,476.04 C225.82,475.7,225.45,475.42,224.99,475.42 C224.85,475.42,224.4,475.45,224.23,475.83 C224.39,475.83,224.52,475.83,224.66,475.95 C224.76,476.04,224.86,476.17,224.86,476.36 C224.86,476.67,224.59,476.71,224.49,476.71 C224.26,476.71,223.93,476.55,223.93,476.06 C223.93,475.57,224.37,475.2,224.99,475.2 C226.01,475.2,227.04,476.1,227.32,477.23 Z " />
+<path
+   id="path513"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M231.98,474.85 L231.97,474.86 L231.97,474.86 L231.97,474.86 L231.97,474.87 L231.97,474.87 L231.97,474.87 L231.97,474.88 L231.97,474.88 L231.97,474.88 L231.97,474.89 L231.96,474.89 L231.96,474.9 L231.96,474.9 L231.95,474.91 L231.95,474.91 L231.94,474.92 L231.94,474.93 L231.93,474.93 L231.93,474.94 L231.93,474.94 L231.92,474.95 L231.92,474.95 L231.92,474.95 L231.91,474.96 L231.91,474.96 L231.9,474.97 L231.9,474.97 L231.89,474.98 L231.89,474.98 L231.88,474.99 L231.88,474.99 L231.87,475 L231.87,475.01 L231.86,475.01 L231.85,475.02 L231.85,475.03 L231.84,475.03 L231.83,475.04 L231.83,475.05 L231.82,475.05 L231.81,475.06 L231.8,475.07 C230.56,476.32,230.24,478.2,230.24,479.72 C230.24,481.45,230.62,483.17,231.85,484.42 C231.98,484.54,231.98,484.56,231.98,484.59 C231.98,484.66,231.93,484.68,231.88,484.68 C231.77,484.68,230.88,484.01,230.29,482.75 C229.78,481.66,229.66,480.55,229.66,479.72 C229.66,478.94,229.77,477.74,230.32,476.62 C230.92,475.4,231.77,474.75,231.88,474.75 C231.93,474.75,231.98,474.78,231.98,474.85 Z " />
+<path
+   id="path515"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M235.88,480.23 L235.89,480.26 L235.89,480.29 L235.9,480.32 L235.91,480.36 L235.92,480.4 L235.93,480.44 L235.95,480.48 L235.96,480.53 L235.98,480.57 L235.99,480.62 L236.01,480.67 L236.03,480.72 L236.06,480.77 L236.08,480.82 L236.11,480.87 L236.13,480.92 L236.16,480.97 L236.19,481.01 L236.23,481.06 L236.26,481.1 L236.3,481.15 L236.34,481.19 L236.38,481.23 L236.43,481.26 L236.47,481.29 L236.52,481.32 L236.55,481.33 L236.57,481.35 L236.6,481.36 L236.63,481.37 L236.65,481.38 L236.68,481.38 L236.71,481.39 L236.74,481.4 L236.77,481.4 L236.8,481.4 L236.83,481.41 L236.87,481.41 C236.92,481.41,237.15,481.41,237.37,481.28 C237.09,481.23,236.89,480.98,236.89,480.74 C236.89,480.58,236.99,480.39,237.26,480.39 C237.48,480.39,237.8,480.57,237.8,480.97 C237.8,481.49,237.21,481.63,236.88,481.63 C236.3,481.63,235.95,481.1,235.83,480.87 C235.58,481.53,235.04,481.63,234.75,481.63 C233.71,481.63,233.15,480.34,233.15,480.1 C233.15,480,233.25,480,233.27,480 C233.35,480,233.38,480.02,233.4,480.11 C233.74,481.16,234.39,481.41,234.73,481.41 C234.92,481.41,235.27,481.32,235.27,480.74 C235.27,480.43,235.1,479.77,234.73,478.38 C234.57,477.76,234.22,477.34,233.79,477.34 C233.73,477.34,233.49,477.34,233.29,477.47 C233.54,477.52,233.76,477.73,233.76,478.01 C233.76,478.28,233.54,478.36,233.39,478.36 C233.09,478.36,232.84,478.1,232.84,477.78 C232.84,477.32,233.34,477.13,233.77,477.13 C234.43,477.13,234.79,477.82,234.82,477.88 C234.94,477.51,235.3,477.13,235.9,477.13 C236.93,477.13,237.49,478.41,237.49,478.66 C237.49,478.76,237.4,478.76,237.37,478.76 C237.29,478.76,237.26,478.71,237.24,478.65 C236.92,477.58,236.24,477.34,235.92,477.34 C235.53,477.34,235.37,477.66,235.37,478 C235.37,478.22,235.43,478.44,235.54,478.87 Z " />
+<path
+   id="path517"
+   style="fill:#000000;stroke-width:0"
+   fill="black"
+   stroke-width="0"
+   d="M241.12,479.72 L241.12,479.79 L241.12,479.87 L241.12,479.95 L241.12,480.03 L241.11,480.2 L241.1,480.37 L241.08,480.55 L241.06,480.74 L241.03,480.94 L241,481.14 L240.96,481.34 L240.92,481.55 L240.86,481.76 L240.8,481.97 L240.73,482.18 L240.65,482.39 L240.61,482.5 L240.56,482.61 L240.52,482.71 L240.47,482.82 C239.87,484.04,239.01,484.68,238.91,484.68 C238.85,484.68,238.81,484.65,238.81,484.59 C238.81,484.56,238.81,484.54,239,484.36 C239.98,483.37,240.55,481.8,240.55,479.72 C240.55,478.02,240.18,476.27,238.94,475.02 C238.81,474.9,238.81,474.88,238.81,474.85 C238.81,474.79,238.85,474.75,238.91,474.75 C239.01,474.75,239.91,475.43,240.5,476.69 C241,477.78,241.12,478.88,241.12,479.72 Z " />
+</g>      </g>
+    </g>
+    <path
+       id="path525"
+       inkscape:label="none"
+       style="stroke-linejoin:round;stroke:#0000FF;stroke-linecap:round;stroke-dasharray:none;stroke-width:1.66666666667;fill:none"
+       d="M  -40.0,37.5106465816068 -33.58974358974359,37.1701374724628 -27.179487179487182,36.7830514278972 -20.769230769230774,36.34301736750418 -14.358974358974365,35.842792735217934 -7.948717948717956,35.27414429349863 -1.5384615384615472,34.62771261181216 4.871794871794862,33.892858019008635 11.28205128205127,33.05748548411739 17.692307692307693,32.10784554325742 24.102564102564102,31.02830799610315 30.51282051282051,29.80110464715756 36.92307692307692,28.406036857590387 43.33333333333333,26.820143094213662 49.74358974358974,25.01732100375633 56.153846153846146,22.967897792127946 62.564102564102555,20.638141837509185 68.97435897435896,17.98970749886964 75.38461538461537,14.979003981971502 81.79487179487178,11.556477874973872 88.20512820512819,7.665797544833396 94.6153846153846,3.242925970415783 101.02564102564101,-1.7849332479962996 107.43589743589742,-7.500534050513387 113.84615384615384,-13.99794997140932 120.25641025641025,-21.384122503003937 126.66666666666666,-29.78062125430445 133.07692307692307,-39.325644874998375 139.48717948717947,-50.17629567816719 145.89743589743588,-62.51116539991952 152.3076923076923,-76.53327465516973 158.7179487179487,-92.47341447030209 165.1282051282051,-110.59394489127496 171.5384615384615,-131.19311318876308 177.94871794871793,-154.60996273402392 184.35897435897436,-181.22991334107076 190.76923076923075,-211.49110492245592 197.17948717948713,-245.89160886940482 203.58974358974356,-284.9976258489877 210.0,-329.45280494653247" />
+  </g>
+</svg>

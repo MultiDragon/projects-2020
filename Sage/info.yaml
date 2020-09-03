@@ -1,0 +1,4 @@
+recurse: 0
+title: SageMath
+actions:
+        Run in Sage: sage

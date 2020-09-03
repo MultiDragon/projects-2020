@@ -1,0 +1,2 @@
+autocmd!
+autocmd VimEnter NERDTree

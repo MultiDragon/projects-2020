@@ -1,0 +1,123 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{tpl}
+\dbegin[26 февраля 2020 г.]{Комбинаторика и алгоритмы, зима 2020}{Главная формула математики}{Савватеев Алексей Владимирович}
+
+\textbf{Задача:} придумать (непрерывный) гомоморфизм из $(\mathbb R,+)$ в $(\mathbb R^*,\times )$, т.е. функцию $f:\mathbb R\to\mathbb R,\forall x,y:f(x+y)=f(x)f(y)$.
+
+Заметим, что $f(0)f(0)=f(0+0)=f(0)$, т.е.  $f(0)\in\{0,1\}$. Если $f(0)=0$, то у нас проблемы: $\forall x:f(x)=f(x)f(0)=0.$ Это значит, что $f\equiv 0$. В дальнейшем мы считаем, что $f\not\equiv c,f(0)=1$.
+
+Пусть $f(x)=0$ при каком-то $x$. Тогда $1=f(0)=f(x)f(-x)=0$ --- противоречие.
+
+\lemma $\forall x\in\mathbb R:f(x)>0$.
+
+\proof $f(x)=f\left(\frac{x}{2}\right)^2\geq 0$ и не равно 0. \QEDA\\
+
+Пусть $a:=f(1)>0$. Тогда очевидно, что $f(x)=a^x$ при $x\in\mathbb N$. Рассмотрев $f(x)f(-x)$ для $x\in\mathbb N$, получаем то же самое тождество для $x\in\mathbb Z$.
+
+Пусть $x=\frac{m}{n}\in\mathbb Q$. Тогда $a^m=f(m)=f\left(\frac{m}{n}+\ldots +\frac{m}{n}\right)=f\left(\frac{m}{n}\right)^n$, значит, $f(\frac{m}{n})=a^{\frac{m}{n}}$. Значит, $f(x)=a^x$ для $x\in\mathbb Q$. Можно считать, что $a>1$, потому что иначе можно рассмотреть $g(x)=f(-x)$.
+
+Теперь нам нужна непрерывность $f$, потому что иначе будет решение через базис Гамеля.
+
+\theorem Пусть $f$ непрерывна на $\mathbb Q$. Тогда существует единственное её обобщение до $\mathbb R$.
+
+\proof Пусть существуют $a,b$ такие, что $f(x_0)$ может быть равно и $a$, и $b$. Тогда проблемы, потому что можно взять $\varepsilon=\frac{|a-b|}{2}$. Значит, доопределить можно максимум одним способом. Дальше можно доказать через фундаментальность и аксиому полноты, что этот способ существует. \QEDA\\
+
+\textit{<<Я помню, когда у нас было доказательство того, что $a^x,\log_a(x)$ и т.п. непрерывные, мы целый месяц этим занимались в 57, мне было лень это делать, я прогуливал занятия, меня преп ловил за шиворот, тащил в класс и говорил доказывать>> --- Савватеев}
+
+\theorem $f(x)=a^x$ непрерывна на $\mathbb Q$.
+
+\proof Докажем, что $\forall\varepsilon>0\exists\delta>0\forall |t|\leq \delta:|a^{x+t}-a^x|<\varepsilon$. Это то же самое, что $|a^t-1|<\frac{\varepsilon}{a^x}$. Т.к. $a^x$ монотонная, достаточно доказать для $t=\pm\delta$, кроме того, можно доказывать для $\delta=\frac{1}{n}$. Тогда $\sqrt[n]a\to1$ по неравенству Бернулли, откуда всё следует.\QEDA\\
+
+Мы поняли, что $\forall x\in\mathbb R:f(x)=a^x$, и при $a>0$ эта функция монотонно возрастает и непрерывна. Попробуем посчитать $f'(x)$. Получим \[
+	f'(x)=\lim\limits_{\delta\to0}\frac{f(x+\delta)-f(x)}{\delta}=\lim\limits_{\delta\to0}\frac{a^x(a^\delta-1)}{\delta}=f(x)f'(0)
+.\]
+
+\z (3 балла) Докажите, что $\exists\lim_{n\to\infty}n(\sqrt[n]a-1)$.\\
+
+\lemma Лебегова мера (обобщённая длина) любого счётного множества точек равна 0.
+
+\proof Построим около первого числа интервал длины $\varepsilon$, около второго числа --- длины $\frac{\varepsilon}{2}$, около третьего --- $\frac{\varepsilon}{4}$ и т.п. Получим, что мера этого множества не больше $2\varepsilon$. \QEDA\\
+
+\theorem Если $g$ --- выпуклая, то почти везде (т.е. в множестве меры 1) существует $g'(x)$.
+
+\textit{<<Что означает, что функция является корытом?>>}
+
+\lemma $f(x)$ дифференцируема.
+
+\proof Докажем, что $f(x)$ выпуклая. Это эквивалентно тому, что $g(d)=\frac{a^d-1}{d}$ монотонно возрастает при $d>0$. Вначале заметим, что $g(n)$ возрастает при $n\in\mathbb N$. Это так, потому что $\frac{(a-1)(a^{n-1}+\ldots +a+1)}{n}$ растёт при $a\neq 1$. Пусть $x=\frac{k}{N}$ и $y=\frac{\ell}{N}$, где $k>\ell$. Докажем, что $g(x)>g(y)$. Это эквивалентно тому, что $\frac{(a^{1/N})^k-1}{k}>\frac{(a^{1/N})^\ell-1}{\ell}$, что следует из леммы для $a^{1/N}$.\QEDA\\
+\newpage
+
+Итак, мы доказали, что $f'(x)=cf(x)$, где $c=f'(0)$.
+
+\definition{Число $e$} такое число, что $(e^x)'=e^x$.
+
+\inkscapefigure[3]{ex2}{$e^x$ и её касательная}
+
+\definition{$\ln x$} такая функция, что $e^{\ln x}=x$.
+
+Заметим, что $(\ln x)'=\frac{1}{x}$.
+
+\lemma $(f\circ g)'=f'(g)\cdot g'(x)$.
+
+\proof \[
+	(f\circ g)'(t)=\lim\limits_{h\to0}\frac{f(g(t+h))-f(g(t))}{h}=\lim\limits_{h\to0}\lrp{\frac{f(g(t+h))-f(g(t))}{g(t+h)-g(t)}\cdot \frac{g(t+h)-g(t)}{h}}=f'(g(t))g'(t)
+.\QEDA\]
+
+\theorem Существует единственное решение уравнения $f'\equiv f$ (такое, что $f(0)=1$).\label{singularity}
+\proof Рассмотрим $\lrb{\ln f(x)}'$. Это равно $\frac{f'(x)}{f(x)}=1=x'$. Значит, $\ln f(x)=x+C$. Т.к. $\ln f(0)=0$, то $\ln f(x)=x$. Значит, $f(x)=e^x$.\QEDA\\
+
+\theorem $f(x)=\sum_{i=0}^\infty \frac{x^i}{i!}=e^x$.
+
+\proof Заметим, что $(\frac{x^i}{i!})'=\frac{x^{i-1}}{(i-1)!}$. Тогда $f'(x)=f(x)$. Кроме того, $f(0)=1$. Тогда по \ref{singularity} $f(x)=e^x$.\QEDA\\
+
+\textit{<<Есть много толстых с маленькой буквы и один большой Лев Николаевич Толстой.>>}
+
+\theorem $g(x)=\lim_{n\to\infty}\lrp{1+\frac{x}{n}}^n=e^x$.
+
+\proof Ясно, что $g(0)=1$. Также \[
+	\lrb{\lim\limits_{n\to\infty}\lrp{1+\frac{x}{n}}^n}'=\lim\limits_{n\to\infty}\lrp{1+\frac{x}{n}}^{n-1}=g(x)
+.\] Таким образом, это так, если $g(x)$ определена. Кроме того, \[
+g_n(x)=\lrp{1+\frac{x}{n}}^n=\binom n 0+\binom n 1 \frac{x}{n} + \binom n 2 \lrp{\frac{x}{n}}^2+\ldots=\sum \lrp{\frac{n(n-1)\ldots (n-k+1)}{k!} \cdot \frac{x^k}{n^k}}<f(x)
+.\] Кроме того, т.к. $g_n(x)>g_{n-1}(x)$, то $g_n(x)$ сходится (при $n\to\infty$).\QEDA\\
+
+На самом деле, $g_n$ сходится к $e$ по такой причине. Зафиксируем $k$ и будем смотреть на \[
+	1+x+\lrp{1-\frac{1}{n}}\frac{x^2}{2!}\ldots +\lrp{1-\frac{1}{n}}\lrp{1-\frac{2}{n}}\ldots \lrp{1-\frac{k-1}{n}}\frac{x^k}{k!}
+.\]\vskip10pt
+
+\hdr{$e$ в жизни двух людей}
+
+\z Пусть пьяница находится на расстоянии 1 метр от двери и идёт в её сторону. Каждый шаг имеет случайную длину, равномерно распределённую на отрезке от 0 до 1 метра. Тогда он в среднем дойдёт до двери за $e$ шагов. \textit{Подсказка: надо посчитать вероятность того, что он дойдёт за $k$ или меньше шагов.}
+
+Пусть в банке дают $100\%$ годовых и можно класть деньги на любой период времени. Тогда максимум можно увеличить свои деньги в год на $e$ раз.\\
+
+\hdr{Переход в комплексную область}
+
+Обозначим $e^z=f(z)=g(z)$. У этой функции сохранены те же самые свойства. Во-первых, $f'(z)=f(z)$ и $g'(z)=g(z)$. Во-вторых, докажем следующее тождество: \[
+	\lrp{1+z+\frac{z^2}{2}+\frac{z^3}{3!}+\ldots }\lrp{1+w+\frac{w^2}{2!}+\ldots }=1+z+w+\frac{(z+w)^2}{2!}+\ldots 
+.\] Оно верно, поскольку \[
+\sum\limits_k\frac{1}{k!}(z+w)^k=\sum\limits_k\sum\limits_{i+j=k}\frac{z^iw^j}{i!j!}=\sum\limits_{i,j}\frac{z^iw^j}{i!j!}=\sum\limits_i \frac{z^i}{i!}\cdot \sum\limits_j \frac{w^j}{j!}
+.\] Итак, мы доказали, что $f(x+y)=f(x)f(y)$. Теперь докажем аналогичное тождество для $g(z)$: \[
+f(z)f(w)=\lim\limits_{n\to\infty}\lrb{\lrp{1+\frac{z}{n}}\lrp{1+\frac{w}{n}}}=\lim\limits_{n\to\infty}\lrb{\lrp{1+\frac{z+w}{n}+\frac{zw}{n^2}}^n}
+.\]
+
+\lemma Пусть $\alpha_n$ ограничена на $\mathbb C$. Тогда $u_n=\lim_{n\to\infty}\lrp{1+\frac{\alpha_n}{n^2}}\to1$. Кроме того, если $\beta\in \mathbb C$, то $v_n=\lim_{n\to\infty}\lrp{1+\frac{\beta}{n}+\frac{\alpha_n}{n^2}}=e^\beta$.\label{central}
+
+\proof Найдём $|u_n-1|$. Это \[
+	\left|\frac{n\alpha_n}{n^2}+\binom n 2\frac{\alpha^2_n}{n^4}+\ldots \right|\leq \left|\frac{\alpha_n}{n}\right|+\left|\frac{\alpha^2_n}{2!n^2}\right|+\ldots \leq \frac{1}{n}f(\alpha_n)\to0
+	.\] Докажем вторую часть. Домножим $v_n$ на $e^{-\beta}=g(-\beta)$. Получим \[
+	g(-\beta)v_n=\lim\limits_{n\to\infty}\lrb{1+\frac{\alpha_n}{n^2}-\frac{\beta^2}{n^2}-\frac{\beta\alpha_n}{n^3}}=1=g(\beta)g(-\beta)=1
+.\QEDA\]
+
+\theorem $e^{i\varphi}=\cos\varphi+i\sin\varphi$.
+
+\proof Докажем, что $g(i\varphi)$ этому равно. Заметим, что $\cos\frac{\varphi}{n}+i\sin\frac{\varphi}{n}=1+\frac{i\varphi}{n}+O\lrp{\frac{1}{n^2}}$. Тогда по \ref{central} мы получим \[
+	e^{i\varphi}=\lim\limits_{n\to\infty}\lrp{1+\frac{i\varphi}{n}}=\lim\limits_{n\to\infty}\lrp{\cos\frac{\varphi}{n}+i\sin\frac{\varphi}{n}}^n=\lim\limits_{n\to\infty}\lrp{\cos\varphi+i\sin\varphi}=\cos\varphi+i\sin\varphi
+.\QEDA\]\vskip10pt
+
+Теперь подставим $z=i\varphi$ в формулу $e^z=f(z)$. Получим \[
+	\cos\varphi + i\sin\varphi = e^{i\varphi}=\sum\frac{(i\varphi)^k}{k!}=\lrp{\sum\frac{\varphi^{4k}}{(4k)!}-\sum\frac{\varphi^{4k+2}}{(4k+2)!}}+i\lrp{\sum\frac{\varphi^{4k+1}}{(4k+1)!}-\sum\frac{\varphi^{4k+3}}{(4k+3)!}}
+.\]
+
+Отсюда получаем разложения для $\sin x$ и $\cos x$ в ряд.
+
+\end{document}

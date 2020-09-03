@@ -1,0 +1,8 @@
+recurse: 1
+title: All projects
+actions: 
+        Change Project: change-project
+        Open Directory: thunar
+        Change Information: editor info.yaml
+        Open Terminal: kitty open-dir
+        Open Editor: editor

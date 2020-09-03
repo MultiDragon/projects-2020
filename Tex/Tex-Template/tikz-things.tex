@@ -1,0 +1,47 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{tpl}
+\usepackage{chessboard}
+\dbegin{Школа 179}{Эксперимент с TikZ}
+
+\begin{tikzpicture}
+	\qsetscale{1}
+	\qcoord{A}00
+	\qcoord{B}36
+	\qcoord{C}{10}0
+	\qm{Am}
+	\qm{Bm}
+	\qm{Cm}
+
+	\qctriangle ABC
+	\qcspoint A
+	\qcspoint B
+	\qcspoint C
+	
+	\qcgMidpoint{Cm}AB
+	\qcpoint[left]{Cm}{$C_0$}
+	\qcsegment C{Cm}
+
+	\qcgMidpoint{Am}BC
+	\qcpoint{Am}{$A_0$}
+	\qcsegment A{Am}
+
+	\qcgMidpoint{Bm}CA
+	\qcpoint[below]{Bm}{$B_0$}	
+	\qcsegment B{Bm}
+
+	\qcgIntersection M{A}{Am}{B}{Bm}
+	\qcspoint [below]M
+	\qcgHeight HBAC
+	\qcspoint [below]H
+	\qcsegment BH
+	\qcccircle{Am}{Bm}{Cm}
+	
+	\qcgBisector LBAC
+	\qcspoint L
+	\qcicircle ABC
+	\qcccircle ABC
+	\qcgCenter OABC
+	\qcspoint O
+\end{tikzpicture}
+
+\end{document}

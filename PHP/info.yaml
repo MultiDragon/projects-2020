@@ -1,0 +1,5 @@
+recurse: 1
+title: PHP Programs
+actions:
+    Open Editor: editor index.php
+main-action: Open Editor

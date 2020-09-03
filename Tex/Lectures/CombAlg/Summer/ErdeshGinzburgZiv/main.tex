@@ -1,0 +1,214 @@
+
+\documentclass[a4paper,12pt]{article}
+\usepackage[russian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=2.5truecm, top=1.8truecm, bottom=1.3truecm]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,amssymb}
+
+
+\relpenalty=10000 \binoppenalty=10000
+\newcounter{theorems}
+\newcommand*{\lemma}{\refstepcounter{theorems}{\bf Лемма \arabic{theorems}. }}
+\newcommand*{\theorem}{\refstepcounter{theorems}{\bf Теорема \arabic{theorems}. }}
+\newcommand*{\lemman}[1]{\refstepcounter{theorems}{\bf Лемма \arabic{theorems} (#1). }}
+\newcommand*{\theoremn}[1]{\refstepcounter{theorems}{\bf Теорема \arabic{theorems} (#1). }}
+
+\newcounter{defs}
+\newcommand*{\definition}{\refstepcounter{defs}{\bf Определение \arabic{defs}. }}
+
+\newcommand*{\QEDA}{\hfill\ensuremath{\blacksquare}}
+
+\newcommand{\proof}{{\bf Доказательство. }}
+\newcommand{\prooft}[1]{{\bf Доказательство теоремы~\ref{#1}. }}
+\newcommand{\prooftms}[1]{\newcounter{tproof#1}}
+\newcommand{\prooftm}[1]{\refstepcounter{tproof#1}{\bf Доказательство теоремы~\ref{#1}~\#\arabic{tproof#1}. }}
+\newcommand{\proofl}[1]{{\bf Доказательство леммы~\ref{#1}. }}
+\newcommand{\prooflms}[1]{\newcounter{lproof#1}}
+\newcommand{\prooflm}[1]{\refstepcounter{lproof#1}{\bf Доказательство леммы~\ref{#1}~\#\arabic{lproof#1}. }}
+\begin{document}
+
+\begin{center}
+{\it Комбинаторика и алгоритмы}
+\vskip9pt\hrule\vskip14pt
+\vfill
+{\Large\bf Нулевые суммы векторов}
+\vskip20pt
+{\large\bf Захаров Дмитрий}
+
+\vfill
+Берендеевы поляны, 17--23 августа 2019 г.
+\end{center}
+
+\newpage
+
+\theoremn{Эрдёш, Гинзбург, Зив, 1961} Пусть $A=a_1,a_2,\ldots,a_{2n-1}$ и $a_i\in\mathbb N$. Тогда $\exists I\subset A:\ |I|=n,\sum I\vdots n$. {\it Примечание. При $|A|<2n-1$ утверждение неверно, например, если в $A\ n-1$ единица и $n-1$ ноль.}\label{egz}
+
+\lemma Достаточно доказать~\ref{egz} для $n\in\mathbb P$.\label{onlyprime}
+
+\proof Пусть~\ref{egz} доказана для чисел $m$ и $n$. Докажем её для $mn$. Возьмём числа $a_1,a_2,\ldots,a_{2mn-1}$. Рассмотрим первые $2n-1$ из них. Из них найдутся $n$, сумма которых кратна $n$. Уберём их из последовательности $a_i$ и поставим в сторону. У нас останется последовательность, в которой на $n$ меньше чисел. Так можно делать $2m-1$ раз, после чего у нас останутся $2m-1$ групп чисел, сумма в каждой из которых кратна $n$ (и в каждой из которых $n$ чисел). Тогда среди них найдутся $m$, общая сумма в которых делится на $mn$, что и доказывает теорему.\QEDA\\
+
+\lemma Пусть $p\in\mathbb P$. Тогда $\binom{2p-1}p\equiv1\mod p$ и $\binom{2p-1-j}{p-j}\vdots p$ для $0<j<p$.\label{wolstensingle}
+
+\proof Первое утверждение: \[
+	1+\binom{2p}p+1=\sum\limits_k\binom{2p}k=2^{2p}\equiv4\mod p\implies\binom{2p}p\equiv2\mod p\implies\binom{2p-1}p\equiv1\mod p
+.\] Второе утверждение: \[
+	\binom{2p-1-j}{p-j}=\dfrac{(2p-1-j)!}{(p-j)!(p-1)!}\text{ и числитель делится на $p$, а знаменатель нет. }\QEDA
+\]
+
+\prooftms{egz}\prooftm{egz} Допустим, что $\forall I\subset A: \sum I\not\equiv0\mod p$. Рассмотрим $S$ --- сумму по всем множествам $I$ выражения $\left(\sum I\right)^{p-1}$. Заметим, что $S\equiv\binom{2p-1}p\mod p$. С другой стороны, верно \[
+	S=\sum\limits_{\sum k_i=p}\left(a_{i_1}^{k_1}\cdot a_{i_2}^{k_2}\cdot\ldots\cdot a_{i_t}^{k_t}\cdot \binom{2p-1-t}{p-t}\right)
+.\]
+Так как каждый такой биномиальный коэффициент кратен $p$ по \ref{wolstensingle}, то и вся сумма кратна, но она сравнима с 1 --- противоречие.\\
+
+Пусть $p\in\mathbb P$. Обозначим $\mathbb F_p$ --- поле остатков по модулю $p$.
+
+\lemman{упражнение} Пусть $P(x)\in\mathbb F_p[x],\deg P<n,\forall x\in\mathbb F_p\ P(x)=0$. Тогда $P(x)\equiv 0$. {\it Подсказка: используйте деление с остатком.}\label{bezu}
+
+\lemman{упражнение} Придумайте контрпример к~\ref{bezu} при составном $p$ и старшем коэффициенте 1.\\%x^5+2x^3+3x=0 mod 6
+
+\definition Назовём многочлен $P\in\mathbb F[x_1,\ldots,x_n]$ полилинейным, если в его мономах нет множителей вида $x_i^\alpha$ при $\alpha>1$.
+
+\lemma Пусть $P\in\mathbb F[x_1,\ldots,x_n]$ полилинейный и для каждого набора из $n$ нулей и единиц $P(\text{набора})=0$. Тогда $P\equiv0$.\\
+
+\proof Используем индукцию. При $n=0$ очевидно.
+
+{\bf Шаг индукции.} \[
+	P(x_1,\ldots,x_n,x_{n+1})=Q(x_1,\ldots,x_n)+x_{n+1}R(x_1,\ldots,x_n).
+\] Зафиксируем набор из $n$ нулей и единиц. Для данного набора $P(x_1,\ldots,x_{n+1})=0$ в нуле и единице, значит, $Q$ и $R$ удовлетворяют предположению индукции.\QEDA\\
+
+\newpage
+\lemman{понижение степеней} Пусть $P\in\mathbb F[x_1,\ldots,x_n]$ принимает нули во всех точках множества $\{0,1\}^n$. Тогда он равен тождественно нулю по модулю $x^2-x$.\label{polyline}\\
+
+\prooftm{egz} Пусть $a_1,\ldots,a_{2p-1}\in\mathbb F_p$. Рассмотрим систему сравнений: \begin{equation}\label{polysystem}
+	\begin{cases}
+		a_1x_1 + a_2x_2 + \ldots + a_{2p-1}x_{2p-1}\equiv0\mod p\\
+		x_1+x_2+\ldots+x_{2p-1}\equiv0\mod p
+	\end{cases}
+\end{equation}
+Если существует решение системы \ref{polysystem} в полилинейных многочленах от $x_i$, то теорема доказана. Рассмотрим $P(v)=\left(1-\left(\sum a_iv_i\right)^{p-1}\right)\left(1-\left(\sum v_i\right)^{p-1}\right)$. Пусть теорема неверна. Тогда для любого ненулевого набора $x$ сравнение не получится, т.е. $P(v)=\delta_{v,(0,0,\ldots)}$. Тогда по \ref{polyline} верно $P(v)\equiv(1-v_1)(1-v_2)\ldots(1-v_{2p-1})$. Но степень левой части $2p-2$, а правой $2p-1$ --- противоречие.\QEDA\\
+
+\vskip8pt\hrule\vskip8pt
+\centerline{\large\scshape Обобщения ЭГЗ}.
+{\bf Задача.} Найти $f(n,d)$ --- наименьшее такое $k$, что для любого набора $U$ из $k$ векторов в $\mathbb Z^d$ найдётся такое множество $I$: $|I|=n,I\subset U,\forall j\leq d\ \sum\limits_{v\in I}v_j\vdots n$.
+
+\theorem $f(n,d)\geq 2^d(n-1)+1$.\label{degree}
+
+\proof Рассмотрим набор $U$ такой, что каждая из строк из $\{0,1\}^d$ входит в него $n-1$ раз. Очевидно, что сумма любых $n$ из них по каждой координате входит в интервал $[0,n-1]$ и все нули быть не могут, т.е. такого множества $I$ нет.\QEDA\\
+
+\lemma Если для $n=n_1$ и $n=n_2$ верно $f(n,d)\leq c(n-1)+1$, то это верно и для $n=n_1n_2$, где $c$ --- константа, не зависящая от $n$ (она может зависеть от $d$).
+
+\proof Аналогично~\ref{onlyprime}.\QEDA\\
+
+\theoremn{Edel, Erscholz} $f(n,3)\geq9n-8$ при нечётных $n$.\label{space}\\
+
+Набор точек плохой, если в нём нет подмножества $I$ размера $n$, сумма координат которых делится на $n$ (по каждой координате).
+
+\lemma Наборы: $\binom00\binom02\binom20\binom22$ (по $n-1$ штук) и $\binom01\binom10\binom12\binom21$ (тоже по $n-1$ штук) плохие.\label{trivial}
+
+\proof Для первого набора это очевидно. Пусть мы взяли векторы второго набора с коэффициентами $\alpha,\beta,\gamma,\delta$. Заметим, что сумма первых координат взятых нами векторов равна $n$ (не $0$ и не $2n$), значит, $\alpha=\delta$. С другой стороны, сумма вторых координат тоже равна $n$, значит, $\beta=\gamma$. Тогда $n=\alpha+\beta+\gamma+\delta=2\alpha+2\beta$ --- чётное --- противоречие.\QEDA\\
+
+\prooft{space} Рассмотрим набор по $n-1$ каждого из следующих векторов: $(1,0,0),(1,2,0),(1,0,2),(1,2,2),(2,0,1),(2,1,0),(2,1,2),(2,2,1),(3,1,1)$. Заметим, что последние две координаты первой четвёрки совпадают с первым набором из \ref{trivial}, а второй четвёрки --- с вторым набором оттуда же. Пусть мы берём эти вектора с количествами $\alpha_1,\alpha_2,\ldots,\alpha_9$.\\
+
+\lemma $\alpha_9\neq0$.
+
+\proof Пусть $\alpha_9=0$. Тогда чтобы сумма $x$ единиц и $n-x$ двоек делилась на $n$, $x$ должно делиться на $n$, т.е. все вектора либо из первой четвёрки, либо из второй, что противоречит \ref{trivial}.\QEDA\\
+
+\newpage
+\lemma Сумма по второй и третьей координатах равна $n$, а по первой --- $2n$.
+
+\proof Сумма по второй и третьей координатах может быть либо $0$, либо $n$, либо $2n$, причём у нас есть единица. Для первой координаты аналогично.\QEDA\\
+
+{\bf Конец доказательства.} Заметим, что сумма координат каждого вектора нечётна, а т.к. $n$ тоже нечётно, суммарная координата должна быть нечётной. С другой стороны, она равна $4n$ --- противоречие.\QEDA\\
+
+\theorem $f(n,d)\geq 2^d\left(\frac98\right)^{[\frac d3]}$ для нечётных $n$.
+
+\proof Для $d\vdots 3$ доказательство аналогично~\ref{degree}. В противном случае добавим несколько пар $(0,1)$ в конце.\QEDA\\
+
+\theoremn{упражнение} При $n=2^k$ оценка из \ref{degree} точная.\\
+
+\lemma Пусть сумма векторов $\binom{x_1}{y_1},\ldots,\binom{x_{3n}}{y_{3n}}$ равна 0. Тогда множество этих векторов хорошее.\label{doublepolylemma}
+
+\proof Рассмотрим систему сравнений от $3p-1$ переменной $\alpha_i$: \begin{equation}\label{dpolysystem}
+	\begin{cases}
+		\sum\alpha_i x_i\equiv0\mod p\\
+		\sum\alpha_i y_i\equiv0\mod p\\
+		\sum\alpha_i\equiv0\mod p\\
+	\end{cases}
+\end{equation} Рассмотрим многочлен \[
+	P(\alpha_1,\ldots,\alpha_{3p-1})=\left(1-\left(\sum\alpha_ix_i\right)^{p-1}\right)\cdot \left(1-\left(\sum\alpha_iy_i\right)^{p-1}\right)\cdot \left(1-\left(\sum\alpha_i\right)^{p-1}\right)
+.\] Если ненулевых решений в $\alpha_n\in\{0,1\}$ у~\ref{dpolysystem} нет, то по~\ref{polyline} верно $P(v)\equiv(1-v_1)(1-v_2)\ldots(1-v_{3p-1})$, но степень многочлена равна $3p-3<3p-1$. Следовательно, у системы есть решение. Тогда если в решении $\sum\alpha_i=p$, то задача решена, иначе $\sum\alpha_i=2p$ и можно взять <<дополнение>>.\QEDA\\
+
+\theoremn{Роньяи, 2007} $f(p,2)\leq 4p-2$ для $p\in\mathbb P$.\label{error}
+
+\proof Пусть есть $4p-2$ вектора $\binom{x_1}{y_1},\ldots,\binom{x_{4p-2}}{y_{4p-2}}$. Рассмотрим многочлен \[
+	P(\alpha_1,\ldots,\alpha_{4p-2})=\left(1-\left(\sum\alpha_ix_i\right)^{p-1}\right)\cdot \left(1-\left(\sum\alpha_iy_i\right)^{p-1}\right)\cdot \left(1-\left(\sum\alpha_i\right)^{p-1}\right)\cdot(\sigma_p(\alpha_i)-2)
+,\] где $\sigma_n(v)=\sum\limits_{I\subset v,|I|=n}\prod\limits_{\alpha\in I}\alpha$. Если у $P$ есть ненулевое решение в $\{0,1\}^{4p-2}$, то задача решена. Действительно, $\sum\alpha_i\in\{p,2p,3p\}$ из-за третьей скобки, $\sum\alpha_i\binom{x_i}{y_i}\equiv0\mod p$ из-за 1-й и 2-й скобки. Если $\sum\alpha_i=p$, то мы нашли сумму. Если $\sum\alpha_i=3p$, то из-за \ref{doublepolylemma} мы победили. Иначе $\sigma_p(\alpha_i)=\binom{2p}p\equiv2\mod p$, т.е. это не решение системы. Иначе этот многочлен (степени $4p-3$) по \ref{polyline} тождественно равен многочлену степени $4p-2$ --- противоречие.\QEDA\\
+
+\theoremn{Рейхер} $f(n,2)=4n-3$.
+
+\newpage
+\lemma $f(3,d)\leq 2\cdot3^d+1$.
+
+\proof Если есть хотя бы столько векторов, то среди них будут 3 одинаковых по модулю 3 и их сумма даст 0.\QEDA\\
+
+\theorem $f(3,d)\leq6\sum\limits_{a+2b\leq2d/3}\binom d{a,\ b}$.\label{ssum}
+
+\theorem~Если~\ref{ssum}, то для достаточно больших $d$ выполняется $f(3,d)\leq2,752^d$.
+
+\proof~Применим~\ref{ssum}. Рассмотрим многочлен $P(x)=(1+x+x^2)^d=\sum C_kx^k$. Заметим, что $C_k=\sum\limits_{a+2b=k}\binom d{a,\ b}$. Мы знаем, что $f(3,d)\leq6\sum\limits_{i\leq2d/3}c_i$.
+
+\lemma~$c_k\leq 2,7515^k$.
+
+\proof~Если $x\geq 0$, то $P(x)\geq C_{2d/3}x^{2d/3}$, т.е. $C_{2d/3}\leq x^{-2d/3}(1+x+x^2)^d$. Возьмём $x=0,84^3$. Тогда $C_{2d/3}\leq(0,84^{-2}+0,84+0,84^4)^d<2,7515^d$. Из этой формулы также видно, что предыдущие коэффициенты меньше.\QEDA\\
+
+\lemma~Пусть есть система $*$ из $m$ линейных уравнений вида $\sum a_ix_i=0$ и $n$ неизвестных, причём $n>m$. Тогда существует решение с хотя бы $n-m$ ненулевыми неизвестными.\label{linal}
+
+\proof~Рассмотрим решение системы $(x_1,\ldots,x_n)$ с максимальным числом ненулевых координат. Пусть их не больше, чем $n-m-1$. Для простоты можно считать, что это координаты $x_1,\ldots,x_{n-m-1}$. Рассмотрим такую систему:
+\begin{equation}
+	\begin{cases}
+		*\\
+		x_1=0\\
+		x_2=0\\
+		\vdots\\
+		x_{n-m-1}=0
+	\end{cases}
+\end{equation}
+У неё есть ненулевое решение $(y_1,\ldots,y_n)$. Тогда $z_i=x_i+y_i$ --- тоже решение и у него меньше нулей --- противоречие.\QEDA\\
+
+\centerline{\scshape $d$-мерные матрицы. Ранг}
+\definition~$d$-мерная матрица $A=A(i_1,\ldots,i_d)$ имеет ранг 1, если есть такое $t$, что $A(i_1,\ldots,i_d)=B(i_t)C(i_1,\ldots,i_{t-1},i_{t+1},\ldots,i_d)$.
+
+\definition~Ранг $d$-мерной матрицы $A$ --- наименьшее такое $r$, что $A$ можно представить в виде суммы $r$ матриц ранга 1.
+
+\definition~Матрица называется диагональной, если все её ненулевые числа стоят на диагонали $i_1=i_2=\ldots=i_d$.
+
+\lemma~Ранг диагональной матрицы равен числу ненулевых коэффициентов.\label{diagon}\\
+
+\prooft{ssum} Пусть $X=\{x_1,\ldots,x_m\}\subset\mathbb F^d_3$. Допустим, что не существует таких $i,j,k$, что $x_i+x_j+x_k=0$. Тогда каждый вектор повторяется не более двух раз. Также можно считать, что они все различны (после такого преобразования суммарное число векторов уменьшится не более чем в 2 раза). Рассмотрим такой многочлен от $3d$ переменных: \[
+	P(\vec u,\vec v,\vec w)=\prod\limits_{i=1}^d((u_i+v_i+w_i)^2-1)
+.\] По предположению, если $u,v,w$ не все одинаковы и из множества $x_i$, то $P(u,v,w)=0$. Действительно, $u+v+w\neq0$ и $u+2v=u-v\neq0$, в обоих случаях произведение 0. Будем интерпретировать $P$ как матрицу $3^d\times3^d\times3^d$. Оценим $rank\ P$.
+
+\newpage
+\lemma $rank\ P\geq\frac m2$.
+
+\proof Ранг матрицы не больше ранга подматрицы, а подматрица $P(u,v,w)$ при $u,v,w\in X$ диагональна. Значит, по \ref{diagon} выполняется $rank\ P\leq\frac m2$.\QEDA\\
+
+\lemma $rank\ P\leq3\sum\limits_{a+2b\leq 2d/3}\binom{d}{a,\ b}$.
+
+\proof Раскроем в многочлене скобки: \[
+	P(\vec u,\vec v,\vec w)=\prod\limits_{i=1}^d((u_i+v_i+w_i)^2-1)=\sum\ldots \overbrace{u^{\vphantom|\ldots}_{\ldots}v^{\ldots}_{\ldots}w^{\ldots}_{\ldots}}^{\leq2d\text{ букв}}
+.\] Заметим, что множителей с какой-то буквой (из $u,v,w$) не более $\frac{2d}3$. Поэтому \[
+	P(\vec u,\vec v,\vec w)=\sum u^{\ldots}_{\ldots}\cdot Q(\vec v,\vec w)+\sum v^{\ldots}_{\ldots}\cdot R(\vec u,\vec w)+\sum w^{\ldots}_{\ldots}\cdot S(\vec u,\vec v)
+,\] где в каждой сумме участвуют члены с достаточно малым кол-вом вынесенных переменных (например, в первой сумме количество $u_i$ не больше $\frac{2d}3$). Заметим, что это представление $P$ в виде суммы нужного количества матриц ранга не более 1.\QEDA\\
+
+\definition Пусть $A$ --- $d$-матрица, $\vec v$ --- вектор в $\mathbb F^n$, где $n$ --- размер каждого ребра $A$ (считаем, что $A$ кубическая). Определим свёртку $A\times v$ как $(d-1)$-матрицу такую, что $(A\times\vec v)(i_1,\ldots,i_{d-1})=\sum\limits_{i_d=1}^n v_(i_d)A(i_1,\ldots,i_d)$,
+
+\proofl{diagon} Доказываем по индукции по количеству измерений. Пусть $A=A_1+\ldots+A_r$, где у $A_i$ ранг 1, и на диагонали ненулевые числа (иначе можно рассматривать подматрицу). Пусть для первых $s$ матриц выполняется $A_i(\vec j)=B_i(j_1,\ldots,j_{d-1})C_i(j_d)$. Заметим, что по~\ref{linal} существует вектор $v$ такой, что: \begin{itemize}
+	\item $(v,C_i)=0\ \forall i=1,\ldots,s$ (скалярное произведение);
+	\item $v$ имеет хотя бы $n-s$ ненулевых координат.
+\end{itemize}
+
+Заметим, что $A\times v=A_{s+1}\times v+A_{s+2}\times v+\ldots+A_r\times v$, и все коэффициенты в этих слагаемых ненулевые. По предположению индукции лемма доказана.\QEDA\\
+\end{document}
