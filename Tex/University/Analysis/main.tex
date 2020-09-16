@@ -63,4 +63,78 @@
 	\item Сечения Дедекинда.
 \end{itemize}
 
+\newpage
+
+\definition{Индуктивное множество} подмножество $K\subset\mathbb R$ такое, что если $x\in K$, то $x+1\in K$.
+
+\definition{Натуральные числа $\mathbb N$} минимальное индуктивное множество, содержащее единицу.
+
+\definition{Целые числа $\mathbb Z$} множество из всех натуральных чисел, нуля и чисел, противоположных натуральным.
+
+\definition{Рациональные числа $\mathbb Q$} такое множество: $\mathbb Z\cup \{mn^{-1}|m\in \mathbb Z,n\in\mathbb Z\setminus 0\}$
+
+\theorem У любого упорядоченного поля есть подполе, изоморфное $\mathbb Q$.\\
+
+\textbf{Аксиома Архимеда.} $\forall a,h>0\exists n\in\mathbb N:an>h$.
+
+\theoremn{Принцип Архимеда} $\forall h>0\exists a\in \mathbb R:\exists n\in \mathbb Z:(n-1)h\leq a<nh$.
+
+\proof Рассмотрим множество $E=\{n\mid n\in\mathbb Z,ah^{-1}<n\}$. Если $a=0$, то это $\mathbb N$, а в противном случае оно непусто по аксиоме Архимеда. Кроме того, оно ограничено снизу нулём. Тогда у него есть минимальный элемент, он подходит в качестве $n$. \QEDA\\
+
+\textbf{Следствие.} $\forall\varepsilon>0\exists n\in \mathbb N:n^{-1}<\varepsilon$.
+
+\textbf{Следствие 2.} $a<b\in \mathbb R\implies \exists r\in \mathbb Q:a<r<b$.
+
+\proof Возьмём $n$ так, что $n^{-1}<b-a$, и $m$ так, что $\frac{m-1}{n}\leq a<\frac{m}{n}$. Тогда $a<\frac{m}{n}<b$. \QEDA
+
+\textbf{Следствие 3.} $\forall x\in \mathbb R\exists[x]$.\\
+
+\definition{Последовательность} функция натурального аргумента.
+
+\definition{Вложенная последовательность} последовательность $a_i$ множеств такая, что $a_i\subset a_{i-1}$ для всех $i$.
+
+\definition{Стремящаяся к нулю последовательность} последовательность $a_i$ вещественных чисел такая, что $\forall \varepsilon>0\exists n\in \mathbb N:\forall m>n:|a_m|<\varepsilon$.
+
+\theorem Пусть $\Delta_n$ --- вложенная последовательность отрезков в $\mathbb R$, т.е. множеств вида $\{x\in \mathbb R\mid a\leq x\leq b,a,b\in\mathbb R\}$. Тогда $\bigcap_n \Delta_n\neq\emptyset$. Кроме того, если последовательность $|\Delta_n|$ стремится к $0$, то $|\bigcap_n\Delta_n|=1$.
+
+\proof Пусть $\Delta_n=[a_n,b_n]$. Рассмотрим $A=\{a_n\mid n\in \mathbb N\}$ и $B=\{b_n\mid n\in \mathbb N\}$. У нас верно, что $a_n\leq b_m$, т.к. последовательность вложена, тогда по аксиоме непрерывности $\exists\gamma:a_i<\gamma<b_j$. Тогда $\gamma\in[a_n,b_n]\forall n$. Кроме того, если таких $\gamma$ хотя бы два, то длина каждого отрезка хотя бы $|\gamma_2-\gamma_1|$, значит, последовательность длин не стремится к 0. \QEDA\\
+
+\definition{Окрестность $\mathcal O(x)$} любой интервал, содержащий $x$.
+
+\definition{$\varepsilon$-окрестность $\mathcal O_\varepsilon(x)$} интервал $(x-\varepsilon,x+\varepsilon)$.
+
+\shdr{Свойства}
+
+\begin{itemize}
+	\item Если $\mathcal O_1(x),\mathcal O_2(x)$ --- окрестности, то $\mathcal O_1\cap \mathcal O_2$ --- тоже.
+	\item $\forall x\neq y\exists \mathcal O(x):y\notin O(x)$.
+\end{itemize}
+
+\definition{Предельная точка множества $A$} такое число $x$, если в любой окрестности $\mathcal O(x)$ существует $a\neq x\in A$, такое, что $a\in\mathcal O(x)$ (это то же самое, как если бы в этой окрестности было бесконечно много точек из $A$). Множество предельных точек обозначается $A'$.
+
+\theorem Пусть $A$ --- бесконечное ограниченное множество. Тогда $A'\neq\emptyset$.
+
+\proof Пусть границы $A$ --- это точки $a_1,b_1$. Поделим отрезок $[a_1,b_1]$ пополам, в одном из отрезков лежит бесконечное количество точек $A$. Пусть его границы --- это $a_2,b_2$. Его тоже поделим пополам и т.п. У нас получится вложенная последовательность отрезков, на каждом из которых лежит бесконечное количество $A$. Пусть $\gamma$ --- пересечение этих отрезков. Возьмём любую окрестность $\gamma$. Она целиком содержит какой-то из отрезков $[a_n,b_n]$, в котором бесконечное количество элементов $A$. Значит, $\gamma$ --- предельная точка.\QEDA
+
+\newpage
+
+\definition{Открытое множество} такое множество $G$, что $\forall x\in G\exists \mathcal O(x)\subset G$.
+
+\definition{Замкнутое множество} такое множество $G$, что $G'\subset G$.
+
+\definition{Внутренняя точка множества $A$} такая точка $x$, что $\exists\mathcal O(x)\subset A$.
+
+\shdr{Примеры}
+
+\begin{itemize}
+	\item $\emptyset,\mathbb R$ замкнутые и открытые одновременно. Других одновременно замкнутых и открытых множеств нет (это эквивалентно аксиоме непрерывности).
+	\item $\mathbb N$ замкнутое --- у него нет предельных точек.
+	\item $(a,b)$ открытое.
+	\item $[a,b]$ замкнутое.
+	\item Канторово множество замкнутое.
+	\item $[a,b)$ ни открытое, ни замкнутое.
+\end{itemize}
+
+\theorem Пусть $A$ открытое, а $B$ замкнутое. Тогда $A\setminus B$ открытое, а $B\setminus A$ замкнутое.
+
 \end{document}

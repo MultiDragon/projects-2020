@@ -1,0 +1,32 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{tpl}
+\begin{document}
+\dbegin[4 сентября 2020 г.]{Матфак ВШЭ}{Геометрия, 1 курс}{Городенский}
+
+\definition{Векторное пространство над полем $\mathbb F$} множество $V$ с операциями $+:V\times V\to V$ и $\cdot :\mathbb F\times V\to V$, обладающими следующими свойствами:
+
+\begin{itemize}
+	\item $V$ --- группа по сложению.
+	\item $\forall \lambda,\mu\in\mathbb F,a\in V:\lambda(\mu a)=(\lambda\mu)a$;
+	\item $\forall \lambda,\mu\in\mathbb F,a\in V:(\lambda+\mu)a=\lambda a+\mu a$;
+	\item $\forall\lambda\in\mathbb F,a,b\in V:\lambda(a+b)=\lambda a+\lambda b$;
+	\item $\forall a\in V:1\cdot a=a$.
+\end{itemize}
+
+\definition{Аффинное пространство над $V$} множество $\mathbb A$ (элементы которого называются <<точками>>) такое, что $\forall a,b\in\mathbb A\exists\overline{ab}\in V$ со следующими свойствами:
+
+\begin{itemize}
+	\item $\forall p\in\mathbb A$ верно, что $\mathbb A\to V:q\mapsto \overline{pq}$ биективно;
+	\item $\forall a,b,c\in\mathbb A:\overline{ab}+\overline{bc}=\overline{ac}$.
+\end{itemize}
+
+\definition{Аффинное пространство над $V$ (другое определение)} множество $\mathbb A$ такое, что $\forall v\in V\exists \tau_v:\mathbb A\to \mathbb A$ со следующими свойствами:
+
+\begin{itemize}
+	\item $\forall p,q\in\mathbb A\exists! v\in V:\tau_v(p)=q$;
+	\item $\tau_p\circ\tau_q=\tau_{p+q}$.
+\end{itemize}
+
+\textbf{Пример.} Множество приведённых кубических многочленов над $\mathbb Q$ --- аффинное пространство над множеством квадратных многочленов над $\mathbb Q$. 
+
+\end{document}

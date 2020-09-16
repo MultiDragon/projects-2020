@@ -48,9 +48,18 @@ function printTime(num) {
 		return `in ${h} h. ${m} min.`
 }
 
+function getType(t) {
+	if (t === "Seminar")
+		return "%{F#0F9}S%{F-}"
+	else if (t === "Lecture")
+		return "%{F#FF0}L%{F-}"
+	else
+		return ""
+}
+
 function printCurrentEvent(currentEvent, currentTime) {
 	const timeLeft = printTime(Math.round((currentEvent.endTime - currentTime) / 1000 / 60))
-	return `%{u#00c}%{+u}Current event: ${currentEvent.name} (ends ${timeLeft})%{-u} `
+	return `%{u#00c}%{+u}${currentEvent.name} ${getType(currentEvent.type)} (ends ${timeLeft})%{-u} `
 }
 
 function printBreak() {
@@ -59,7 +68,7 @@ function printBreak() {
 
 function printNextEvent(nextEvent, currentTime) {
 	const timeLeft = printTime(Math.round((nextEvent.startTime - currentTime) / 1000 / 60))
-	return `%{u#60c}%{+u}Next event: ${nextEvent.name} (starts ${timeLeft})%{-u} `
+	return `%{u#60c}%{+u}Next: ${nextEvent.name} ${getType(nextEvent.type)} (starts ${timeLeft})%{-u} `
 }
 
 function printUpdateButton(next) {
@@ -72,9 +81,9 @@ function printRoomChange(prev, next) {
 
 function processEvent(schedule, currentTime) {
 	let text = ""
-	let ckey = FSServer.getCurrentKey(schedule, home)
-	let key = FSServer.getRealKey(schedule, currentTime)
-
+	const ckey = FSServer.getCurrentKey(schedule, home)
+	const key = FSServer.getRealKey(schedule, currentTime)
+	let kdelta = 0
 	let bad = false
 	if (key === schedule.length) {
 		bad = true
@@ -83,14 +92,13 @@ function processEvent(schedule, currentTime) {
 			text += printCurrentEvent(schedule[key], currentTime)
 		} else {
 			text += printBreak()
-			key--
-			ckey--
-			if (key >= 0 && schedule[key].room !== schedule[key + 1].room)
-				text += printRoomChange(schedule[key], schedule[key + 1])
+			if (key > 0 && schedule[key].room !== schedule[key - 1].room)
+				text += printRoomChange(schedule[key - 1], schedule[key])
+			kdelta = -1
 		}
 
-		if (key < schedule.length - 1)
-			text += printNextEvent(schedule[key + 1], currentTime)
+		if (key + kdelta < schedule.length - 1)
+			text += printNextEvent(schedule[key + kdelta + 1], currentTime)
 	}
 
 	if (!bad) {

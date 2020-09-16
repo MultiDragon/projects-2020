@@ -1,2 +1,4 @@
 recurse: 1
 title: University
+actions:
+    Open Sheets: pdfdir sheets

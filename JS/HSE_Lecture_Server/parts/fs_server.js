@@ -24,7 +24,7 @@ module.exports.getSchedule = function(time, home) {
 		const data = yamllib.safeLoad(yaml)[days[new Date().getDay()]]
 		for (let j = 0; j < data.length; j++) {
 			const i = data[j]
-			if (i.week === week) {
+			if (i.week && i.week !== week) {
 				data.splice(j, 1)
 				j--
 			}

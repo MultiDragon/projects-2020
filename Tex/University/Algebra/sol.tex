@@ -1,0 +1,49 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{tpl}
+\begin{document}
+\dbegin[16 сентября 2020 г.]{Матфак ВШЭ}{Решения алгебры}{Кудрявцев Александр, 1 курс}
+
+\z Нарисуем это число на комплексной плоскости:
+
+\begin{tikzpicture}
+	\qsetscale{0.5}
+	% \qgrid{10}{10}
+	\qcoord O55
+	\qcspoint O
+	\qcoord A89
+	\qccircle OA
+	\qcoord F{10}5
+	\qcoord G5{10}
+	\qcoord X{13}9
+	\qctriangle[fill,red] OXF
+	\qctriangle[fill,blue] OXA
+	\qcpoint[right] F{$F(1)$}
+	\qcpoint[right] X{$X(x)$}
+	\qcgMidpoint MOX
+	\qcpoint[left] A{$A(\cos\varphi+i\sin\varphi)$}
+	\qcpoint G{$G(i)$}
+	\qcspoint M
+\end{tikzpicture}
+
+Заметим, что $\triangle OFX=\triangle OAX$, откуда $\arg x=\frac{\varphi}{2}$. Кроме того, $|x|=OX=2OM=2OF\cos \frac{\varphi}{2}=2\cos \frac{\varphi}{2}$.\QEDA\\
+
+\z $z^n=i\iff r^n(\cos\varphi+i\sin\varphi)^n=i\iff r^n(\cos n\varphi+i\sin n\varphi)=i$. Так как $|i|=1$, то $r=1$. Тогда $\cos n\varphi+i\sin n\varphi=i\iff n\varphi=\frac{\pi}{2}+2\pi k\iff \varphi=\frac{\pi}{2n}+2\pi \frac{k}{n}$.\QEDA\\
+
+\z Рассмотрим число $z_0=\sum_{k=1}^n(\cos(kx)+i\sin(kx))$. С одной стороны, нам нужно найти $\Im(z_0)$. С другой стороны,
+
+\begin{equation*}
+	z_0=\sum_{k=1}^n((z_1)^k)=z_1\cdot \frac{z_1^k-1}{z_1-1}=z_1\cdot (z_1^k-1)\cdot (\cos x-i\sin x-1)\cdot \frac1{(\cos x+1)^2+(\sin x)^2}
+\end{equation*}
+где $z_1=\cos x+i\sin x$. Тогда
+
+\begin{align*}
+	\Im z_0=\frac{1}{2-2\cos x}\cdot \Im(\cos x+i\sin x)(\cos nx+i\sin nx-1)(\cos x-i\sin x-1)=\\
+	=\frac{1}{2-2\cos x}\cdot\Im (1-\cos x-i\sin x)(\cos nx+i\sin nx-1)=\\
+	=\frac{1}{2-2\cos x}\cdot\Im(\ldots +i(\sin nx-\cos x\sin nx-\sin x\cos nx+\sin x))=\frac{\sin x+\sin nx-\sin(n+1)x}{2-2\cos x}.\QEDA
+\end{align*}
+
+\z Если $n$ нечётно, то множество квадратов корней $n$-й степени из 1 совпадает с множеством корней, а их сумма равна 0 (т.к. эти корни соответствуют векторам из $O$ в вершины правильного $n$-угольника). Если чётно, то множество этих квадратов --- это множество корней $\frac{n}{2}$-й степени, взятое два раза. Их сумма тоже равна 0. Ответ: 0.\QEDA\\
+
+\z Заметим, что множество чисел вида $(5k+3)+i(5l+4),k,l\in \mathbb Z$, замкнуто относительно умножения, т.к. $(5k_1+3+i(5l_1+4))(5k_2+3+i(5l_2+4))=5k'+9+5k''-16+i(5l'+24)=5(k'+k''-2)+3+i(5(l'+4)+4)$. Кроме того, $\frac{2+i}{2-i}=\frac{(2+i)^2}{5}=\frac{3+4i}{5}$. Значит, если $(\frac{2+i}{2-i})^n=1$, то $\frac(3+4i)^n=5^n$, но левая часть вида $5k+3+i(5l+4)$, т.е. её мнимая часть ненулевая.\QEDA\\
+
+\end{document}

@@ -3,13 +3,13 @@ Monday:
         name: English
         startTime: 9:30
         endTime: 10:50
-        room: 210
+        room: 211
         type: Lesson
     -
         name: Analysis
         startTime: 11:10
         endTime: 12:30
-        room: 213
+        room: 210
         type: Seminar
     -
         name: Geometry
@@ -18,7 +18,7 @@ Monday:
         room: 427
         type: Lecture
     -
-        name: Triviality
+        name: Trivium
         startTime: 16:20
         endTime: 17:40
         room: 110
@@ -26,12 +26,6 @@ Monday:
         week: 2
 Tuesday:
     -
-        name: Discrete Math
-        startTime: 9:30
-        endTime: 10:50
-        room: 208
-        type: Seminar
-    -
         name: Algebra
         startTime: 11:10
         endTime: 12:30
@@ -46,52 +40,62 @@ Tuesday:
         type: Lecture
         week: 2
     -
-        name: Algebra
+        name: Geometry
         startTime: 14:40
         endTime: 16:00
-        room: 213
+        room: 212
         type: Seminar
 Wednesday:
     -
-        name: Analysis
-        startTime: 11:10
-        endTime: 12:30
-        room: 427
-        type: Seminar
-        week: 1
-    -
-        name: Discrete Math
-        startTime: 11:10
-        endTime: 12:30
-        room: 427
-        type: Lecture
-        week: 2
-    -
-        name: Geometry
-        startTime: 14:40
-        endTime: 16:00
-        room: 210
-        type: Seminar
-Thursday:
-    -
-        name: Analysis
+        name: Algebra
         startTime: 9:30
         endTime: 10:50
         room: 208
         type: Seminar
     -
         name: Discrete Math
-        startTime: 11:10
-        endTime: 12:30
+        startTime: 13:00
+        endTime: 14:20
+        room: 427
+        type: Lecture
+    -
+        name: Analysis
+        startTime: 14:40
+        endTime: 16:00
+        room: 326
+        type: Seminar
+    -
+        name: Geometry
+        startTime: 16:20
+        endTime: 17:40
+        room: 306
+        type: Lesson
+        week: 2
+Thursday:
+    -
+        name: Discrete Math
+        startTime: 9:30
+        endTime: 10:50
+        room: 210
+        type: Seminar
+    -
+        name: Discrete Math
+        startTime: 13:00
+        endTime: 14:20
         room: 427
         type: Lecture
     -
         name: Geometry
         startTime: 14:40
         endTime: 16:00
-        room: 210
+        room: 110
         type: Seminar
-        week: 1
+    -
+        name: Discrete Math
+        startTime: 16:20
+        endTime: 17:40
+        room: 110
+        type: Lesson
 Friday:
     -
         name: Algebra
@@ -109,12 +113,12 @@ Friday:
         name: English
         startTime: 14:40
         endTime: 16:00
-        room: 210
+        room: 110
         type: Lesson
     -
         name: Algebra
         startTime: 16:20
         endTime: 17:40
-        room: 427
+        room: 326
         type: Seminar
         week: 2
