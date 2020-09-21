@@ -1,7 +1,7 @@
 const fs = require("fs")
 const express = require("express")
 const app = express()
-const port = process.env.PORT || 10000
+// const port = process.env.PORT || 10000
 const home = process.env.HOME
 
 const FSServer = require("./parts/fs_server.js")
@@ -33,7 +33,21 @@ app.get("/", (req, res) => {
 	res.render("template", { context: { page: "index" }, tree: data })
 })
 
-app.listen(port, () => (`HSE-LS, port ${port}`))
+// app.listen(port, () => (`HSE-LS, port ${port}`))
+
+const colors = {
+	seminar: "00FA9A",
+	lecture: "B8860B",
+	lesson: "808080",
+	problems: "FFA500",
+	change: "FF0000",
+	underlineCurrent: "0000CD",
+	underlineNext: "800080",
+	underlineBreak: "FFFFFF",
+	name: "32CD32",
+	room: "4682B4",
+	zoom: "FFD700"
+}
 
 function printTime(num) {
 	const h = Math.floor(num / 60)
@@ -48,62 +62,72 @@ function printTime(num) {
 		return `in ${h} h. ${m} min.`
 }
 
-function getType(t) {
+function printType(t) {
 	if (t === "Seminar")
-		return "%{F#0F9}S%{F-}"
+		return `%{F#${colors.seminar}}Sem%{F-}`
 	else if (t === "Lecture")
-		return "%{F#FF0}L%{F-}"
-	else
-		return ""
+		return `%{F#${colors.lecture}}Lec%{F-}`
+	else if (t === "Lesson")
+		return `%{F#${colors.lesson}}Lsn%{F-}`
+	else if (t === "Problems")
+		return `%{F#${colors.problems}}Prob%{F-}`
+	return ""
+}
+
+function printRoom(prev, next) {
+	if (next.room === "Zoom")
+		return ` %{A1:xdg-open zoommtg\\://zoom.us/join\\?action=join\\&confno=${next.zoomID}\\&pwd=${next.zoomPassHash}:}` +
+			`%{F#${colors.zoom}}Zoom%{F-}%{A}`
+	else if (next.room !== prev.room)
+		return ` %{F#${colors.room}}in ${next.room}%{F-}`
+	return ""
 }
 
 function printCurrentEvent(currentEvent, currentTime) {
 	const timeLeft = printTime(Math.round((currentEvent.endTime - currentTime) / 1000 / 60))
-	return `%{u#00c}%{+u}${currentEvent.name} ${getType(currentEvent.type)} (ends ${timeLeft})%{-u} `
+	return `%{u#${colors.underlineCurrent}}%{+u}%{F#${colors.name}}${currentEvent.name}%{F-} ${printType(currentEvent.type)} ` +
+		`(ends ${timeLeft})%{-u} `
 }
 
 function printBreak() {
-	return "%{u#090}%{+u}Break.%{-u} "
+	return `%{u#${colors.underlineBreak}}%{+u}Break.%{-u} `
 }
 
-function printNextEvent(nextEvent, currentTime) {
+function printNextEvent(currentEvent, nextEvent, currentTime) {
 	const timeLeft = printTime(Math.round((nextEvent.startTime - currentTime) / 1000 / 60))
-	return `%{u#60c}%{+u}Next: ${nextEvent.name} ${getType(nextEvent.type)} (starts ${timeLeft})%{-u} `
+	return `%{u#${colors.underlineNext}}%{+u}Next: %{F#${colors.name}}${nextEvent.name}%{F-} ${printType(nextEvent.type)} ` +
+		`(starts ${timeLeft}${printRoom(currentEvent, nextEvent)})%{-u} `
 }
 
 function printUpdateButton(next) {
-	return `%{A1:${home}/.custom/bin/projecteer ${home}/Projects list-projects "${next.name}":}%{u#f00}%{+u}[CHANGE PROJECT]%{-u}%{A} `
+	return `%{A1:${home}/.custom/bin/projecteer ${home}/Projects list-projects "${next.name}":}` +
+		`%{u#${colors.change}}%{+u}[CHANGE PROJECT]%{-u}%{A} `
 }
 
-function printRoomChange(prev, next) {
-	return `%{u#ccc}%{+u}Move from ${prev.room} to ${next.room}%{-u} `
-}
+// function printRoomChange(prev, next) {
+// return `%{u#ccc}%{+u}Move from ${prev.room} to ${next.room}%{-u} `
+// }
 
 function processEvent(schedule, currentTime) {
 	let text = ""
 	const ckey = FSServer.getCurrentKey(schedule, home)
-	const key = FSServer.getRealKey(schedule, currentTime)
-	let kdelta = 0
+	const [key1, key2] = FSServer.getRealKey(schedule, currentTime)
 	let bad = false
-	if (key === schedule.length) {
+	if (key1 === schedule.length) {
 		bad = true
 	} else {
-		if (currentTime >= schedule[key].startTime) {
-			text += printCurrentEvent(schedule[key], currentTime)
-		} else {
+		if (key1 === key2)
+			text += printCurrentEvent(schedule[key1], currentTime)
+		else
 			text += printBreak()
-			if (key > 0 && schedule[key].room !== schedule[key - 1].room)
-				text += printRoomChange(schedule[key - 1], schedule[key])
-			kdelta = -1
-		}
 
-		if (key + kdelta < schedule.length - 1)
-			text += printNextEvent(schedule[key + kdelta + 1], currentTime)
+		if (key1 < schedule.length - 1)
+			text += printNextEvent(schedule[key1], schedule[key1 + 1], currentTime)
 	}
 
 	if (!bad) {
-		if (ckey !== key)
-			text += printUpdateButton(schedule[key])
+		if (schedule[ckey].name !== schedule[key2].name)
+			text += printUpdateButton(schedule[key2])
 		setTimeout(() => processEvent(schedule, currentTime + 10000), 10000)
 		console.log(text)
 	} else {

@@ -6,3 +6,4 @@ actions:
         Change Information: editor info.yaml
         Open Terminal: kitty open-dir
         Open Editor: editor
+        Edit Schedule: editor /home/wizzerinus/Projects/.metadata/schedule.yaml

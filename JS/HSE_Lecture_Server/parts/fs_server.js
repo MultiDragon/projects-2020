@@ -15,13 +15,22 @@ module.exports.getObject = function(id, home) {
 	}
 }
 
+function proc(x) {
+	if (x > 9)
+		return x
+	return "0" + x
+}
+
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 module.exports.getSchedule = function(time, home) {
 	try {
 		const date = new Date(new Date(time).toDateString())
 		const week = ((date.getTime() / (1000 * 60 * 60 * 24)) + 25 / 8) % 14 < 7 ? 1 : 2
 		const yaml = fs.readFileSync(home + "/Projects/.metadata/schedule.yaml")
-		const data = yamllib.safeLoad(yaml)[days[new Date().getDay()]]
+		const fullDoc = yamllib.safeLoad(yaml)
+		const currentDate = `${proc(date.getDate())}.${proc(date.getMonth() + 1)}.${date.getFullYear()}`
+		const data = (fullDoc[days[new Date().getDay()]] || []).concat(fullDoc[currentDate] || [])
+		data.sort((a, b) => a.startTime - b.startTime)
 		for (let j = 0; j < data.length; j++) {
 			const i = data[j]
 			if (i.week && i.week !== week) {
@@ -58,7 +67,10 @@ module.exports.getRealKey = function(schedule, time) {
 		if (i.endTime < time)
 			j++
 	// now j is the least key such that schedule[j] didn't end yet
-	return j
+	if (j === schedule.length || schedule[j].startTime < time)
+		return [j, j]
+	else
+		return [j - 1, j]
 }
 
 function process(arr) {

@@ -23,6 +23,10 @@ Python/Spriter/out
 Python/Spriter/resources
 Python/Spriter/sprites
 
+Python/Tex_Recombiner/docs
+Python/Tex_Recombiner/out
+Python/Tex_Recombiner/tmp
+
 Tex/**/*.aux
 Tex/**/*.fls
 Tex/**/*.log
