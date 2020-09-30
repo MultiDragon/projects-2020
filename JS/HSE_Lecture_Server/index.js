@@ -76,9 +76,9 @@ function printType(t) {
 
 function printRoom(prev, next) {
 	if (next.room === "Zoom")
-		return ` %{A1:xdg-open zoommtg\\://zoom.us/join\\?action=join\\&confno=${next.zoomID}\\&pwd=${next.zoomPassHash}:}` +
+		return ` %{A1:~/.custom/bin/xdg-rofi zoommtg\\://zoom.us/join\\?action=join\\&confno=${next.zoomID}\\&pwd=${next.zoomPassHash}:}` +
 			`%{F#${colors.zoom}}Zoom%{F-}%{A}`
-	else if (next.room !== prev.room)
+	else if (!prev || next.room !== prev.room)
 		return ` %{F#${colors.room}}in ${next.room}%{F-}`
 	return ""
 }
@@ -108,6 +108,7 @@ function printUpdateButton(next) {
 // return `%{u#ccc}%{+u}Move from ${prev.room} to ${next.room}%{-u} `
 // }
 
+let notified = false
 function processEvent(schedule, currentTime) {
 	let text = ""
 	const ckey = FSServer.getCurrentKey(schedule, home)
@@ -116,20 +117,28 @@ function processEvent(schedule, currentTime) {
 	if (key1 === schedule.length) {
 		bad = true
 	} else {
-		if (key1 === key2)
+		if (key1 === key2) {
 			text += printCurrentEvent(schedule[key1], currentTime)
-		else
+			notified = false
+		} else {
 			text += printBreak()
+		}
 
-		if (key1 < schedule.length - 1)
+		if (key1 < schedule.length - 1) {
+			if (key1 !== key2 && schedule[key1 + 1].startTime - currentTime < 300000 && !notified) {
+				notified = true
+				FSServer.sendNotification(home, schedule[key1 + 1])
+			}
+
 			text += printNextEvent(schedule[key1], schedule[key1 + 1], currentTime)
+		}
 	}
 
 	if (!bad) {
-		if (schedule[ckey].name !== schedule[key2].name)
+		if (ckey === -1 || schedule[ckey].name !== schedule[key2].name)
 			text += printUpdateButton(schedule[key2])
 		setTimeout(() => processEvent(schedule, currentTime + 10000), 10000)
-		console.log(text)
+		console.log(text.trim())
 	} else {
 		console.log("No events today")
 	}

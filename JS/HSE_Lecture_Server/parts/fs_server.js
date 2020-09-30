@@ -55,9 +55,10 @@ module.exports.getCurrentKey = function(schedule, home) {
 		for (let i = 0; i < schedule.length; i++)
 			if (schedule[i].name === title)
 				return i
-		return 0
+		return -1
 	} catch (e) {
-		return 0
+		console.log(e)
+		return -1
 	}
 }
 
@@ -111,4 +112,9 @@ module.exports.getObjects = function(home) {
 	}
 
 	return process(arr)
+}
+
+module.exports.sendNotification = function(home, evt) {
+	cp.execFileSync("/usr/bin/notify-send", ["Event starting soon!", `Event ${evt.name} starts soon in ${evt.room}!`])
+	cp.execFileSync("/usr/bin/paplay", [home + "/.custom/res/notification.ogg"])
 }

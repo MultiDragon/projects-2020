@@ -17,21 +17,45 @@ def create_tex(meta, projects):
     fixed_texs = meta["header"]
 
     flag = 0
+    big_math = 0
+    big_math_str = ""
     for i in texs:
         i = i.strip()
         if len(i) == 0:
             continue
+
+        bad = False
+        for j in meta["blocked"]:
+            if i.find(j) == 0:
+                bad = True
+                break
+        if bad:
+            continue
+
         if i[0] == ";" and i[1] == ";":
             fixed_texs.append("\\newpage")
             fixed_texs.append(i[2:])
             continue
+
         for j in meta["start"]:
             if i.find(j) == 0:
                 flag = 2
-                fixed_texs.append(i)
+                if i[-2:] == "\\[":
+                    big_math = 2
+                    big_math_str = i
+                else:
+                    fixed_texs.append(i)
                 break
+        if big_math and i.find("\\]") != -1:
+            big_math_str += "\n" + i
+            fixed_texs.append(big_math_str)
+            big_math = 0
 
-        if flag == 1:
+        if big_math:
+            if big_math != 2:
+                big_math_str += "\n" + i
+            big_math = 1
+        elif flag == 1:
             for j in meta["continue"]:
                 if i.find(j) == 0:
                     flag = 3
@@ -44,7 +68,6 @@ def create_tex(meta, projects):
             flag = 0
     fixed_texs += meta["footer"]
     return "\n\n".join(fixed_texs)
-    return False
 
 def process(name):
     with open("docs/" + name + ".yaml") as f:

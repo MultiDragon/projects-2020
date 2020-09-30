@@ -1,32 +1,232 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage{tpl}
 \begin{document}
-\dbegin[4 сентября 2020 г.]{Матфак ВШЭ}{Геометрия, 1 курс}{Городенский}
+\dbegin[3 сентября 2020 г.]{Матфак ВШЭ}{Геометрия, 1 курс}{Городенский}
 
-\definition{Векторное пространство над полем $\mathbb F$} множество $V$ с операциями $+:V\times V\to V$ и $\cdot :\mathbb F\times V\to V$, обладающими следующими свойствами:
+\textit{Формула оценки: $\min\lrp{\frac{S+C+E+L+K}{40},10}$, где $S,C,E,L,K$ --- оценки за семинары, коллоквиум, экзамен, листки и контрольные; каждая из этих оценок от 0 до 100.}\\
+
+\hdr{Векторные и аффинные пространства}
+
+\definition{Векторное пространство} множество $V$ (элементы которого называются <<векторами>>) с операциями $+:V\times V\to V$ и $\cdot :\mathbb F\times V\to V$, обладающими следующими свойствами:
 
 \begin{itemize}
-	\item $V$ --- группа по сложению.
-	\item $\forall \lambda,\mu\in\mathbb F,a\in V:\lambda(\mu a)=(\lambda\mu)a$;
-	\item $\forall \lambda,\mu\in\mathbb F,a\in V:(\lambda+\mu)a=\lambda a+\mu a$;
-	\item $\forall\lambda\in\mathbb F,a,b\in V:\lambda(a+b)=\lambda a+\lambda b$;
-	\item $\forall a\in V:1\cdot a=a$.
+	\item $V$ --- абелева группа по сложению.
+	\item $\forall \lambda,\mu\in\mathbb F,\overline{v}\in V:\lambda(\mu \overline{v})=(\lambda\mu)\overline{v}$;
+	\item $\forall \lambda,\mu\in\mathbb F,\overline{v}\in V:(\lambda+\mu)\overline{v}=\lambda \overline{v}+\mu \overline{v}$;
+	\item $\forall\lambda\in\mathbb F,\overline{v},\overline{w}\in V:\lambda(\overline{v}+\overline{w})=\lambda \overline{v}+\lambda \overline{w}$;
+	\item $\forall \overline{v}\in V:1\cdot \overline{v}=\overline{v}$.
 \end{itemize}
 
-\definition{Аффинное пространство над $V$} множество $\mathbb A$ (элементы которого называются <<точками>>) такое, что $\forall a,b\in\mathbb A\exists\overline{ab}\in V$ со следующими свойствами:
+\definition{Линейное отображение} функция $f:U\to W$ (между векторными пространствами), такая, что $f(\lambda \overline{u}+\mu \overline{v})=\lambda f(\overline{u})+\mu f(\overline{v})$ для всех $\overline{u},\overline{v}\in U$.
+
+\definition{Изоморфизм пространств} биективное линейное отображение.
+
+\definition{Одномерное пространство} пространство $V$, такое, что в нём есть $\overline{v}\neq\overline{0}$ и $\forall \overline{u}\in V\exists \lambda:\lambda\overline{v}=\overline{u}$.
+
+\definition{Двумерное пространство} пространство $V$, такое, что в нём есть непропорциональные $\overline{v}$ и $\overline{w}$, и $\forall \overline{u}\in V\exists \lambda,\mu\in \mathbb F:\overline{u}=\lambda\overline{v}+\mu\overline{w}$.\\
+
+\definition{Определитель двумерной матрицы} выражение \[
+	\det\begin{pmatrix}
+		a_1 & b_1\\
+		a_2 & b_2
+	\end{pmatrix}=\det\lrp{\binom{a_1}{a_2},\binom{b_1}{b_2}}=a_1b_2-a_2b_1.
+\]
+
+\lemma Определитель билинеен и кососимметричен (т.е. $\det\lrp{\overline{v_1},\overline{v_2}}=-\det\lrp{\overline{v_2},\overline{v_1}}$).
+
+\theoremn{Крамер} Векторы $\overline{v_1},\overline{v_2}$ образуют в $\mathbb F^2$ базис тогда и только тогда, когда $\det(\overline{v_1},\overline{v_2})\neq 0$. В этом случае для любого вектора $\overline{u}\in\mathbb F^2$ выполняется \[
+	\overline{u}=\frac{\det(\overline{u},\overline{v_2})}{\det(\overline{v_1},\overline{v_2})}\overline{v_1}+\frac{\det(\overline{v_1},\overline{u})}{\det(\overline{v_1},\overline{v_2})}\overline{v_2}.
+\]
+
+\definition{Площадь ориентированного параллелограмма} функция $S:V\times V\to \mathbb F$, обладающая следующими свойствами:
 
 \begin{itemize}
-	\item $\forall p\in\mathbb A$ верно, что $\mathbb A\to V:q\mapsto \overline{pq}$ биективно;
+	\item $S(\overline{a},\overline{b})=S(\overline{a},\overline{b}+\lambda \overline{a})=S(\overline{a}+\mu \overline{b},\overline{b})$;
+	\item $S(\lambda \overline{a},\overline{b})=\lambda S(\overline{a},\overline{b})=S(\overline{a},\lambda \overline{b})$.
+\end{itemize}
+
+\theorem На любом двумерном $V$ существует ровно одна функция $S$ с точностью до пропорциональности.
+
+\proof С одной стороны, $f(\overline{a},\overline{b})=\det\lrp{\overline{a},\overline{b}}$ подходит. Пусть $\overline{u},\overline{v}$ --- базис на $V$ и $c=S(\overline{u},\overline{v})$. Рассмотрим $S(\overline{a},\overline{b})$: \[
+	S(\overline{a},\overline{b})=S(x_1\overline{u}+y_1\overline{v},x_2\overline{u}+y_2\overline{v})=S(\overline{u},\overline{v})\cdot (x_1y_2-x_2y_1)=c\cdot \det\begin{pmatrix}
+		x_1 & x_2\\
+		y_1 & y_2
+\end{pmatrix}.\QEDA
+\]
+
+\definition{Аффинное пространство} множество $\mathbb A$ (элементы которого называются <<точками>>) такое, что $\forall a,b\in\mathbb A\exists\overline{ab}\in V$ со следующими свойствами:
+
+\begin{itemize}
+	\item $\forall p\in\mathbb A$ верно, что $f:\mathbb A\to V,q\mapsto \overline{pq}$ биективно;
 	\item $\forall a,b,c\in\mathbb A:\overline{ab}+\overline{bc}=\overline{ac}$.
 \end{itemize}
 
-\definition{Аффинное пространство над $V$ (другое определение)} множество $\mathbb A$ такое, что $\forall v\in V\exists \tau_v:\mathbb A\to \mathbb A$ со следующими свойствами:
+\definition{Центр тяжести набора точек} точка $c$, такая, что $\sum_i\mu_i\overline{cp_i}=0$, где $p_i$ --- точки набора, а $\mu_i\in\mathbb F$ --- веса этих точек.
+
+\theorem Если $\sum \mu_i\neq 0$, то центр тяжести существует и единственен.
+
+\lemma Пусть есть системы точек $(p_i,\lambda_i)$ и $(q_i,\mu_i)$, при этом $\sum\lambda_i\neq 0,\sum\mu_i\neq 0$. Пусть $P,Q$ --- центры тяжести этих систем. Тогда центр тяжести объединения этих систем совпадает с центром тяжести системы $\{(P,\sum \lambda_i),(Q,\sum\mu_i)\}$.\\
+
+\definition{Коллинеарные точки} три элемента $a,b,p\in \mathbb A$ такие, что $\overline{pa}\sim \overline{pb}$.
+
+\definition{Аффинная прямая} множество таких $p$, что $a,b,p$ коллинеарны для фиксированных $a,b$.
+
+\definition{Координатный репер} тройка $(O\in\mathbb A,\overline{v},\overline{w})$ такая, что $\overline{v}\not\sim \overline{w}$. Если $Y=O+\lambda\overline{v}+\mu\overline{w}$, то пара $(\lambda,\mu)$ называется координатами $Y$ в этом репере.
+
+\definition{Треугольник} тройка неколлинеарных точек из $\mathbb A^2$.
+
+\definition{Площадь треугольника} функция $S(a,b,c)=\frac{1}{2}S(\overline{ab},\overline{ac})$, где $S(\overline{u},\overline{v})$ --- площадь параллелограмма.
+
+\lemma Для любых точек $p,a,b,c\in \mathbb A^2$ таких, что $a,b,c$ неколлинеарны, выполняется $S(abc)=S(pab)+S(pbc)+S(pca)$.
+
+\definition{Барицентрические координаты} набор весов $\alpha,\beta,\gamma$ такой, что $\alpha+\beta+\gamma=1$ и $p=a\alpha+b\beta+c\gamma$ (где $p$ --- точка, координаты которой мы ищем).
+
+\lemma Координаты точки $p$ равны $\alpha=\frac{S(pbc)}{S(abc)},\beta=\frac{S(pca)}{S(abc)},\gamma=\frac{S(pab)}{S(abc)}$.\\
+
+\vskip10pt
+\hdr{Аффинные преобразования}
+
+\definition{Полуаффинное преобразование} биекция $f:\mathbb A^2\to \mathbb A^2$, переводящая прямые в прямые.
+
+\definition{Дифференциал полуаффинного преобразования} функция $D_f:V\to V,\overline{ab}\mapsto  \overline{f(a)f(b)}$.
+
+\shdr{Свойства}
 
 \begin{itemize}
-	\item $\forall p,q\in\mathbb A\exists! v\in V:\tau_v(p)=q$;
-	\item $\tau_p\circ\tau_q=\tau_{p+q}$.
+	\item $f$ сохраняет параллельность и переводит параллелограммы в параллелограммы.
+	\item Дифференциал определён корректно, кроме того, $D_f(\overline{v})+D_f(\overline{w})=D_f(\overline{v}+\overline{w})$.
+	\item $D_f(\lambda\overline{v})$ пропорционален $D_F(\overline{v})$.
 \end{itemize}
 
-\textbf{Пример.} Множество приведённых кубических многочленов над $\mathbb Q$ --- аффинное пространство над множеством квадратных многочленов над $\mathbb Q$. 
+Обозначим за $\psi_v(\lambda)$ такую функцию $\mathbb F\to \mathbb F$, что $D_f(\lambda\overline{v})=\psi_v(\lambda)D_f(\overline{v})$.
+
+\lemma $\psi_v$ не зависит от $v$ (дальше мы будем обозначать эту функцию $\psi$).
+
+\lemma $\psi$ является автоморфизмом $\mathbb F$.
+
+\lemma Полуаффинное преобразование однозначно задаётся $f(o)$ и $D_f(\overline{v})$, а дифференциал полулинеен, т.е. $\exists \psi:\mathbb F\to \mathbb F;D_f(\lambda \overline{u}+\mu \overline{v})=\psi(\lambda)f(\overline{u})+\psi(\mu)f(\overline{v})$.\\
+
+Рассмотрим в $\mathbb F$ простое подполе (множество элементов вида $\frac{1\pm1\pm\ldots \pm1}{1\pm1\pm\ldots \pm 1}$). Очевидно, что на нём автоморфизм --- это тождественное преобразование. Тогда если $\mathbb F$ само простое (т.е. $\mathbb Q$ или $\mathbb Z /\mathbb Zp$), то $\psi(x)=x$. Кроме того, из непрерывности $\mathbb R$ получается то же самое для $\mathbb R$. Почему это так: $x\in\mathbb R>0\iff \exists y:x=y^2$, поэтому $\psi$ будет монотонной, а ещё $\psi(t)=t\forall t\ \in \mathbb Q$.
+
+\theoremn{по анализу} $\psi(x):\mathbb R\to \mathbb R$ возрастает, и $\psi(x)=x\forall x\in\mathbb Q$. Тогда $\psi(x)=x\forall x$.\\
+
+\definition{Аффинное преобразование} функция $f:\mathbb A(U)\to \mathbb A(W)$ (между аффинными пространствами над векторными пространствами $U,W$), такая, что существует линейное отображение $D_f:U\to V$ такое, что $\forall p\in \mathbb A(U):f(p)=f(o)+D_f(\overline{op})$ для некоторой фиксированной точки $o\in\mathbb A(U)$.
+
+\lemma В качестве $o$ можно выбрать любую точку в $\mathbb A(U)$, и $D_f$ не зависит от выбора.
+
+\lemma Отображение $f:\mathbb A(U)\to \mathbb A(V)$ аффинно тогда и только тогда, когда \[
+	\forall p_1,\ldots ,p_n\in \mathbb A(U),\mu_1,\ldots ,\mu_n\in\mathbb F:f(\mu_1p_1+\ldots +\mu_np_n)=\mu_1f(p_1)+\ldots +\mu_nf(p_n)
+.\]
+
+\lemma Аффинное преобразование $f:\mathbb A(U)\to \mathbb A(V)$ однозначно задаётся значениями $f(o)$ и $D_f(e_i)$, где $o\in \mathbb A(U)$ и $\{e_i\}$ --- базис в $\mathbb U$.
+
+\newpage
+
+\lemma Для любого $\triangle abc\in \mathbb A(U)$ и любых точек $x,y,z\in \mathbb A(V)$ существует единственное аффинное преобразование, переводящее $a,b,c$ в $x,y,z$ соответственно.\\
+
+\definition{Произведение матриц} такая матрица $C=A\times B$, что $c_{i,j}=\sum_k a_{i,k}b_{k,j}$. В частности, произведение строки $(a_1,\ldots ,a_n)$ на столбец $(b_1,\ldots ,b_n)$ равно $\sum_i a_ib_i$.\\
+
+Пусть $V,W$ двумерные, $f:V\to W$ линейно, $f\binom10=f\binom{a_{11}}{a_{21}}$ и $f\binom 01=f\binom{a_{12}}{a_{22}}$. Тогда \[
+	f\binom {x_1}{x_2}=x_1\binom{a_{11}}{a_{21}}+x_2\binom{a_{12}}{a_{22}}=\binom{a_{11}\ a_{22}}{a_{21}\ a_{22}}\times \binom{x_1}{x_2}.
+\] Значит, все линейные отображения имеют вид $\overline{x}\mapsto A\overline{x}$, где столбцы $A$ --- это координаты $f(e_k)$ (по крайней мере для двумерных пространств, но для $n$-мерных это тоже верно).\\
+
+\lemma Любые 3 различные конкурентные прямые в $\mathbb A(U)$ можно перевести в любые 3 различные конкурентные прямые в $\mathbb A(V)$ ровно одним аффинным преобразованием с точностью до гомотетии в точке пересечения прямых.
+
+Пусть у нас 4 конкурентные прямые, пересекающиеся в точке $O$, и с направляющими векторами $e_1,e_2,e_1+e_2,e_2+te_1$ (с концами в точках $P_1,P_2,P_3,P_4$), где $t\in\mathbb F\cup \infty$ (при значениях $\infty,0,1$ получаются соответственно первая, вторая и третья прямые). Тогда если преобразование из прошлой задачи перевело первые 3 прямые в $m_1,m_2,m_3$, то 4-ю прямую оно переведёт в $m_4$ с таким же значением $t$.
+
+\lemma В предыдущем рассуждении выполняется \[
+	t=\frac{S(\overline{OP_1},\overline{OP_3})S(\overline{OP_2},\overline{OP_4})}{S(\overline{OP_1},\overline{OP_4})S(\overline{OP_2},\overline{OP_3})}.
+\]
+
+\definition{Двойное отношение четвёрки прямых} $t$ из леммы. Обозначение: $(l_1:l_2:l_3:l_4)$.
+
+\textbf{Как меняется площадь при аффинном преобразовании.} Можно считать, что $f$ линейно, т.к. аффинное преобразование --- композиция линейного и сдвига. Пусть $S(\overline{u},\overline{v})$ --- ненулевая функция площади. Тогда $S_f(\overline{u},\overline{v}):=S(f(\overline{u}),f(\overline{v}))$ --- тоже функция площади (т.к. $S_f(\lambda\overline{u},\overline{v})=\lambda S_f(\overline{u},\overline{v})$ и $S_f(\overline{u}+\lambda\overline{v},\overline{v})=S_f(\overline{u},\overline{v})$). Значит, площадь при аффинном преобразовании умножается на какую-то константу.
+
+\definition{Определитель линейного преобразования} такое число $\det(f)$, что $S(f(\overline{u}),f(\overline{v}))=\det(f)S(\overline{u},\overline{v})$ (это число равно определителю матрицы отображения $f$).\\
+
+Заметим, что композиция двух линейных отображений (в одном и том же векторном пространстве) линейна, и биективные линейные отображения обратимы. Значит, биективные линейные отображения образуют группу. Эту группу будем обозначать $GL(V)$. Кроме того, то же верно и для аффинных отображений, эту группу будем обозначать $Aff(V)$.
+
+Обозначим $\tau_{\overline{v}}$ --- параллельный перенос на вектор $\overline{v}$. Пусть $F$ аффинно. Тогда \[
+	F\circ\tau_{\overline{v}}(p)=F(p+\overline{v})=F(p)+D_F(\overline{v})\implies F\circ \tau_{\overline{v}}\circ F^{-1}=\tau_{D_F(\overline{v})}.
+\]
+
+\lemma Подгруппа $Aff(V)$ из преобразований с фиксированной неподвижной точкой изоморфна $GL(V)$.
+
+\lemma $Aff(V)$ изоморфна $GL(V)\times V$, и композиция двух преобразований из $Aff(V)$ вычисляется следующим способом (это полупрямое произведение): \[
+	(v,F)\circ (w,G)=(v+F(w),F\circ G).
+\]
+
+\newpage
+
+\hdr{Длины}
+
+В этом разделе мы предполагаем, что $\mathbb F=\mathbb R$.
+
+\definition{Скалярное произведение} функция $V\times V\to \mathbb R$, обладающая следующими свойствами:
+
+\begin{itemize}
+	\item Билинейность: $(ax+by,cz+dt)=ac(x,z)+ad(y,t)+bc(y,z)+bd(y,t)$ (здесь $x,y,z,t$ --- вектора, а $a,b,c,d\in \mathbb R$);
+	\item Симметричность: $(v,w)=(w,v)$;
+	\item Положительность: $(v,v)>0$ при $v\neq 0$.
+\end{itemize}
+
+\definition{Евклидова структура} векторное пространство со скалярным произведением.
+
+\definition{Длина вектора} число $|v|=\sqrt{(v,v)}$.
+
+\definition{Перпендикулярные вектора} два вектора $v,w$ такие, что $(v,w)=0$.
+
+\shdr{Примеры таких структур}
+
+\begin{itemize}
+	\item Стандартная евклидова структура: $V=\mathbb R^n$ и $\overline{x}\cdot \overline{y}=\sum x_iy_i$.
+	\item Непрерывные функции $[0,1]\to \mathbb R$, и скалярное произведение равно $f\cdot g=\int_0^1f(x)g(x)dx$.
+\end{itemize}
+
+\theoremn{Пифагор} $a\perp b$ тогда и только тогда, когда $|a+b|^2=|a|^2+|b|^2$.
+
+\lemma $\forall \overline{a}\neq 0,\overline{b}\ \exists! b_a,b_{a\perp}$ со следующими свойствами:
+
+\begin{itemize}
+	\item $b=b_a+b_{a\perp}$;
+	\item $b_a=\lambda a$;
+	\item $b_{a\perp}\perp a$.
+\end{itemize}
+
+\theoremn{Неравенство Коши-Буняковского-Шварца} $\forall a,b:(a,b)^2\leq (a,a)(b,b)$, и равенство тогда и только тогда, когда $\lambda a+\mu b=0$.\label{kbsh}
+
+\proof Если $a=0$, то утверждение тривиально. Пусть $a\neq 0$. Тогда $(b_{a\perp},b_{a\perp})\geq 0$ и равенство тогда и только тогда, когда $a$ и $b$ пропорциональны. Тогда \[
+	0\leq (b_{a\perp},b_{a\perp})=\lrp{b-a\frac{(a,b)}{(a,a)},b-a\frac{(a,b)}{(a,a)}}=(b,b)-(b,a)\frac{(a,b)}{(a,a)}=\frac{(a,a)(b,b)-(a,b)^2}{(a,a)},
+\] откуда и следует утверждение.\QEDA\\
+
+\lemman{Неравенство треугольника} $|a+b|\leq |a|+|b|$ и равенство, только если $\lambda a+\mu b=0$, где $\lambda\mu\leq 0$.
+
+\proof Возведём в квадрат: $(a+b,a+b)\leq^? (a,a)+(b,b)+2|a||b|$. Это равносильно тому, что $(a,b)\leq |a||b|$, что верно при $(a,b)<0$ и равносильно \ref{kbsh} в противном случае. \QEDA\\
+
+\definition{Ортонормальный базис} базис $(e_1,e_2)$ т.ч. $(e_1,e_2)=0$ и $|e_1|=|e_2|=1$.
+
+\lemma Ортонормальный базис всегда существует.
+
+\proof Пусть $(a,b)$ --- базис. Рассмотрим $e_1=\frac{a}{|a|}$ и $e_2=\frac{b_{a\perp}}{|b_{a\perp}|}$. Они подходят.\QEDA\\
+
+\definition{Матрица Грама} матрица $G_u=\binom{u_1}{u_2}(u_1,u_2)=\binom{(u_1,u_1)\ (u_1,u_2)}{(u_2,u_1)\ (u_2,u_2)}$.
+
+\lemma Пусть $\overline{x}=(x_1,x_2)\binom{u_1}{u_2},\overline{y}=(u_1,u_2)\binom{y_1}{y_2}$. Тогда $(\overline{x},\overline{y})=(x_1,x_2)G_u\binom{y_1}{y_2}$.\\
+
+Рассмотрим аффинное пространство $\mathbb A$, ассоциированное с $V$.
+
+\definition{Отрезок} множество таких $x\in \mathbb A$, что $|x-a|+|b-x|=|b-a|$.\\
+
+\lemma Пусть $(u_1,u_2)=(e_1,e_2)G_u$. Тогда $s^2(u_1,u_2)=s^2(e_1,e_2)\det G_u$.
+
+\lemma Если $(e_1,e_2)$ и $(e_1',e_2')$ --- два ортонормальных базиса, то $s(e_1,e_2)=\pm s(e_1',e_2')$.\label{gram}
+
+\newpage
+
+Из \ref{gram} следует, что есть два типа ортонормальных базисов: <<положительно ориентированные>> и <<отрицательно ориентированные>>.
+
+Пусть $(e_1,e_2)$ положительно ориентированный и $u=x_1e_1+x_2e_2$. Тогда $|u|=1\iff x_1^2+y_1^2=1$. Значит, $\exists! t\in\left[0,2\pi k\right):u=\cos t\cdot e_1+\sin t\cdot e_2$. Это $t$ называется \textit{углом между $e_1$ и $u$}.
+
+\lemma Если $|u|=1$, то $(e_1,u)=\cos\angle(e_1,u)$ и $s(e_1,u)=\sin\angle(e_1,u)$.
 
 \end{document}

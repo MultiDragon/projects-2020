@@ -128,15 +128,6 @@ Friday:
         room: 326
         type: Seminar
         week: 2
-21.09.2020:
-    -
-        name: Analysis
-        startTime: 18:00
-        endTime: 19:00
-        room: Zoom
-        zoomID: 8302597761
-        zoomPassHash: eno3RHYra3lQTjVxWmFDL1YrT0hZZz09
-        type: Problems
 22.09.2020:
     -
         name: Parking Problem
@@ -145,3 +136,12 @@ Friday:
         room: Zoom
         zoomID: 5732879943
         type: Seminar
+23.09.2020:
+    -
+        name: Analysis
+        startTime: 20:00
+        endTime: 21:00
+        room: Zoom
+        zoomID: 8302597761
+        zoomPassHash: eno3RHYra3lQTjVxWmFDL1YrT0hZZz09
+        type: Problems
