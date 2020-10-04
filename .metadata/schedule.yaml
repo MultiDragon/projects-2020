@@ -64,13 +64,6 @@ Wednesday:
         endTime: 16:00
         room: 326
         type: Seminar
-    -
-        name: Geometry
-        startTime: 16:20
-        endTime: 17:40
-        room: 306
-        type: Lesson
-        week: 2
 Thursday:
     -
         name: Discrete Math
