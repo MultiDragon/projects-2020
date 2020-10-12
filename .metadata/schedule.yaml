@@ -3,7 +3,7 @@ Monday:
         name: English
         startTime: 9:30
         endTime: 10:50
-        room: 211
+        room: 212
         type: Lesson
     -
         name: Analysis
@@ -112,7 +112,7 @@ Friday:
         name: English
         startTime: 14:40
         endTime: 16:00
-        room: 110
+        room: 212
         type: Lesson
     -
         name: Algebra
